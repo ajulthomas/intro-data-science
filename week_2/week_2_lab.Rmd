@@ -1,0 +1,33 @@
+---
+title: "Week_2_lab"
+author: "Ajul Thomas"
+date: "2023-08-08"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## This is my first Report!
+
+This is my first markdown report
+
+```{r}
+# storing value to variable age
+age <- 23
+age <- age + 2
+age <- age * 3
+age <- age - 6
+age <- age/3
+age
+
+```
+
+```{r}
+
+readline(prompt="what is your age ?")
+
+25
+
+```

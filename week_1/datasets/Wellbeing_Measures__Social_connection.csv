@@ -1,0 +1,714 @@
+Domain,DomainDefinition,Indicator,IndicatorDefinition,MeasureID,Measure,MeasureDefinition,DataSource,PeriodEndDate,Type,CategoryName,CategoryOption,Value,Unit,RSE,LowerCI,UpperCI,ComparisonCategoryName,ComparisonCategoryOption,Notes
+Social connection,"Being connected with family, friends and community",Sense of social connection,"Social interactions with friends, family and community groups
+help Canberrans to feel valued and connected to the broader
+community. This indicator will measure Canberrans’ self rated sense of social connection to their family, friends and
+the community.",25,Social connection scale - traditional,"This measure shows the proportion of adults with a high sense of traditional social connectedness. Traditional connectedness includes face to face engagement with family and friends not living in the same household, as well as chatting with neighbours.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Carers,Carer with < 15 hours per week caring obligations,12.089643,Proportion (%),,4.16199,5.202305,,,
+Social connection,"Being connected with family, friends and community",Sense of social connection,"Social interactions with friends, family and community groups
+help Canberrans to feel valued and connected to the broader
+community. This indicator will measure Canberrans’ self rated sense of social connection to their family, friends and
+the community.",25,Social connection scale - traditional,"This measure shows the proportion of adults with a high sense of traditional social connectedness. Traditional connectedness includes face to face engagement with family and friends not living in the same household, as well as chatting with neighbours.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Disability,"Person with disability/long-term health condition, little/no difficulty with daily functions",9.883313,Proportion (%),,2.535566,2.9209983,,,
+Social connection,"Being connected with family, friends and community",Sense of social connection,"Social interactions with friends, family and community groups
+help Canberrans to feel valued and connected to the broader
+community. This indicator will measure Canberrans’ self rated sense of social connection to their family, friends and
+the community.",25,Social connection scale - traditional,"This measure shows the proportion of adults with a high sense of traditional social connectedness. Traditional connectedness includes face to face engagement with family and friends not living in the same household, as well as chatting with neighbours.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Gender,Male,7.842104,Proportion (%),,1.495892,1.6587528,,,
+Social connection,"Being connected with family, friends and community",Sense of social connection,"Social interactions with friends, family and community groups
+help Canberrans to feel valued and connected to the broader
+community. This indicator will measure Canberrans’ self rated sense of social connection to their family, friends and
+the community.",25,Social connection scale - traditional,"This measure shows the proportion of adults with a high sense of traditional social connectedness. Traditional connectedness includes face to face engagement with family and friends not living in the same household, as well as chatting with neighbours.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,CALD 1,Born in Australia,8.484532,Proportion (%),,1.2464776,1.3436172,,,
+Social connection,"Being connected with family, friends and community",Sense of social connection,"Social interactions with friends, family and community groups
+help Canberrans to feel valued and connected to the broader
+community. This indicator will measure Canberrans’ self rated sense of social connection to their family, friends and
+the community.",25,Social connection scale - traditional,"This measure shows the proportion of adults with a high sense of traditional social connectedness. Traditional connectedness includes face to face engagement with family and friends not living in the same household, as well as chatting with neighbours.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Disability,"Person with disability, has moderate or high difficulty with daily functions",8.8890705,Proportion (%),,1.7794194,2.0127146,,,
+Social connection,"Being connected with family, friends and community",Sense of social connection,"Social interactions with friends, family and community groups
+help Canberrans to feel valued and connected to the broader
+community. This indicator will measure Canberrans’ self rated sense of social connection to their family, friends and
+the community.",25,Social connection scale - traditional,"This measure shows the proportion of adults with a high sense of traditional social connectedness. Traditional connectedness includes face to face engagement with family and friends not living in the same household, as well as chatting with neighbours.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,18-24,,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Sense of social connection,"Social interactions with friends, family and community groups
+help Canberrans to feel valued and connected to the broader
+community. This indicator will measure Canberrans’ self rated sense of social connection to their family, friends and
+the community.",25,Social connection scale - traditional,"This measure shows the proportion of adults with a high sense of traditional social connectedness. Traditional connectedness includes face to face engagement with family and friends not living in the same household, as well as chatting with neighbours.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Children in household,Children aged 5-17 in household,6.610571,Proportion (%),,1.9909455,2.5866885,,,
+Social connection,"Being connected with family, friends and community",Sense of social connection,"Social interactions with friends, family and community groups
+help Canberrans to feel valued and connected to the broader
+community. This indicator will measure Canberrans’ self rated sense of social connection to their family, friends and
+the community.",25,Social connection scale - traditional,"This measure shows the proportion of adults with a high sense of traditional social connectedness. Traditional connectedness includes face to face engagement with family and friends not living in the same household, as well as chatting with neighbours.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - broad groups,65+,16.995945,Proportion (%),,1.8948734,2.0445635,,,
+Social connection,"Being connected with family, friends and community",Sense of social connection,"Social interactions with friends, family and community groups
+help Canberrans to feel valued and connected to the broader
+community. This indicator will measure Canberrans’ self rated sense of social connection to their family, friends and
+the community.",25,Social connection scale - traditional,"This measure shows the proportion of adults with a high sense of traditional social connectedness. Traditional connectedness includes face to face engagement with family and friends not living in the same household, as well as chatting with neighbours.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,45-54,8.449767,Proportion (%),,2.200121,2.7597091,,,
+Social connection,"Being connected with family, friends and community",Sense of social connection,"Social interactions with friends, family and community groups
+help Canberrans to feel valued and connected to the broader
+community. This indicator will measure Canberrans’ self rated sense of social connection to their family, friends and
+the community.",25,Social connection scale - traditional,"This measure shows the proportion of adults with a high sense of traditional social connectedness. Traditional connectedness includes face to face engagement with family and friends not living in the same household, as well as chatting with neighbours.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Disability,Person with no disability,7.6589093,Proportion (%),,1.5038075,1.6421946,,,
+Social connection,"Being connected with family, friends and community",Sense of social connection,"Social interactions with friends, family and community groups
+help Canberrans to feel valued and connected to the broader
+community. This indicator will measure Canberrans’ self rated sense of social connection to their family, friends and
+the community.",25,Social connection scale - traditional,"This measure shows the proportion of adults with a high sense of traditional social connectedness. Traditional connectedness includes face to face engagement with family and friends not living in the same household, as well as chatting with neighbours.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,64-75,17.373943,Proportion (%),,2.3675191,2.603518,,,
+Social connection,"Being connected with family, friends and community",Sense of social connection,"Social interactions with friends, family and community groups
+help Canberrans to feel valued and connected to the broader
+community. This indicator will measure Canberrans’ self rated sense of social connection to their family, friends and
+the community.",25,Social connection scale - traditional,"This measure shows the proportion of adults with a high sense of traditional social connectedness. Traditional connectedness includes face to face engagement with family and friends not living in the same household, as well as chatting with neighbours.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Children in household,Children aged 0-4 in household,4.3316593,Proportion (%),,2.7634974,3.7965643,,,
+Social connection,"Being connected with family, friends and community",Sense of social connection,"Social interactions with friends, family and community groups
+help Canberrans to feel valued and connected to the broader
+community. This indicator will measure Canberrans’ self rated sense of social connection to their family, friends and
+the community.",25,Social connection scale - traditional,"This measure shows the proportion of adults with a high sense of traditional social connectedness. Traditional connectedness includes face to face engagement with family and friends not living in the same household, as well as chatting with neighbours.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Children in household,No children in household,9.283016,Proportion (%),,1.425705,1.5423721,,,
+Social connection,"Being connected with family, friends and community",Sense of social connection,"Social interactions with friends, family and community groups
+help Canberrans to feel valued and connected to the broader
+community. This indicator will measure Canberrans’ self rated sense of social connection to their family, friends and
+the community.",25,Social connection scale - traditional,"This measure shows the proportion of adults with a high sense of traditional social connectedness. Traditional connectedness includes face to face engagement with family and friends not living in the same household, as well as chatting with neighbours.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,UC Survey Option,Low,44.305294,Proportion (%),,1.6938124,1.7169001,,,
+Social connection,"Being connected with family, friends and community",Sense of social connection,"Social interactions with friends, family and community groups
+help Canberrans to feel valued and connected to the broader
+community. This indicator will measure Canberrans’ self rated sense of social connection to their family, friends and
+the community.",25,Social connection scale - traditional,"This measure shows the proportion of adults with a high sense of traditional social connectedness. Traditional connectedness includes face to face engagement with family and friends not living in the same household, as well as chatting with neighbours.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Carers,Not a carer,8.321839,Proportion (%),,1.1765971,1.2617071,,,
+Social connection,"Being connected with family, friends and community",Sense of social connection,"Social interactions with friends, family and community groups
+help Canberrans to feel valued and connected to the broader
+community. This indicator will measure Canberrans’ self rated sense of social connection to their family, friends and
+the community.",25,Social connection scale - traditional,"This measure shows the proportion of adults with a high sense of traditional social connectedness. Traditional connectedness includes face to face engagement with family and friends not living in the same household, as well as chatting with neighbours.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,75+,16.23693,Proportion (%),,3.021123,3.4289014,,,
+Social connection,"Being connected with family, friends and community",Sense of social connection,"Social interactions with friends, family and community groups
+help Canberrans to feel valued and connected to the broader
+community. This indicator will measure Canberrans’ self rated sense of social connection to their family, friends and
+the community.",25,Social connection scale - traditional,"This measure shows the proportion of adults with a high sense of traditional social connectedness. Traditional connectedness includes face to face engagement with family and friends not living in the same household, as well as chatting with neighbours.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,CALD 1,Born overseas - non-English speaking country,8.488501,Proportion (%),,3.2521162,3.9586089,,,
+Social connection,"Being connected with family, friends and community",Sense of social connection,"Social interactions with friends, family and community groups
+help Canberrans to feel valued and connected to the broader
+community. This indicator will measure Canberrans’ self rated sense of social connection to their family, friends and
+the community.",25,Social connection scale - traditional,"This measure shows the proportion of adults with a high sense of traditional social connectedness. Traditional connectedness includes face to face engagement with family and friends not living in the same household, as well as chatting with neighbours.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - broad groups,30-49,5.960739,Proportion (%),,1.5066948,1.89473,,,
+Social connection,"Being connected with family, friends and community",Sense of social connection,"Social interactions with friends, family and community groups
+help Canberrans to feel valued and connected to the broader
+community. This indicator will measure Canberrans’ self rated sense of social connection to their family, friends and
+the community.",25,Social connection scale - traditional,"This measure shows the proportion of adults with a high sense of traditional social connectedness. Traditional connectedness includes face to face engagement with family and friends not living in the same household, as well as chatting with neighbours.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,UC Survey Option,Moderate,47.382008,Proportion (%),,1.7605754,1.758586,,,
+Social connection,"Being connected with family, friends and community",Sense of social connection,"Social interactions with friends, family and community groups
+help Canberrans to feel valued and connected to the broader
+community. This indicator will measure Canberrans’ self rated sense of social connection to their family, friends and
+the community.",25,Social connection scale - traditional,"This measure shows the proportion of adults with a high sense of traditional social connectedness. Traditional connectedness includes face to face engagement with family and friends not living in the same household, as well as chatting with neighbours.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,25-34,5.2993703,Proportion (%),,2.3898814,3.5948243,,,
+Social connection,"Being connected with family, friends and community",Sense of social connection,"Social interactions with friends, family and community groups
+help Canberrans to feel valued and connected to the broader
+community. This indicator will measure Canberrans’ self rated sense of social connection to their family, friends and
+the community.",25,Social connection scale - traditional,"This measure shows the proportion of adults with a high sense of traditional social connectedness. Traditional connectedness includes face to face engagement with family and friends not living in the same household, as well as chatting with neighbours.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,UC Survey Option,High,8.312699,Proportion (%),,1.0785047,1.1507758,,,
+Social connection,"Being connected with family, friends and community",Sense of social connection,"Social interactions with friends, family and community groups
+help Canberrans to feel valued and connected to the broader
+community. This indicator will measure Canberrans’ self rated sense of social connection to their family, friends and
+the community.",25,Social connection scale - traditional,"This measure shows the proportion of adults with a high sense of traditional social connectedness. Traditional connectedness includes face to face engagement with family and friends not living in the same household, as well as chatting with neighbours.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,35-44,4.8115697,Proportion (%),,1.7486271,2.527966,,,
+Social connection,"Being connected with family, friends and community",Sense of social connection,"Social interactions with friends, family and community groups
+help Canberrans to feel valued and connected to the broader
+community. This indicator will measure Canberrans’ self rated sense of social connection to their family, friends and
+the community.",25,Social connection scale - traditional,"This measure shows the proportion of adults with a high sense of traditional social connectedness. Traditional connectedness includes face to face engagement with family and friends not living in the same household, as well as chatting with neighbours.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - broad groups,18-29,1.2950782,Proportion (%),,0.9832212,2.6826608,,,
+Social connection,"Being connected with family, friends and community",Sense of social connection,"Social interactions with friends, family and community groups
+help Canberrans to feel valued and connected to the broader
+community. This indicator will measure Canberrans’ self rated sense of social connection to their family, friends and
+the community.",25,Social connection scale - traditional,"This measure shows the proportion of adults with a high sense of traditional social connectedness. Traditional connectedness includes face to face engagement with family and friends not living in the same household, as well as chatting with neighbours.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Carers,Carer,8.387418,Proportion (%),,2.6047552,3.1235998,,,
+Social connection,"Being connected with family, friends and community",Sense of social connection,"Social interactions with friends, family and community groups
+help Canberrans to feel valued and connected to the broader
+community. This indicator will measure Canberrans’ self rated sense of social connection to their family, friends and
+the community.",25,Social connection scale - traditional,"This measure shows the proportion of adults with a high sense of traditional social connectedness. Traditional connectedness includes face to face engagement with family and friends not living in the same household, as well as chatting with neighbours.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,CALD 1,Born overseas - English speaking country,6.4034386,Proportion (%),,2.5832195,3.1476564,,,
+Social connection,"Being connected with family, friends and community",Sense of social connection,"Social interactions with friends, family and community groups
+help Canberrans to feel valued and connected to the broader
+community. This indicator will measure Canberrans’ self rated sense of social connection to their family, friends and
+the community.",25,Social connection scale - traditional,"This measure shows the proportion of adults with a high sense of traditional social connectedness. Traditional connectedness includes face to face engagement with family and friends not living in the same household, as well as chatting with neighbours.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Gender,Female,8.754264,Proportion (%),,1.5246017,1.6588235,,,
+Social connection,"Being connected with family, friends and community",Sense of social connection,"Social interactions with friends, family and community groups
+help Canberrans to feel valued and connected to the broader
+community. This indicator will measure Canberrans’ self rated sense of social connection to their family, friends and
+the community.",25,Social connection scale - traditional,"This measure shows the proportion of adults with a high sense of traditional social connectedness. Traditional connectedness includes face to face engagement with family and friends not living in the same household, as well as chatting with neighbours.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - broad groups,50-64,11.211385,Proportion (%),,1.9310325,2.1876132,,,
+Social connection,"Being connected with family, friends and community",Sense of social connection,"Social interactions with friends, family and community groups
+help Canberrans to feel valued and connected to the broader
+community. This indicator will measure Canberrans’ self rated sense of social connection to their family, friends and
+the community.",25,Social connection scale - traditional,"This measure shows the proportion of adults with a high sense of traditional social connectedness. Traditional connectedness includes face to face engagement with family and friends not living in the same household, as well as chatting with neighbours.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,55-64,12.751357,Proportion (%),,2.3011134,2.6444821,,,
+Social connection,"Being connected with family, friends and community",Sense of social connection,"Social interactions with friends, family and community groups
+help Canberrans to feel valued and connected to the broader
+community. This indicator will measure Canberrans’ self rated sense of social connection to their family, friends and
+the community.",25,Social connection scale - traditional,"This measure shows the proportion of adults with a high sense of traditional social connectedness. Traditional connectedness includes face to face engagement with family and friends not living in the same household, as well as chatting with neighbours.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,LGBTIQ+,Not LGBTIQ+,8.228796,Proportion (%),,1.1661059,1.2494102,,,
+Social connection,"Being connected with family, friends and community",Sense of social connection,"Social interactions with friends, family and community groups
+help Canberrans to feel valued and connected to the broader
+community. This indicator will measure Canberrans’ self rated sense of social connection to their family, friends and
+the community.",25,Social connection scale - traditional,"This measure shows the proportion of adults with a high sense of traditional social connectedness. Traditional connectedness includes face to face engagement with family and friends not living in the same household, as well as chatting with neighbours.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,LGBTIQ+,LGBTIQ+,3.8744965,Proportion (%),,3.0367749,5.261954,,,
+Social connection,"Being connected with family, friends and community",Sense of social connection,"Social interactions with friends, family and community groups
+help Canberrans to feel valued and connected to the broader
+community. This indicator will measure Canberrans’ self rated sense of social connection to their family, friends and
+the community.",25,Social connection scale - traditional,"This measure shows the proportion of adults with a high sense of traditional social connectedness. Traditional connectedness includes face to face engagement with family and friends not living in the same household, as well as chatting with neighbours.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Carers,"Carer with 15 or more hours per week caring obligations, or varied/hard to say hours",5.5956755,Proportion (%),,3.0160093,4.050038,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - broad groups,30-49,13.948128,Proportion (%),,2.4798596,2.785857,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,CALD 1,Born in Australia,26.43247,Proportion (%),,3.7828665,4.065928,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Age - broad groups,30-49,29.136229,Proportion (%),,5.3881164,5.94494,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,45-54,14.690018,Proportion (%),,2.9522069,3.427279,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Disability,"Person with disability, has moderate or high difficulty with daily functions",41.373955,Proportion (%),,6.9023585,7.119262,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,UC Survey Option,Often lonely,25.588257,Proportion (%),,3.4035518,3.645583,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Age - detailed groups,64-75,10.321198,Proportion (%),,8.383356,11.902277,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Age - detailed groups,35-44,29.2245,Proportion (%),,7.191404,8.341049,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Children in household,No children in household,33.471973,Proportion (%),,9.510626,10.182586,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Age - detailed groups,45-54,27.068031,Proportion (%),,7.1543164,8.808813,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Disability,"Person with disability/long-term health condition, little/no difficulty with daily functions",15.203627,Proportion (%),,5.744227,7.690359,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Age - detailed groups,25-34,34.261272,Proportion (%),,8.074749,8.678119,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Gender,Female,26.769596,Proportion (%),,3.8541193,4.146214,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Age - detailed groups,75+,30.893305,Proportion (%),,14.995064,25.473795,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Carers,Carer with 15 or more hours per week caring obligations,23.434532,Proportion (%),,9.666877,11.114305,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,UC Survey Option,Hardly ever lonely,37.565434,Proportion (%),,3.7950568,3.9392738,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Carers,Not a carer,25.65462,Proportion (%),,3.505118,3.7803273,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,55-64,9.026907,Proportion (%),,2.090475,2.444124,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,18-24,25.695572,Proportion (%),,8.328061,10.39064,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Children in household,No children in household,15.517902,Proportion (%),,1.2757865,1.3974133,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,75+,5.1948986,Proportion (%),,1.5845712,2.108499,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - broad groups,65+,6.627104,Proportion (%),,1.1594399,1.3485428,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,CALD 1,Born overseas - non-English speaking country,23.053509,Proportion (%),,7.650815,9.329448,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Disability,Person with no disability,18.322968,Proportion (%),,3.76797,4.25347,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,LGBTIQ+,LGBTIQ+,28.767998,Proportion (%),,6.4618826,7.9453716,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Age - detailed groups,55-64,11.398417,Proportion (%),,6.0203676,8.021483,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Carers,"Carer with < 15 hours per week caring obligations, or varied/hard to say hours",7.317253,Proportion (%),,2.7805648,4.0154243,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Age - broad groups,18-29,31.849936,Proportion (%),,7.5858316,8.147077,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Age - broad groups,50-64,17.394314,Proportion (%),,5.4730654,6.690207,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Gender,Female,15.220521,Proportion (%),,1.4459276,1.5812658,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,LGBTIQ+,Not LGBTIQ+,12.254769,Proportion (%),,1.0514865,1.1378316,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,UC Survey Option,Sometimes lonely,29.441765,Proportion (%),,1.5433044,1.5859883,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - broad groups,50-64,11.455161,Proportion (%),,1.9138649,2.167021,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Carers,Not a carer,13.474631,Proportion (%),,1.0774645,1.1644672,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,UC Survey Option,Often lonely,13.6264105,Proportion (%),,1.0015442,1.0768507,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Children in household,Children aged 0-4 in household,7.6380787,Proportion (%),,3.215032,4.175826,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,UC Survey Option,Sometimes lonely,36.84631,Proportion (%),,3.8935912,4.0007014,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,LGBTIQ+,Not LGBTIQ+,24.2047,Proportion (%),,3.3879466,3.6565933,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,CALD 1,Born overseas - non-English speaking country,9.587467,Proportion (%),,2.5236928,3.291385,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Gender,Male,11.924899,Proportion (%),,1.3404009,1.5081227,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,64-75,7.3454676,Proportion (%),,1.5218104,1.816689,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,35-44,14.061029,Proportion (%),,3.3823614,3.9889433,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,25-34,14.192316,Proportion (%),,4.430731,5.326905,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Carers,"Carer with < 15 hours per week caring obligations, or varied/hard to say hours",28.435066,Proportion (%),,10.02585,12.721279,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Children in household,Children aged 0-4 in household,26.38911,Proportion (%),,9.401939,10.79934,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,UC Survey Option,Hardly ever lonely,56.931824,Proportion (%),,1.7091131,1.6844296,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Disability,"Person with disability/long-term health condition, little/no difficulty with daily functions",10.068061,Proportion (%),,2.0495768,2.4780898,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Disability,Person with no disability,10.576485,Proportion (%),,1.187945,1.342549,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Children in household,Children aged 5-17 in household,26.839113,Proportion (%),,6.524343,7.49082,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Disability,"Person with disability, has moderate or high difficulty with daily functions",23.569624,Proportion (%),,2.1255393,2.3305838,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,LGBTIQ+,LGBTIQ+,33.949085,Proportion (%),,11.640274,13.6570425,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Carers,Carer,25.158606,Proportion (%),,7.1883383,8.167048,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Children in household,Children aged 5-17 in household,13.076266,Proportion (%),,2.9430487,3.440186,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Age - detailed groups,18-24,30.434927,Proportion (%),,9.508183,10.554158,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,CALD 1,Born overseas - English speaking country,12.649568,Proportion (%),,2.1531231,2.7487788,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - broad groups,18-29,21.831833,Proportion (%),,5.420166,6.5062633,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Carers,Carer with 15 or more hours per week caring obligations,18.979107,Proportion (%),,3.9452758,4.817439,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,CALD 1,Born overseas - English speaking country,28.27204,Proportion (%),,8.96401,11.164724,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Carers,Carer,14.317067,Proportion (%),,2.599308,3.1101105,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Age - broad groups,65+,19.03517,Proportion (%),,7.8398747,10.557985,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,CALD 1,Born in Australia,15.514085,Proportion (%),,1.1955043,1.2927126,,,
+Social connection,"Being connected with family, friends and community",Levels of loneliness,"Feeling lonely, distant from others or like an outsider has a
+proven connection to low wellbeing and poor resilience. This
+indicator will measure how frequently Canberrans’
+experience loneliness.",26,Loneliness scale,"This measure shows the proportion of adults who often feel they lack companionship, are left out, or are isolated from others.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Gender,Male,24.308535,Proportion (%),,6.7431836,7.893386,,,
+Social connection,"Being connected with family, friends and community",Levels of volunteering,"Volunteering plays an important role in the ACT community
+and contributes to building healthier and more resilient
+individuals, communities and natural environments. This
+indicator will measure levels of volunteering in the ACT and
+the types of volunteering opportunities people are
+undertaking in our community.",27,Volunteers,This measure shows the proportion of adults who have volunteered in the last 12 months.,"Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Disability,"Person with disability, has moderate or high difficulty with daily functions",40.264763,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Levels of volunteering,"Volunteering plays an important role in the ACT community
+and contributes to building healthier and more resilient
+individuals, communities and natural environments. This
+indicator will measure levels of volunteering in the ACT and
+the types of volunteering opportunities people are
+undertaking in our community.",27,Volunteers,This measure shows the proportion of adults who have volunteered in the last 12 months.,"Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Children in household,No children in household,35.113823,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Levels of volunteering,"Volunteering plays an important role in the ACT community
+and contributes to building healthier and more resilient
+individuals, communities and natural environments. This
+indicator will measure levels of volunteering in the ACT and
+the types of volunteering opportunities people are
+undertaking in our community.",27,Volunteers,This measure shows the proportion of adults who have volunteered in the last 12 months.,"Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Carers,Carer with < 15 hours per week caring obligations,44.339447,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Levels of volunteering,"Volunteering plays an important role in the ACT community
+and contributes to building healthier and more resilient
+individuals, communities and natural environments. This
+indicator will measure levels of volunteering in the ACT and
+the types of volunteering opportunities people are
+undertaking in our community.",27,Volunteers,This measure shows the proportion of adults who have volunteered in the last 12 months.,"Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Gender,Male,37.19176,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Levels of volunteering,"Volunteering plays an important role in the ACT community
+and contributes to building healthier and more resilient
+individuals, communities and natural environments. This
+indicator will measure levels of volunteering in the ACT and
+the types of volunteering opportunities people are
+undertaking in our community.",27,Volunteers,This measure shows the proportion of adults who have volunteered in the last 12 months.,"Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,64-75,44.062363,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Levels of volunteering,"Volunteering plays an important role in the ACT community
+and contributes to building healthier and more resilient
+individuals, communities and natural environments. This
+indicator will measure levels of volunteering in the ACT and
+the types of volunteering opportunities people are
+undertaking in our community.",27,Volunteers,This measure shows the proportion of adults who have volunteered in the last 12 months.,"Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,UC Survey Option,Volunteered at least once,37.739708,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Levels of volunteering,"Volunteering plays an important role in the ACT community
+and contributes to building healthier and more resilient
+individuals, communities and natural environments. This
+indicator will measure levels of volunteering in the ACT and
+the types of volunteering opportunities people are
+undertaking in our community.",27,Volunteers,This measure shows the proportion of adults who have volunteered in the last 12 months.,"Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Gender,Female,38.254868,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Levels of volunteering,"Volunteering plays an important role in the ACT community
+and contributes to building healthier and more resilient
+individuals, communities and natural environments. This
+indicator will measure levels of volunteering in the ACT and
+the types of volunteering opportunities people are
+undertaking in our community.",27,Volunteers,This measure shows the proportion of adults who have volunteered in the last 12 months.,"Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,55-64,36.65736,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Levels of volunteering,"Volunteering plays an important role in the ACT community
+and contributes to building healthier and more resilient
+individuals, communities and natural environments. This
+indicator will measure levels of volunteering in the ACT and
+the types of volunteering opportunities people are
+undertaking in our community.",27,Volunteers,This measure shows the proportion of adults who have volunteered in the last 12 months.,"Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,75+,33.527138,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Levels of volunteering,"Volunteering plays an important role in the ACT community
+and contributes to building healthier and more resilient
+individuals, communities and natural environments. This
+indicator will measure levels of volunteering in the ACT and
+the types of volunteering opportunities people are
+undertaking in our community.",27,Volunteers,This measure shows the proportion of adults who have volunteered in the last 12 months.,"Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Children in household,Children aged 5-17 in household,50.357567,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Levels of volunteering,"Volunteering plays an important role in the ACT community
+and contributes to building healthier and more resilient
+individuals, communities and natural environments. This
+indicator will measure levels of volunteering in the ACT and
+the types of volunteering opportunities people are
+undertaking in our community.",27,Volunteers,This measure shows the proportion of adults who have volunteered in the last 12 months.,"Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,UC Survey Option,Never volunteered,25.619205,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Levels of volunteering,"Volunteering plays an important role in the ACT community
+and contributes to building healthier and more resilient
+individuals, communities and natural environments. This
+indicator will measure levels of volunteering in the ACT and
+the types of volunteering opportunities people are
+undertaking in our community.",27,Volunteers,This measure shows the proportion of adults who have volunteered in the last 12 months.,"Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - broad groups,50-64,38.82528,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Levels of volunteering,"Volunteering plays an important role in the ACT community
+and contributes to building healthier and more resilient
+individuals, communities and natural environments. This
+indicator will measure levels of volunteering in the ACT and
+the types of volunteering opportunities people are
+undertaking in our community.",27,Volunteers,This measure shows the proportion of adults who have volunteered in the last 12 months.,"Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Carers,Carer,46.471725,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Levels of volunteering,"Volunteering plays an important role in the ACT community
+and contributes to building healthier and more resilient
+individuals, communities and natural environments. This
+indicator will measure levels of volunteering in the ACT and
+the types of volunteering opportunities people are
+undertaking in our community.",27,Volunteers,This measure shows the proportion of adults who have volunteered in the last 12 months.,"Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Carers,"Carer with 15 or more hours per week caring obligations, or varied/hard to say hours",48.779526,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Levels of volunteering,"Volunteering plays an important role in the ACT community
+and contributes to building healthier and more resilient
+individuals, communities and natural environments. This
+indicator will measure levels of volunteering in the ACT and
+the types of volunteering opportunities people are
+undertaking in our community.",27,Volunteers,This measure shows the proportion of adults who have volunteered in the last 12 months.,"Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Children in household,Children aged 0-4 in household,33.642784,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Levels of volunteering,"Volunteering plays an important role in the ACT community
+and contributes to building healthier and more resilient
+individuals, communities and natural environments. This
+indicator will measure levels of volunteering in the ACT and
+the types of volunteering opportunities people are
+undertaking in our community.",27,Volunteers,This measure shows the proportion of adults who have volunteered in the last 12 months.,"Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,CALD 1,Born in Australia,40.412987,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Levels of volunteering,"Volunteering plays an important role in the ACT community
+and contributes to building healthier and more resilient
+individuals, communities and natural environments. This
+indicator will measure levels of volunteering in the ACT and
+the types of volunteering opportunities people are
+undertaking in our community.",27,Volunteers,This measure shows the proportion of adults who have volunteered in the last 12 months.,"Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,25-34,28.016949,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Levels of volunteering,"Volunteering plays an important role in the ACT community
+and contributes to building healthier and more resilient
+individuals, communities and natural environments. This
+indicator will measure levels of volunteering in the ACT and
+the types of volunteering opportunities people are
+undertaking in our community.",27,Volunteers,This measure shows the proportion of adults who have volunteered in the last 12 months.,"Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,45-54,44.79981,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Levels of volunteering,"Volunteering plays an important role in the ACT community
+and contributes to building healthier and more resilient
+individuals, communities and natural environments. This
+indicator will measure levels of volunteering in the ACT and
+the types of volunteering opportunities people are
+undertaking in our community.",27,Volunteers,This measure shows the proportion of adults who have volunteered in the last 12 months.,"Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,CALD 1,Born overseas - English speaking country,38.209846,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Levels of volunteering,"Volunteering plays an important role in the ACT community
+and contributes to building healthier and more resilient
+individuals, communities and natural environments. This
+indicator will measure levels of volunteering in the ACT and
+the types of volunteering opportunities people are
+undertaking in our community.",27,Volunteers,This measure shows the proportion of adults who have volunteered in the last 12 months.,"Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - broad groups,18-29,32.269352,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Levels of volunteering,"Volunteering plays an important role in the ACT community
+and contributes to building healthier and more resilient
+individuals, communities and natural environments. This
+indicator will measure levels of volunteering in the ACT and
+the types of volunteering opportunities people are
+undertaking in our community.",27,Volunteers,This measure shows the proportion of adults who have volunteered in the last 12 months.,"Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,LGBTIQ+,Not LGBTIQ+,38.339268,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Levels of volunteering,"Volunteering plays an important role in the ACT community
+and contributes to building healthier and more resilient
+individuals, communities and natural environments. This
+indicator will measure levels of volunteering in the ACT and
+the types of volunteering opportunities people are
+undertaking in our community.",27,Volunteers,This measure shows the proportion of adults who have volunteered in the last 12 months.,"Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Disability,Person with no disability,35.06116,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Levels of volunteering,"Volunteering plays an important role in the ACT community
+and contributes to building healthier and more resilient
+individuals, communities and natural environments. This
+indicator will measure levels of volunteering in the ACT and
+the types of volunteering opportunities people are
+undertaking in our community.",27,Volunteers,This measure shows the proportion of adults who have volunteered in the last 12 months.,"Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - broad groups,30-49,38.7682,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Levels of volunteering,"Volunteering plays an important role in the ACT community
+and contributes to building healthier and more resilient
+individuals, communities and natural environments. This
+indicator will measure levels of volunteering in the ACT and
+the types of volunteering opportunities people are
+undertaking in our community.",27,Volunteers,This measure shows the proportion of adults who have volunteered in the last 12 months.,"Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,CALD 1,Born overseas - non-English speaking country,31.478125,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Levels of volunteering,"Volunteering plays an important role in the ACT community
+and contributes to building healthier and more resilient
+individuals, communities and natural environments. This
+indicator will measure levels of volunteering in the ACT and
+the types of volunteering opportunities people are
+undertaking in our community.",27,Volunteers,This measure shows the proportion of adults who have volunteered in the last 12 months.,"Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - broad groups,65+,40.574272,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Levels of volunteering,"Volunteering plays an important role in the ACT community
+and contributes to building healthier and more resilient
+individuals, communities and natural environments. This
+indicator will measure levels of volunteering in the ACT and
+the types of volunteering opportunities people are
+undertaking in our community.",27,Volunteers,This measure shows the proportion of adults who have volunteered in the last 12 months.,"Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,UC Survey Option,Used to volunteer,36.641087,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Levels of volunteering,"Volunteering plays an important role in the ACT community
+and contributes to building healthier and more resilient
+individuals, communities and natural environments. This
+indicator will measure levels of volunteering in the ACT and
+the types of volunteering opportunities people are
+undertaking in our community.",27,Volunteers,This measure shows the proportion of adults who have volunteered in the last 12 months.,"Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Carers,Not a carer,36.7823,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Levels of volunteering,"Volunteering plays an important role in the ACT community
+and contributes to building healthier and more resilient
+individuals, communities and natural environments. This
+indicator will measure levels of volunteering in the ACT and
+the types of volunteering opportunities people are
+undertaking in our community.",27,Volunteers,This measure shows the proportion of adults who have volunteered in the last 12 months.,"Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,18-24,34.348587,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Levels of volunteering,"Volunteering plays an important role in the ACT community
+and contributes to building healthier and more resilient
+individuals, communities and natural environments. This
+indicator will measure levels of volunteering in the ACT and
+the types of volunteering opportunities people are
+undertaking in our community.",27,Volunteers,This measure shows the proportion of adults who have volunteered in the last 12 months.,"Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,35-44,42.737995,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Levels of volunteering,"Volunteering plays an important role in the ACT community
+and contributes to building healthier and more resilient
+individuals, communities and natural environments. This
+indicator will measure levels of volunteering in the ACT and
+the types of volunteering opportunities people are
+undertaking in our community.",27,Volunteers,This measure shows the proportion of adults who have volunteered in the last 12 months.,"Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Disability,"Person with disability/long-term health condition, little/no difficulty with daily functions",44.533627,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Levels of volunteering,"Volunteering plays an important role in the ACT community
+and contributes to building healthier and more resilient
+individuals, communities and natural environments. This
+indicator will measure levels of volunteering in the ACT and
+the types of volunteering opportunities people are
+undertaking in our community.",27,Volunteers,This measure shows the proportion of adults who have volunteered in the last 12 months.,"Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,LGBTIQ+,LGBTIQ+,39.65767,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Participation in community events and activities,"This indicator will measure self-rated frequency of
+engagement by Canberrans in events, meetings or activities
+including&#58; sports, arts and culture, clubs, churches or spiritual
+places, and other social activities in the community or at
+work.",28,Level of participation in events and activities,"This measure shows the proportion of adults who take part in group events. The activities include community events, sports groups, local community clubs or hobby groups and local online community groups.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,UC Survey Option,High,27.611315,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Participation in community events and activities,"This indicator will measure self-rated frequency of
+engagement by Canberrans in events, meetings or activities
+including&#58; sports, arts and culture, clubs, churches or spiritual
+places, and other social activities in the community or at
+work.",28,Level of participation in events and activities,"This measure shows the proportion of adults who take part in group events. The activities include community events, sports groups, local community clubs or hobby groups and local online community groups.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Disability,"Person with disability/long-term health condition, little/no difficulty with daily functions",30.323774,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Participation in community events and activities,"This indicator will measure self-rated frequency of
+engagement by Canberrans in events, meetings or activities
+including&#58; sports, arts and culture, clubs, churches or spiritual
+places, and other social activities in the community or at
+work.",28,Level of participation in events and activities,"This measure shows the proportion of adults who take part in group events. The activities include community events, sports groups, local community clubs or hobby groups and local online community groups.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Disability,Person with no disability,29.871231,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Participation in community events and activities,"This indicator will measure self-rated frequency of
+engagement by Canberrans in events, meetings or activities
+including&#58; sports, arts and culture, clubs, churches or spiritual
+places, and other social activities in the community or at
+work.",28,Level of participation in events and activities,"This measure shows the proportion of adults who take part in group events. The activities include community events, sports groups, local community clubs or hobby groups and local online community groups.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Carers,Not a carer,28.380478,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Participation in community events and activities,"This indicator will measure self-rated frequency of
+engagement by Canberrans in events, meetings or activities
+including&#58; sports, arts and culture, clubs, churches or spiritual
+places, and other social activities in the community or at
+work.",28,Level of participation in events and activities,"This measure shows the proportion of adults who take part in group events. The activities include community events, sports groups, local community clubs or hobby groups and local online community groups.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,UC Survey Option,Moderate,53.163742,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Participation in community events and activities,"This indicator will measure self-rated frequency of
+engagement by Canberrans in events, meetings or activities
+including&#58; sports, arts and culture, clubs, churches or spiritual
+places, and other social activities in the community or at
+work.",28,Level of participation in events and activities,"This measure shows the proportion of adults who take part in group events. The activities include community events, sports groups, local community clubs or hobby groups and local online community groups.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Gender,Female,26.990276,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Participation in community events and activities,"This indicator will measure self-rated frequency of
+engagement by Canberrans in events, meetings or activities
+including&#58; sports, arts and culture, clubs, churches or spiritual
+places, and other social activities in the community or at
+work.",28,Level of participation in events and activities,"This measure shows the proportion of adults who take part in group events. The activities include community events, sports groups, local community clubs or hobby groups and local online community groups.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Disability,"Person with disability, has moderate or high difficulty with daily functions",20.00243,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Participation in community events and activities,"This indicator will measure self-rated frequency of
+engagement by Canberrans in events, meetings or activities
+including&#58; sports, arts and culture, clubs, churches or spiritual
+places, and other social activities in the community or at
+work.",28,Level of participation in events and activities,"This measure shows the proportion of adults who take part in group events. The activities include community events, sports groups, local community clubs or hobby groups and local online community groups.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - broad groups,30-49,31.833761,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Participation in community events and activities,"This indicator will measure self-rated frequency of
+engagement by Canberrans in events, meetings or activities
+including&#58; sports, arts and culture, clubs, churches or spiritual
+places, and other social activities in the community or at
+work.",28,Level of participation in events and activities,"This measure shows the proportion of adults who take part in group events. The activities include community events, sports groups, local community clubs or hobby groups and local online community groups.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,UC Survey Option,Low,19.224943,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Participation in community events and activities,"This indicator will measure self-rated frequency of
+engagement by Canberrans in events, meetings or activities
+including&#58; sports, arts and culture, clubs, churches or spiritual
+places, and other social activities in the community or at
+work.",28,Level of participation in events and activities,"This measure shows the proportion of adults who take part in group events. The activities include community events, sports groups, local community clubs or hobby groups and local online community groups.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,LGBTIQ+,Not LGBTIQ+,27.996138,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Participation in community events and activities,"This indicator will measure self-rated frequency of
+engagement by Canberrans in events, meetings or activities
+including&#58; sports, arts and culture, clubs, churches or spiritual
+places, and other social activities in the community or at
+work.",28,Level of participation in events and activities,"This measure shows the proportion of adults who take part in group events. The activities include community events, sports groups, local community clubs or hobby groups and local online community groups.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,45-54,25.299442,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Participation in community events and activities,"This indicator will measure self-rated frequency of
+engagement by Canberrans in events, meetings or activities
+including&#58; sports, arts and culture, clubs, churches or spiritual
+places, and other social activities in the community or at
+work.",28,Level of participation in events and activities,"This measure shows the proportion of adults who take part in group events. The activities include community events, sports groups, local community clubs or hobby groups and local online community groups.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,LGBTIQ+,LGBTIQ+,28.809134,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Participation in community events and activities,"This indicator will measure self-rated frequency of
+engagement by Canberrans in events, meetings or activities
+including&#58; sports, arts and culture, clubs, churches or spiritual
+places, and other social activities in the community or at
+work.",28,Level of participation in events and activities,"This measure shows the proportion of adults who take part in group events. The activities include community events, sports groups, local community clubs or hobby groups and local online community groups.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Carers,"Carer with 15 or more hours per week caring obligations, or varied/hard to say hours",16.283333,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Participation in community events and activities,"This indicator will measure self-rated frequency of
+engagement by Canberrans in events, meetings or activities
+including&#58; sports, arts and culture, clubs, churches or spiritual
+places, and other social activities in the community or at
+work.",28,Level of participation in events and activities,"This measure shows the proportion of adults who take part in group events. The activities include community events, sports groups, local community clubs or hobby groups and local online community groups.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - broad groups,65+,24.382788,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Participation in community events and activities,"This indicator will measure self-rated frequency of
+engagement by Canberrans in events, meetings or activities
+including&#58; sports, arts and culture, clubs, churches or spiritual
+places, and other social activities in the community or at
+work.",28,Level of participation in events and activities,"This measure shows the proportion of adults who take part in group events. The activities include community events, sports groups, local community clubs or hobby groups and local online community groups.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Children in household,Children aged 0-4 in household,31.98936,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Participation in community events and activities,"This indicator will measure self-rated frequency of
+engagement by Canberrans in events, meetings or activities
+including&#58; sports, arts and culture, clubs, churches or spiritual
+places, and other social activities in the community or at
+work.",28,Level of participation in events and activities,"This measure shows the proportion of adults who take part in group events. The activities include community events, sports groups, local community clubs or hobby groups and local online community groups.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Carers,Carer with < 15 hours per week caring obligations,28.315222,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Participation in community events and activities,"This indicator will measure self-rated frequency of
+engagement by Canberrans in events, meetings or activities
+including&#58; sports, arts and culture, clubs, churches or spiritual
+places, and other social activities in the community or at
+work.",28,Level of participation in events and activities,"This measure shows the proportion of adults who take part in group events. The activities include community events, sports groups, local community clubs or hobby groups and local online community groups.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Gender,Male,28.273184,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Participation in community events and activities,"This indicator will measure self-rated frequency of
+engagement by Canberrans in events, meetings or activities
+including&#58; sports, arts and culture, clubs, churches or spiritual
+places, and other social activities in the community or at
+work.",28,Level of participation in events and activities,"This measure shows the proportion of adults who take part in group events. The activities include community events, sports groups, local community clubs or hobby groups and local online community groups.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Children in household,No children in household,24.326303,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Participation in community events and activities,"This indicator will measure self-rated frequency of
+engagement by Canberrans in events, meetings or activities
+including&#58; sports, arts and culture, clubs, churches or spiritual
+places, and other social activities in the community or at
+work.",28,Level of participation in events and activities,"This measure shows the proportion of adults who take part in group events. The activities include community events, sports groups, local community clubs or hobby groups and local online community groups.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - broad groups,50-64,20.256071,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Participation in community events and activities,"This indicator will measure self-rated frequency of
+engagement by Canberrans in events, meetings or activities
+including&#58; sports, arts and culture, clubs, churches or spiritual
+places, and other social activities in the community or at
+work.",28,Level of participation in events and activities,"This measure shows the proportion of adults who take part in group events. The activities include community events, sports groups, local community clubs or hobby groups and local online community groups.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,18-24,30.115929,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Participation in community events and activities,"This indicator will measure self-rated frequency of
+engagement by Canberrans in events, meetings or activities
+including&#58; sports, arts and culture, clubs, churches or spiritual
+places, and other social activities in the community or at
+work.",28,Level of participation in events and activities,"This measure shows the proportion of adults who take part in group events. The activities include community events, sports groups, local community clubs or hobby groups and local online community groups.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,75+,23.923512,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Participation in community events and activities,"This indicator will measure self-rated frequency of
+engagement by Canberrans in events, meetings or activities
+including&#58; sports, arts and culture, clubs, churches or spiritual
+places, and other social activities in the community or at
+work.",28,Level of participation in events and activities,"This measure shows the proportion of adults who take part in group events. The activities include community events, sports groups, local community clubs or hobby groups and local online community groups.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - broad groups,18-29,30.8479,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Participation in community events and activities,"This indicator will measure self-rated frequency of
+engagement by Canberrans in events, meetings or activities
+including&#58; sports, arts and culture, clubs, churches or spiritual
+places, and other social activities in the community or at
+work.",28,Level of participation in events and activities,"This measure shows the proportion of adults who take part in group events. The activities include community events, sports groups, local community clubs or hobby groups and local online community groups.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Children in household,Children aged 5-17 in household,36.05415,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Participation in community events and activities,"This indicator will measure self-rated frequency of
+engagement by Canberrans in events, meetings or activities
+including&#58; sports, arts and culture, clubs, churches or spiritual
+places, and other social activities in the community or at
+work.",28,Level of participation in events and activities,"This measure shows the proportion of adults who take part in group events. The activities include community events, sports groups, local community clubs or hobby groups and local online community groups.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Carers,Carer,21.41141,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Participation in community events and activities,"This indicator will measure self-rated frequency of
+engagement by Canberrans in events, meetings or activities
+including&#58; sports, arts and culture, clubs, churches or spiritual
+places, and other social activities in the community or at
+work.",28,Level of participation in events and activities,"This measure shows the proportion of adults who take part in group events. The activities include community events, sports groups, local community clubs or hobby groups and local online community groups.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,35-44,36.176823,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Participation in community events and activities,"This indicator will measure self-rated frequency of
+engagement by Canberrans in events, meetings or activities
+including&#58; sports, arts and culture, clubs, churches or spiritual
+places, and other social activities in the community or at
+work.",28,Level of participation in events and activities,"This measure shows the proportion of adults who take part in group events. The activities include community events, sports groups, local community clubs or hobby groups and local online community groups.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,CALD 1,Born in Australia,24.83651,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Participation in community events and activities,"This indicator will measure self-rated frequency of
+engagement by Canberrans in events, meetings or activities
+including&#58; sports, arts and culture, clubs, churches or spiritual
+places, and other social activities in the community or at
+work.",28,Level of participation in events and activities,"This measure shows the proportion of adults who take part in group events. The activities include community events, sports groups, local community clubs or hobby groups and local online community groups.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,CALD 1,Born overseas - English speaking country,20.301115,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Participation in community events and activities,"This indicator will measure self-rated frequency of
+engagement by Canberrans in events, meetings or activities
+including&#58; sports, arts and culture, clubs, churches or spiritual
+places, and other social activities in the community or at
+work.",28,Level of participation in events and activities,"This measure shows the proportion of adults who take part in group events. The activities include community events, sports groups, local community clubs or hobby groups and local online community groups.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,55-64,21.452946,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Participation in community events and activities,"This indicator will measure self-rated frequency of
+engagement by Canberrans in events, meetings or activities
+including&#58; sports, arts and culture, clubs, churches or spiritual
+places, and other social activities in the community or at
+work.",28,Level of participation in events and activities,"This measure shows the proportion of adults who take part in group events. The activities include community events, sports groups, local community clubs or hobby groups and local online community groups.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,25-34,28.345695,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Participation in community events and activities,"This indicator will measure self-rated frequency of
+engagement by Canberrans in events, meetings or activities
+including&#58; sports, arts and culture, clubs, churches or spiritual
+places, and other social activities in the community or at
+work.",28,Level of participation in events and activities,"This measure shows the proportion of adults who take part in group events. The activities include community events, sports groups, local community clubs or hobby groups and local online community groups.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,CALD 1,Born overseas - non-English speaking country,36.147507,Proportion (%),,,,,,
+Social connection,"Being connected with family, friends and community",Participation in community events and activities,"This indicator will measure self-rated frequency of
+engagement by Canberrans in events, meetings or activities
+including&#58; sports, arts and culture, clubs, churches or spiritual
+places, and other social activities in the community or at
+work.",28,Level of participation in events and activities,"This measure shows the proportion of adults who take part in group events. The activities include community events, sports groups, local community clubs or hobby groups and local online community groups.","Living Well in the ACT Region survey, University of Canberra (2020) - https&#58;//www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,64-75,24.611515,Proportion (%),,,,,,

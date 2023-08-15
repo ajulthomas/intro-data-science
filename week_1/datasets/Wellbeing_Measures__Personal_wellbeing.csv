@@ -1,0 +1,435 @@
+Domain,DomainDefinition,Indicator,IndicatorDefinition,MeasureID,Measure,MeasureDefinition,DataSource,PeriodEndDate,Type,CategoryName,CategoryOption,Value,Unit,RSE,LowerCI,UpperCI,ComparisonCategoryName,ComparisonCategoryOption,Notes
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Carers,"Carer with 15 or more hours per week caring obligations, or varied/hard to say hours",17.744663,Proportion (%),,5.039023,5.7353487,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,CALD 1,Born overseas - English speaking country,23.768438,Proportion (%),,5.8972197,6.612009,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,55-64,33.74623,Proportion (%),,3.7365437,3.8406208,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,LGBTIQ+,Not LGBTIQ+,34.85402,Proportion (%),,1.8692244,1.8923154,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Age - detailed groups,35-44,20.502527,Proportion (%),,4.988731,5.826068,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Age - broad groups,50-64,24.20121,Proportion (%),,4.0180583,4.315644,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Disability,"Person with disability, has moderate or high difficulty with daily functions",25.099796,Proportion (%),,2.8417823,5.8059835,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - broad groups,18-29,31.60791,Proportion (%),,6.676632,7.4130974,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Age - detailed groups,64-75,36.270702,Proportion (%),,4.9725695,5.1486015,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Gender,Female,24.69336,Proportion (%),,2.7255173,2.8653636,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - broad groups,30-49,31.34663,Proportion (%),,3.4434214,3.6113012,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Disability,Person with no disability,38.321934,Proportion (%),,2.4122357,4.850061,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,45-54,27.216673,Proportion (%),,4.121449,4.4110446,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Children in household,No children in household,33.499138,Proportion (%),,2.2459552,2.2727835,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Carers,Not a carer,34.61128,Proportion (%),,1.8796387,1.9030969,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,CALD 1,Born overseas - English speaking country,33.769234,Proportion (%),,4.8759995,4.9413185,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Age - broad groups,18-29,24.25978,Proportion (%),,5.509449,6.410886,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Disability,"Person with disability/long-term health condition, little/no difficulty with daily functions",28.727314,Proportion (%),,4.037015,8.171228,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,18-24,25.65121,Proportion (%),,8.9972105,10.959988,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Age - detailed groups,25-34,22.108921,Proportion (%),,5.0425205,6.020514,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Age - broad groups,30-49,21.406836,Proportion (%),,3.6486647,4.053915,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,75+,46.713398,Proportion (%),,4.6585774,4.6842475,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Gender,Male,29.014486,Proportion (%),,3.72635,3.87648,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Children in household,Children aged 0-4 in household,45.839302,Proportion (%),,5.775133,6.170953,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,UC Survey Option,Low,20.699177,Proportion (%),,1.3643441,1.4242796,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,LGBTIQ+,LGBTIQ+,15.274636,Proportion (%),,6.5586863,8.769306,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,UC Survey Option,Typical,45.63738,Proportion (%),,1.7549589,1.7700311,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,LGBTIQ+,LGBTIQ+,15.380568,Proportion (%),,7.3679156,8.596277,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Age - detailed groups,55-64,30.848238,Proportion (%),,4.81385,5.160091,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,UC Survey Option,High,26.86134,Proportion (%),,2.2139986,2.2895799,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - broad groups,65+,46.368904,Proportion (%),,2.7744663,2.7859893,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,CALD 1,Born overseas - non-English speaking country,32.762386,Proportion (%),,7.2184315,7.8291893,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Age - detailed groups,75+,54.018105,Proportion (%),,7.5007596,7.5839734,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Disability,"Person with disability, has moderate or high difficulty with daily functions",18.40473,Proportion (%),,3.5703382,3.8928163,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,64-75,46.211464,Proportion (%),,3.4443681,3.4642265,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Gender,Male,32.348164,Proportion (%),,2.5587606,2.604439,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,LGBTIQ+,Not LGBTIQ+,27.828997,Proportion (%),,2.3327842,2.412919,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,UC Survey Option,Typical,44.760357,Proportion (%),,2.4548326,2.4693408,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,CALD 1,Born in Australia,31.210443,Proportion (%),,2.0018132,2.0334423,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Age - detailed groups,18-24,23.012732,Proportion (%),,7.0753326,8.870553,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Carers,Carer,20.706173,Proportion (%),,4.600534,5.1910133,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Children in household,Children aged 0-4 in household,17.246784,Proportion (%),,5.6035185,7.045888,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Children in household,Children aged 5-17 in household,23.949389,Proportion (%),,4.1833377,4.485857,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Children in household,No children in household,33.810177,Proportion (%),,3.2284715,3.3465128,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Age - broad groups,65+,42.100353,Proportion (%),,4.1810045,4.2713566,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,35-44,24.958473,Proportion (%),,4.6893,5.045571,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Age - detailed groups,45-54,21.626734,Proportion (%),,5.1214714,5.807648,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Disability,"Person with disability/long-term health condition, little/no difficulty with daily functions",24.321198,Proportion (%),,4.8753343,5.3399677,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Children in household,Children aged 5-17 in household,18.560917,Proportion (%),,4.40576,5.0243096,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Carers,Carer,26.64848,Proportion (%),,4.359953,4.58502,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,UC Survey Option,Low,28.378305,Proportion (%),,2.0775702,2.1714017,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Carers,Carer with < 15 hours per week caring obligations,38.39591,Proportion (%),,6.9207377,7.027509,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Disability,Person with no disability,33.114197,Proportion (%),,3.2201507,3.335686,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,CALD 1,Born in Australia,24.654873,Proportion (%),,2.4925125,2.5885935,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - broad groups,50-64,28.605381,Proportion (%),,3.1303222,3.231876,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Age - detailed groups,25-34,38.58333,Proportion (%),,6.0308228,6.514618,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,CALD 1,Born overseas - non-English speaking country,39.337048,Proportion (%),,5.3704596,5.6038446,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,UC Survey Option,High,33.663445,Proportion (%),,1.7309234,1.7519222,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",12/31/2019 12:00:00 AM,ACT,Gender,Female,34.92944,Proportion (%),,2.3988152,2.440373,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Carers,Not a carer,27.980396,Proportion (%),,2.4343302,2.5183275,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Carers,"Carer with 15 or more hours per week caring obligations, or varied/hard to say hours",24.505001,Proportion (%),,5.570895,6.763011,,,
+Personal wellbeing,,Personal wellbeing,"Personal wellbeing is a measure of an individual’s
+satisfaction with their standard of living, health,
+what they are achieving in life, relationships, safety,
+community-connectedness, and future security.
+This indicator will measure the overall wellbeing of
+people in the ACT using the Personal Wellbeing
+Index",84,Personal Wellbeing Index,"This measure provides an overall indication of the satisfaction of Canberrans with their standard of living, health, what they are achieving in life, relationships, safety, community-connectedness, and future security.","Living Well in the ACT Region survey, University of Canberra (2020) - www.canberra.edu.au/research/institutes/health-research-institute/files/files-living-well-in-the-act/Living-well-in-the-ACT-region_Part-1_Indicators_7Dec2020.pdf",05/31/2020 12:00:00 AM,ACT,Carers,Carer with < 15 hours per week caring obligations,15.752109,Proportion (%),,7.289894,8.399942,,,
