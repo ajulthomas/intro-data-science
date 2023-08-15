@@ -1,0 +1,53 @@
+---
+title: "Lecture_week3"
+author: "Ibrahim"
+date: "22/02/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Creating vectors 
+## Character vectors 
+```{r, echo=TRUE}
+# Create atomic vectors for data types
+houses.addresses <-  c("7 George st", 
+                      "18/5 Irwan cresent", 
+                      "8 Morad close", 
+                      "1/2 London Circuit")
+houses.addresses
+length(houses.addresses)
+class(houses.addresses)
+is.character(houses.addresses)
+str(houses.addresses)
+```
+
+## Numeric vectors
+```{r, echo=TRUE}
+# Create numeric vectors
+houses.area <- c(420.5, 220.15, 750.4, 120.5)
+houses.area
+length(houses.area)
+mode(houses.area)
+str(houses.area)
+```
+
+## Integer vectors
+```{r, echo=TRUE}
+houses.bedrooms <- as.integer(c(2, 3, 5, 2))
+houses.bedrooms
+class(houses.bedrooms)
+length(houses.bedrooms)
+str(houses.bedrooms)
+```
+
+## Logical vectors
+```{r, echo=TRUE}
+houses.has.garden <- c(T, F, TRUE, FALSE)
+houses.has.garden
+length(houses.has.garden)
+str(houses.has.garden)
+
+```

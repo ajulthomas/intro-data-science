@@ -1,0 +1,55 @@
+---
+title: "Factor as a data structure"
+author: "Ibrahim"
+date: "22/02/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Here we demonstrate examples on creating factors based on previuosly declared vectors.
+```{r, echo=TRUE}
+# Creating vectors
+
+# Create character vector for types of the properties 
+houses.types.chr <- c("House", "Unit", "House", "Unit")
+houses.types.chr
+str(houses.types.chr)
+# Create integral vector for types of the properties 
+houses.types <- c(1L, 2L, 1L, 2L)
+houses.types
+str(houses.types)
+```
+
+Now let's create a factor
+```{r, echo=TRUE}
+houses.types <- factor(houses.types.chr)
+houses.types
+# underlying representation of factor
+class(houses.types)
+str(houses.types)
+# Searching using characters
+houses.types[houses.types == "House"] # not effecient
+# Searching using integer
+houses.types[as.numeric(houses.types) == 1] # effecient
+```
+
+Here is another example:
+```{r, echo=TRUE}
+employees.gender <- rep(c("female", "male", "male", "female", "male"), 10)
+employees.gender
+employees <- factor(employees.gender)
+str(employees)
+```
+Yet another one
+```{r, echo=TRUE}
+# order of levels
+x <- factor(c("yes", "no", "yes", "no"))
+x
+y <- factor(c("yes", "no", "yes", "no"), levels= c("yes", "no"))
+y
+
+```
+

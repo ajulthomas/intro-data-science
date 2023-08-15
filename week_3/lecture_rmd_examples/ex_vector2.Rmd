@@ -1,0 +1,69 @@
+---
+title: "Operations on Vectors"
+author: "Ibrahim"
+date: "22/02/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Operations on vectors
+
+## 1. Arithmetic operations on vectors
+```{r, echo=TRUE}
+x <- 6:15
+y <- 21:30
+# arithmetic op on vectors
+x
+y
+x+y
+x * y
+x / y
+```
+
+## 2. Logical operations on vectors
+```{r, echo=TRUE}
+x
+x > 8
+x >= 8
+y == 28
+```
+
+## 3. Sub-setting operations on vectors
+```{r, echo=TRUE}
+x[1]
+x[2]
+y[2:5]
+x
+y
+y[x > 8]
+x
+x[x >= 7]
+x[y<=25]
+```
+
+## 4. Coercion operations on vectors (i.e., converting one type to another)
+### implicit coercion
+```{r, echo=TRUE}
+z <- c(8, 7.4, 14, "5")
+str(z)
+```
+
+### explicit coercion 
+```{r, echo=TRUE}
+# sensible coercion
+as.numeric(x >= 9) # converting logical values to numeric values
+as.character(x)
+
+houses.area <- c(420.5, 220.15, 750.4, 120.5)
+houses.area
+as.integer(houses.area)
+
+# non sensible coercion
+houses.addresses <- c("7 George st", "18/5 Irwan cresent", "8 Morad close", "1/2 London Circuit")
+houses.addresses
+as.numeric(houses.addresses) # warning here and NAs are the result 
+```
+

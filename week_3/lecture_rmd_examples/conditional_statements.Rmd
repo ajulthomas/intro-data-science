@@ -1,0 +1,64 @@
+---
+title: "conditional_statements"
+author: "Ibrahim Radwan"
+date: "2023-02-21"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This notebook demonstrates the usage the conditional statements (if and if--else)
+
+- Generate random sequenses:
+```{r}
+# Generate random marks for the students 
+students.length <- 100 
+students.marks <- rnorm(students.length, mean= 50, sd=30) 
+
+# compute average 
+students.average <- mean(students.marks) 
+print(paste("average mark of the class is:", students.average)) 
+
+```
+
+- using (if) as a conditional statement:
+```{r}
+# A check average mark of the class 
+if(students.average >= 50){ 
+  print(paste("The performance is OK, as the average =", students.average)) 
+} 
+print("Test is completed!") 
+
+```
+
+- Using if - else
+```{r}
+# A check average mark of the class 
+if(students.average >= 50){ 
+  print(paste("The performance is OK, as the average =", students.average)) 
+}else{
+  print(paste("The performance is bad, as the average =", students.average)) 
+} 
+print("Test is completed!") 
+
+```
+
+- Using  nested if - else
+```{r}
+# multiple if else
+  students.average <- students.average + 10
+  if(students.average < 50){
+    print(paste("The performance is bad, as the average =", students.average))
+  }else if(students.average < 60){
+    print(paste("The performance is good, as the average =", students.average))
+  }else{
+    print(paste("The performance is Excellent, as the average =", students.average))
+  }
+  print("Test is completed!")
+```
+
+
