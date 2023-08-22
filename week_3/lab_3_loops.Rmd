@@ -1,0 +1,61 @@
+---
+title: "Lab 3 - Loops"
+author: "Ajul Thomas"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+
+nums <- c(10, 13, 14, 15, 16)
+for (i in nums) {
+  print(i)
+}
+
+print("Using while loops")
+
+
+```
+
+## Exercise 5
+
+```{r}
+
+emails <- c('myname@mycompany.com',
+            'my@mycompany.com',
+            'name@mycompany.net',
+            'work@mycompany.org',
+            'mywork#mycompany.net',
+            'myproduct#mycompany.com',
+            'myCoffee2mycompany.org',
+            'mycar@mycompany.com',
+            'mypet@mycompany.com',
+            'hobbies!mycompany.com')
+
+length(emails)
+valid_emails <- c()
+invalid_emails <-  c()
+
+for (email in emails) {
+  if(grepl("@",email)) {
+    valid_emails <- c(valid_emails, email)
+  }
+  else {
+    invalid_emails <- c(invalid_emails, email)
+  }
+}
+
+cat("Valid emails : ")
+print(valid_emails)
+
+print("=======================================")
+
+cat("Invalid emails: ")
+print(invalid_emails)
+
+```
+

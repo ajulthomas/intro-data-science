@@ -1,0 +1,157 @@
+---
+title: "Lab 3 - Vectors"
+author: "Ajul Thomas"
+date: "2023-08-15"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+A vector is a data type for collection of items that are stored together under a name and has a size, which is the number of these items. The c( ) function can be used to create vectors of homogeneous objects by concatenating them together.
+
+To access elements in a vector, you can use the square brackets, i.e [ ] with index/indices to refer to the items you would like to access. The indices can be either positive or negative. Also they can be either scalar or combination of numbers in another vector or sequence.
+
+```{r}
+
+    x <- c(0.5, 0.6)       ## numeric
+    print(x)
+    
+    x <- c(TRUE, FALSE)    ## logical
+    print(x)
+    
+    x <- c(T, F)           ## logical
+    print(x)
+    
+    x <- c("a", "b", "c")  ## character
+    print(x)
+    
+    x <- 9:29              ## integer
+    print(x)
+    
+    x <- c(1+0i, 2+4i)     ## complex
+    print(x)
+
+
+
+```
+
+## Exercise 2
+
+---
+There are built-in vectors in R, such as LETTERS, which is a vector that contains the uppercase letters of the English alphabet.
+
+Add another chunk of code to generate a vector of each of the following:
+
+1) First 12 letters,
+2) Odd `numbered’ letters,
+3) English vowels (i.e. a, e, i, o, u, y) and
+4) English consonants.
+
+```{r}
+
+# built-in functions
+
+letters # lowercase letters
+LETTERS # uppercase letters
+
+print(letters[1:12])
+
+```
+
+```{r}
+
+# print odd numbers only
+odd_index <- seq(from=1, to=26, by=2)
+odd_index
+
+even_index <- seq(from=2, to=26, by=2)
+even_index
+
+```
+
+```{r}
+
+letters[odd_index]
+
+vowels <- grep("A|E|I|O|U", LETTERS)
+vowels
+
+# printing vowels
+
+letters[vowels]
+LETTERS[vowels]
+
+# printing consonants
+
+letters[-vowels]
+
+length(letters[-vowels])
+
+```
+
+## Exercise 3
+
+---
+
+```{r}
+
+weights.people <-  c("Jack",	"Dione", 	"Reda",	"Sally",	"Adam")
+
+weights.before <- c(78,	72,	78,	79,	105)
+
+weights.after <- c(67,	65,	79,	70,	93)
+
+weights.lost <- weights.before - weights.after
+
+weights.lost
+
+weights.lost.mean <- mean(weights.lost)
+
+weights.lost.mean
+
+weights.lost.max.index <- which.max(weights.lost)
+weights.lost.max.index
+
+weights.lost.min.index <- which.min(weights.lost)
+weights.lost.min.index
+
+paste(weights.people[weights.lost.max.index] , "lost most weight of", max(weights.lost), "Kgs")
+
+paste(weights.people[weights.lost.min.index] , "gained most weight of", min(weights.lost), "Kgs")
+
+```
+
+
+Alternate method to find max and min index:
+
+```{r}
+
+weights.lost == max(weights.lost)
+weights.lost == min(weights.lost)
+
+max_weights_lost_person <-  weights.people[weights.lost == max(weights.lost)]
+max_weights_lost_person
+
+
+min_weights_lost_person <-  weights.people[weights.lost == min(weights.lost)]
+min_weights_lost_person
+
+person_weight_gained <-  weights.people[weights.lost < 0]
+person_weight_gained
+
+
+```
+
+```{r}
+
+if(any(weights.lost > 0)) {
+  
+  print("Someone gained weight")
+  
+}
+
+```
+
+

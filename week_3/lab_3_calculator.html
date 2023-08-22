@@ -11,9 +11,9 @@
 
 <meta name="author" content="Ajul Thomas" />
 
-<meta name="date" content="2023-08-15" />
+<meta name="date" content="2023-08-22" />
 
-<title>Lab 3 - Variables and Data types</title>
+<title>Lab 3 - Calculator</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -350,63 +350,41 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Lab 3 - Variables and Data types</h1>
+<h1 class="title toc-ignore">Lab 3 - Calculator</h1>
 <h4 class="author">Ajul Thomas</h4>
-<h4 class="date">2023-08-15</h4>
+<h4 class="date">2023-08-22</h4>
 
 </div>
 
 
-<div id="exercise-1" class="section level2">
-<h2>Exercise 1</h2>
-<hr />
-<pre class="r"><code># Assign the value 42 to x
-x &lt;- 42
-
-# Print out the value of the variable x
-x</code></pre>
-<pre><code>## [1] 42</code></pre>
-<pre class="r"><code># Change the variable&#39;s value to -63 and print it
-x &lt;- -63
-
-x</code></pre>
-<pre><code>## [1] -63</code></pre>
-<pre class="r"><code># Create another variable called y and assign 32 as its value
-y &lt;- 32
-
-# Add the absolute values of the two number and assign the result to variable z
-z &lt;- abs(x) + abs(y)
-
-# print x, y, and z
-paste(&quot;X --&gt; &quot;, x)</code></pre>
-<pre><code>## [1] &quot;X --&gt;  -63&quot;</code></pre>
-<pre class="r"><code>paste(&quot;y --&gt; &quot;, y) </code></pre>
-<pre><code>## [1] &quot;y --&gt;  32&quot;</code></pre>
-<pre class="r"><code>paste(&quot;z --&gt; &quot;, z)</code></pre>
-<pre><code>## [1] &quot;z --&gt;  95&quot;</code></pre>
-</div>
-<div id="exercise-2" class="section level2">
-<h2>Exercise 2</h2>
-<hr />
-<pre class="r"><code># Declare variables of different types
-my_numeric &lt;- 42
-my_character &lt;- &quot;70&quot;
-my_logical &lt;- FALSE 
-
-# Check class of my_numeric
-class(my_numeric)</code></pre>
-<pre><code>## [1] &quot;numeric&quot;</code></pre>
-<pre class="r"><code># Check class of my_character
-class(my_character)</code></pre>
-<pre><code>## [1] &quot;character&quot;</code></pre>
-<pre class="r"><code># Check class of my_logical
-class(my_logical)</code></pre>
-<pre><code>## [1] &quot;logical&quot;</code></pre>
-<pre class="r"><code># Can you fix this to avoid the error
-res &lt;- my_numeric + as.numeric(my_character)
-
-# </code></pre>
-</div>
+<pre class="r"><code># Simple Calculator
+print(&quot;Select operation.&quot;)</code></pre>
+<pre><code>## [1] &quot;Select operation.&quot;</code></pre>
+<pre class="r"><code>print(&quot;1.Add&quot;)</code></pre>
+<pre><code>## [1] &quot;1.Add&quot;</code></pre>
+<pre class="r"><code>print(&quot;2.Subtract&quot;)</code></pre>
+<pre><code>## [1] &quot;2.Subtract&quot;</code></pre>
+<pre class="r"><code>print(&quot;3.Multiply&quot;)</code></pre>
+<pre><code>## [1] &quot;3.Multiply&quot;</code></pre>
+<pre class="r"><code>print(&quot;4.Divide&quot;)</code></pre>
+<pre><code>## [1] &quot;4.Divide&quot;</code></pre>
+<pre class="r"><code># Your choice
+choice = as.integer(params$choice)
+num1 = as.numeric(params$num1)
+num2 = as.numeric(params$num2)
+# Which operation?
+if(choice == 1){
+  print(paste(num1,&quot;+&quot;,num2,&quot;=&quot;, num1+num2))
+}else if(choice == 2){
+  print(paste(num1,&quot;-&quot;,num2,&quot;=&quot;, num1-num2))
+}else if(choice == 3){
+  print(paste(num1,&quot;x&quot;,num2,&quot;=&quot;, num1*num2))
+}else if(choice == 4){
+  print(paste(num1,&quot;/&quot;,num2,&quot;=&quot;, num1/num2))
+}else{
+  print(&quot;Wrong choice!&quot;)
+}</code></pre>
+<pre><code>## [1] &quot;5 + 4 = 9&quot;</code></pre>
 
 
 

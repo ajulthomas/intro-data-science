@@ -1,5 +1,5 @@
 ---
-title: "Week 3 - Tutorial"
+title: "Lab 3 - Variables and Data types"
 author: "Ajul Thomas"
 date: "2023-08-15"
 output: html_document
@@ -10,7 +10,8 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-# Exercise 1
+
+## Exercise 1
 
 ---
 
@@ -41,7 +42,7 @@ paste("z --> ", z)
 ```
 
 
-# Exercise 2
+## Exercise 2
 
 ---
 
