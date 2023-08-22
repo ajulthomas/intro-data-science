@@ -49,20 +49,74 @@ class(names)
 ```
 ```{r}
 
-search_ids = c(1003, 1005, 1007)
+# search_ids = c(1003, 1005, 1007)
 
-for (id in search_ids) {
+new_search_id = sample(x=1000:1020,size = 1)
+
+for (id in new_search_id) {
   if (id %in% ids){
     
-    print(ids==id)
+    #print(ids==id)
     
     name <- names[ids==id]
     
     cat("The student with ID ", id, " is ", name, "\n")
   }
+  else {
+    cat("The student with ID ", id, " is not in the database.", "\n")
+  }
 }
+
+```
+```{r}
+
+ids <- c(1001, 1002, 1003, 1004, 1005)
+names <- c("Alice", "Bob", "Charlie", "David", "Eve")
+
+id = 1001
+
+bool_vector <- ids==id
+
+names[bool_vector]
+
+```
+
+```{r}
+
+new_search_id = sample(x=1000:1020,size = 1)
+
 
 ```
 
 
+## Exercise 3
+
+```{r}
+
+numbers <- c(1, 3, 5, 7, 9)
+sum <- 0
+for (n in numbers){
+  if(n %% 2 != 0) {
+    sum = sum + n
+  }
+}
+print(sum)
+```
+
+## Excercise 4
+
+```{r}
+
+firstnames <- c("John", "Jane", "David")
+lastnames <- c("Doe", "Smith", "Jones")
+
+fullnames <- c()
+
+for (index in 1:length(firstnames)) {
+  fullnames <- c(fullnames, paste(firstnames[index], lastnames[index]) )
+}
+
+cat(fullnames, sep = "\n")
+
+```
 
