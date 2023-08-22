@@ -1,0 +1,68 @@
+---
+title: "Lab 4 - Vectors"
+author: "Ajul Thomas"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Exercise 1
+
+```{r}
+
+vecX <- c(9, -1, 4, 2)           
+cat("Original Vector: ")   
+print(vecX)
+
+# Append 3 at the start of the vector
+vecX <- c(3, vecX)
+cat("Appending 3 at the start of the vector: ")
+print(vecX)
+
+# Append 6 at the end of the vector
+vecX <- c(vecX, 6)
+cat("Appending 6 at the end of the vector: ")
+print(vecX)
+
+# Append another vector at the end of the vector
+tempVector <- c(-7, 12)
+vecOut <- c(vecX, tempVector)
+cat("Appending another vector at the end of the vector: ")
+print(vecOut)
+
+```
+
+## Exercise 2
+
+```{r}
+
+ids <- c(1001, 1002, 1003, 1004, 1005)
+names <- c("Alice", "Bob", "Charlie", "David", "Eve")
+
+class(ids)
+class(names)
+
+```
+```{r}
+
+search_ids = c(1003, 1005, 1007)
+
+for (id in search_ids) {
+  if (id %in% ids){
+    
+    print(ids==id)
+    
+    name <- names[ids==id]
+    
+    cat("The student with ID ", id, " is ", name, "\n")
+  }
+}
+
+```
+
+
+
