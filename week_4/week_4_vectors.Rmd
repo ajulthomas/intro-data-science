@@ -1,7 +1,7 @@
 ---
 title: "Lab 4 - Vectors"
 author: "Ajul Thomas"
-date: "`r Sys.Date()`"
+date: "2023-08-22"
 output: html_document
 ---
 
