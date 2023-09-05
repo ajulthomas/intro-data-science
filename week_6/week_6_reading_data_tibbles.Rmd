@@ -1,0 +1,194 @@
+---
+title: "Lab 6 - Importing Data, Tibbles"
+author: "Ajul Thomas"
+date: "2023-09-05"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Data Frame (RECAP)
+
+### Exercise 1
+
+Let’s warm up and review the data.frame concept with this exercise. It uses a built-in dataset called (airquality), which includes daily air quality measurements in the New York city from May to September 1973 over a period of 5 months. Kindly create a markdown file and perform the following tasks on this data:
+
+- Write (?airquality) in the console area, what did you get in the help tab?
+- Can you describe this data in your R Markdown and specify what kind of analysis you can do using it?
+- Read the airquality on a variable and give it a name (e.g., airQ)
+- What is the type/class of the airQ variables?
+- How many rows and columns in this data?
+- Check the type of each column/variable in this data
+- Can you identify which column/variable has the most NA data?
+- Compute the average of each numeric column.
+
+```{r}
+
+airQ <- airquality
+
+print(airQ)
+
+# what is the type of airQ ?
+class(airQ)
+
+# how many rows and cols
+
+ncols <- ncol(airQ)
+nrows <- nrow(airQ)
+
+cat("AirQuality contains of ", nrows, "rows and", ncols, "columns")
+
+# Check the type of each column/variable in this data
+
+colnames(airQ)
+for (col in colnames(airQ)) {
+  cat(col, class(airQ[,col]))
+  cat("\n")
+}
+
+# Can you identify which column/variable has the most NA data?
+
+na_vec <- vector()
+for(col in colnames(airQ)) {
+  na_count <- sum(is.na(airQ[,col]))
+  cat(col, "has", na_count, "no. of na columns.")
+  cat("\n")
+  na_vec <- c(na_vec, na_count)
+}
+print(na_vec)
+
+col_index <- which.max(na_vec)
+
+cat("Columns with highest number of NA values is", colnames(airQ)[col_index])
+
+# Compute the average of each numeric column.
+
+averages <- vector()
+for( col in colnames(airQ)) { 
+  if(is.numeric(airQ[,col])) {
+    average_col <- mean(airQ[,col],na.rm = TRUE)
+    averages <- c(averages, average_col)
+    cat("average of column ", col, "is", average_col, "\n")
+  }
+}
+cat("-------------------------------------\n")
+print(averages)
+
+```
+
+
+## Importing data from external files
+
+#### Data
+
+The data used in the following exercises has been collected from ‘data.gov.au’ website about number of sport clubs registered under “sports vouchers” program. Feel free to read more about this data from this link, (https://data.gov.au/dataset/ds-sa-c1ce1428-4915-44a1-a936-f7d0d8c63678/details?q=sport).
+
+
+
+### Exercise 2
+
+In few sentences, your task is to describe the above data and define what kind of analysis can be done on this data.
+
+#### Importing data
+
+To read tabular data (e.g., text, csv, excel sheets, …, etc.) into data frames, we have the read.* functions in the core R. See for example help(read.csv), help(read.csv2), help(read.delim). On the read data, we can perform several types of operations. Also, there are the equivalent write.* functions (e.g., write.csv, write.delim, …, etc.) to write data frames’ contents back into files.
+
+### Exercise 3
+
+1) Download the data (two csv files) from the Canvas under week 6.
+
+2) Place the data directory in your working directory
+
+3) Create an R-markdown file and perform the following operations:
+
+  - Put the description of the data at the beginning of the your Markdown file
+  - Add a chunk of code to read the “club-venues-in-the-sports-voucher-program.csv” file into a data frame and give it a name (e.g., club_data_df)
+  - Print the content of this data frame
+  - What is number of rows and number of columns?
+  - Could you print the type/class of each column in the data frame?
+  - Read the “club-created-date.csv” file into another data frame and give it a name (e.g., club_dates_df)
+  - Can you merge the two data frames into a new data frame?
+  - How many Diving club are available in South Australia that are accredited with this program? 
+  - How many clubs have been accredited with this program after 1-Jan-1990?
+  - Save the merged data frame to a new csv file on your working directory.
+
+
+```{r}
+
+club_data_df <- read.csv("data/club-venues-in-the-sports-voucher-program.csv")
+
+club_data_df
+
+str(club_data_df)
+
+dim(club_data_df)
+
+# Could you print the type/class of each column in the data frame?
+
+sapply(colnames(club_data_df), function(col) class(club_data_df[,col])) 
+
+```
+```{r}
+
+club_dates_df <- read.csv("data/club-created-date.csv")
+club_dates_df
+
+# combining two data frames
+
+data_df <- cbind(club_data_df,club_dates_df)
+str(data_df)
+
+```
+
+```{r}
+
+# How many Diving club are available in South Australia that are accredited with this program? 
+
+data_df[data_df $Club_Venue_Sports == "Diving",]
+
+diving_clubs_count <- nrow(data_df[data_df $Club_Venue_Sports == "Diving",])
+diving_clubs_count
+
+# How many clubs have been accredited with this program after 1-Jan-1990?
+
+class(data_df$Creation_Date)
+
+# convert the column to a date
+data_df$Creation_Date <- as.Date(data_df$Creation_Date, format="%d/%m/%Y")
+
+class(data_df$Creation_Date)
+
+data_df
+
+data_df[data_df$Creation_Date >= as.Date("1990-01-01"),]
+
+nrow(data_df[data_df$Creation_Date >= as.Date("1990-01-01"),])
+
+write.csv(data_df, file="club_sports_merged.csv")
+
+```
+
+
+
+## Tibbles as alternative for data frames
+
+Tibbles are a modern way to create and to handle data frames. Tibbles incorporate features of the old data frames that resist the test of time with new added features to make - reading, accessing and handling the big datasets are much easier and effective.
+
+Note : To work with creating, reading or writing tibbles, you need to install the package called “tidyverse”. This can be done by installing and calling this package as following:
+
+```{r}
+
+install.packages("tidyverse")
+library(tidyverse)
+
+```
+
+
+You need to install this package only once. Next time you just call it using the library(package_ _name) command.
+
+### Exercise 4
+
+Repeat the steps of Exercise 3 using read_csv, parse_date and write_csv functions
+Discuss your notices on the differences between the two approaches (i.e., pros/cons) with your peers in the class
