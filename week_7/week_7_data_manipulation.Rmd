@@ -1,0 +1,101 @@
+---
+title: "Lab 7 - Data Manipulation"
+author: "Ajul Thomas"
+date: "2023-09-13"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+
+### Exercise 1
+
+
+
+
+
+
+### Excercise 2
+
+
+```{r}
+
+install.packages("nycflights13")
+
+```
+```{r}
+
+library(tidyverse)
+library(nycflights13)
+
+```
+
+```{r}
+
+df <- flights
+
+df
+
+l <- filter(df, arr_delay >= 120)
+
+df
+
+# 2 flew to houston
+
+houston_df <- filter(df, dest %in% c('IAH','HOU'))
+houston_df <- filter(df, dest == 'IAH' | dest == 'HOU')
+
+# 3 were operated by united, american or delta
+
+operator_filter <- filter(df, carrier %in% c('UA','AA','DL'))
+operator_filter
+
+flights
+
+# 4 Departed in summer July, August, September
+
+filter(df, month %in% c(7,8,9))
+
+# 5 Arrived more than two hours late, but didn’t leave late
+
+filter(df, dep_delay <= 0 & arr_delay >= 120)
+
+# 6 Were delayed by at least an hour, but made up over 30 minutes in flight
+filter(df, dep_delay >= 60, arr_delay - dep_delay > 30)
+
+# 7 Departed between midnight and 6am (inclusive)
+
+filter(df, between(dep_time, 000, 600))
+
+# 8 Their departure time is not recorded (i.e. NA).
+
+filter(df, is.na(dep_time))
+
+```
+
+### Excercise 3
+
+```{r}
+
+
+# 1  Which month had the highest proportion of the cancelled flights?
+
+cancelled_flights <-  filter(flights, is.na(air_time))
+grouped_by_month <- group_by(cancelled_flights, month)
+grouped_by_month
+counts_per_month <- summarise(grouped_by_month, count=n())
+counts_per_month
+highest_prop <- summarise(counts_per_month, max_month=month[which.max(count)], max.value=max(count))
+highest_prop
+
+# 2  Which month had the lowest proportion of the cancelled flights?
+
+lowest_prop <- summarise(counts_per_month, min_month=month[which.min(count)], min.value=min(count))
+lowest_prop
+
+```
+
