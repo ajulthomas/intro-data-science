@@ -137,7 +137,8 @@ print(monthly_average_temp_df)
 
 monthly_average_temperature <- monthly_average_temp_df$average_temp
 
-
+cat("Q1: Monthly average temperatures: ")
+print(monthly_average_temperature)
 
 #----------------------------------#
 
@@ -159,13 +160,14 @@ monthly_avg_humidity_df
 #   select(Date, Month, Location)
 
 canberra_monthly_avg_humidity <- (filter(monthly_avg_humidity_df,Location == 'Canberra'))$average_humidity
-canberra_monthly_avg_humidity
+# canberra_monthly_avg_humidity <- c(0, canberra_monthly_avg_humidity)
 
 sydney_monthly_average_humidity <- (filter(monthly_avg_humidity_df,Location == 'Sydney'))$average_humidity
-sydney_monthly_average_humidity
+# sydney_monthly_average_humidity <- c(sydney_monthly_average_humidity, 0)
 
-
-
+cat("Q2: Monthly average humidity for Sydney and Canberra: \n")
+print(canberra_monthly_avg_humidity)
+print(sydney_monthly_average_humidity)
 
 #----------------------------------#
 
@@ -184,7 +186,7 @@ monthly_averages_df <- weather %>%
     average_wind_speed = mean(WindSpeed)
     )
 
-monthly_averages_df
+monthly_averages_df <- monthly_averages_df %>% select(-Month)
 
 # as the next step, we will convert the df into a matrix
 # reference: https://stat.ethz.ch/R-manual/R-devel/library/base/html/data.matrix.html
@@ -273,7 +275,7 @@ for (i in 1:n_slices) {
   # the rows of this matrix represents the weekday starting from Monday. 
   # i.e first row represents Monday
   # the columns represents the average readings, it follows the same order as that of the 'monthly_averages_by_day_df' dataframe
-  data_matrix <- matrix(data = NA, nrow = 0, ncol = n_coles)
+  data_matrix <- matrix(data = NA, nrow = 0, ncol = n_cols)
   
   # starts the inner loop, where we will loop through each day of the week
   for( j in  1:n_rows) {
@@ -394,12 +396,31 @@ print(city_averages_by_day_arr)
 
 # Use matrix multiplication to calculate the product of the transpose of the matrix in task 3 with the vector in task 1.
 
+# vector from task 1
+cat("Task 1: vector containing monthly average temperatures: \n")
+cat("------------------------------------------------------\n")
+print(monthly_average_temperature)
+cat("\n")
 
+# matrix from task 3
+cat("Task 3: matrix containing the average temperature, humidity, pressure, and wind speed readings for each month: \n")
+cat("-------------------------------------------------------------------\n")
+print(monthly_averages)
+cat("\n")
 
+# matrix transpose
+cat("Transpose of the matrix : \n")
+cat("------------------------------------------------------\n")
+mat_transpose <- t(monthly_averages)
+print(mat_transpose)
+cat("\n")
 
-
-
-
+# matrix multiplication
+product <- mat_transpose %*% monthly_average_temperature
+rownames(product) <- NULL
+cat("\n Product of matrix multiplication:\n")
+cat("---------------------------------\n")
+print(product)
 
 #----------------------------------#
 
@@ -414,14 +435,66 @@ Please follow this structure:
 #----------------------------------#
 
 # 1-  The code for task 1 goes here
+# Write a loop that calculates the average pressure reading for each month and stores the results in a vector.
 
+# Initialize lists with month names as names
+monthly_pressure_readings_sum <- list()
+monthly_pressure_readings_count <- list()
 
+for (i in 1:nrow(weather)) {
+  key <- weather$Month[i]
+  pressure <- as.numeric(weather$Pressure[i])
+  
+  # Check if the key (month) is already in the lists, and if not, initialize it
+  if (!(key %in% names(monthly_pressure_readings_sum))) {
+    monthly_pressure_readings_sum[[key]] <- 0
+    monthly_pressure_readings_count[[key]] <- 0
+  }
+  
+  # Update the sum and count for the corresponding month
+  monthly_pressure_readings_sum[[key]] <- monthly_pressure_readings_sum[[key]] + pressure
+  monthly_pressure_readings_count[[key]] <- monthly_pressure_readings_count[[key]] + 1
+}
+
+average_monthly_pressure <- c()
+
+for (month in names(monthly_pressure_readings_sum)) {
+  average_value <- monthly_pressure_readings_sum[[month]]/monthly_pressure_readings_count[[month]]
+  average_monthly_pressure <- c(average_monthly_pressure,average_value)
+}
+
+average_monthly_pressure
 
 #----------------------------------#
 
 # 2-  The code for task 2 goes here
 
+# Use a conditional statement to determine how many days had a temperature above 25 degrees Celsius in Sydney.
 
+# variable to store the no. of instances where the Sydney temp is greater than 25 degree celcius
+high_temp_count <- 0
+
+# loopint through df
+for (i in 1:nrow(weather)) {
+  # stores location
+  location <- weather$Location[i]
+  
+  # stores the temperature
+  temp <- weather$Temperature[i]
+  
+  # checks if location is Sydney and temp is greater than 25
+  if(location == 'Sydney' & temp > 25) {
+    # updates the temp count
+    high_temp_count = high_temp_count + 1
+  }
+}
+
+# print the output
+print(high_temp_count)
+
+# to validate
+# weather %>%
+#   filter(Location == 'Sydney' & Temperature > 25)
 
 #----------------------------------#
 
