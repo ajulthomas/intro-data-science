@@ -1,0 +1,273 @@
+---
+title: "Introduction to Data Science 11372 & 11516 G"
+subtitle: Tutorial / Laboratories - Week 4
+output:
+  html_document: rmdformats::readthedown
+editor_options:
+  markdown:
+    wrap: 72
+status: In Progress
+params:
+  solutionOn: yes
+  tutorOn: yes
+---
+***
+
+Welcome to the tutorials and practical laboratory of the **Introduction to Data Science**.
+
+The purpose of this week's tutorial and lab exercises is to introduce you to some other components of the R programming language, which are essential for any data science project.
+
+These components include vectors, conditional statements, and loop statements. Also, this is coupled with hands-on skills on how to use these components on real data. The objectives of this tutorial can be summarised as follows:
+
+1.  Get yourself familiar with creating, accessing and operating on ‘vectors’
+2.	Gain high level of understanding for the usage conditional and loop statements on data stored in vectors.
+
+
+# More on Vectors
+In this section, we will revise the vectors data structure.
+
+## Exercise 1
+In this exercise, you are given the following code snippet, which is not complete. Can you perform the required steps to get it working based on the provided comments?
+
+```{r, eval=FALSE}
+vecX <- c(9, -1, 4, 2)           
+cat("Original Vector: ")   
+print(vecX)
+
+# Append 3 at the start of the vector
+vecX <- 
+cat("Appending 3 at the start of the vector: ")
+print(vecX)
+
+# Append 6 at the end of the vector
+vecX <- 
+cat("Appending 6 at the end of the vector: ")
+print(vecX)
+
+# Append another vector at the end of the vector
+tempVector <- c(-7, 12)
+vecOut <- 
+cat("Appending another vector at the end of the vector: ")
+print(vecOut)
+```
+
+```{r, eval=FALSE, echo=params$solutionOn}
+### Solution
+vecX <- c(9, -1, 4, 2)           
+cat("Original Vector: ")   
+print(vecX)
+
+vecX <- c(3, vecX) 
+cat("Appending 3 at the start of the vector: ")
+print(vecX)
+
+vecX <- c(vecX, 6) 
+cat("Appending 6 at the end of the vector: ")
+print(vecX)
+
+tempVector <- c(-7, 12)
+vecOut <- c(vecX, tempVector)
+cat("Appending another vector at the end of the vector: ")
+print(vecOut)
+```
+
+# More on Conditional and loop Statements
+
+## Exercise 2
+
+Suppose you are given two vectors of data:
+
+- `ids`: A vector of student IDs.
+- `names`: A vector of corresponding student names.
+
+```{r, eval=FALSE}
+ids <- c(1001, 1002, 1003, 1004, 1005)
+names <- c("Alice", "Bob", "Charlie", "David", "Eve")
+```
+
+Your task is to write a program that does the following:
+
+1. Check the type of values stored in the vectors 
+2. Checks if the following students exist in the data, (1003, 1005, 1007)ids.
+- If the ID is in ids, prints out the corresponding student name in names.
+- If the ID is not in ids, prints out an error message.
+- Can you search for the name of a _randomly sampled_ student, where the generated  id can be any integers between 1000 and 1020?
+
+```{r, eval=FALSE, echo=params$solutionOn}
+### Solution:
+
+# Define the vectors
+ids <- c(1001, 1002, 1003, 1004, 1005)
+names <- c("Alice", "Bob", "Charlie", "David", "Eve")
+
+# types of the vectors
+class(ids)
+class(names)
+
+# vectors of the student ID
+search_ids <- c(1003, 1005, 1007)
+
+for (input in search_ids){
+
+  # Check if the entered ID is in ids
+  if (input %in% ids) {
+    
+    # Get the corresponding student name in names
+    name <- names[ids == input]
+    
+    # Print out the name
+    cat("The student with ID", input, "is", name, "\n")
+    
+  } else {
+    
+    # Print out an error message
+    
+    cat("The student with ID", input, "is not existing in the database\n")
+    
+  }
+  
+}
+
+# sample a student id within the range (1000, 1020):
+input <- sample(x = 1000:1020, size = 1)
+
+## same code as above without the for loop
+# Check if the entered ID is in ids
+if (input %in% ids) {
+  
+  # Get the corresponding student name in names
+  name <- names[ids == input]
+  
+  # Print out the name
+  cat("The student with ID", input, "is", name, "\n")
+  
+} else {
+  
+  # Print out an error message
+  
+  cat("The student with ID", input, "is not existing in the database\n")
+}
+
+```
+
+## Exercise 3
+
+Suppose you have a vector of data called `numbers`:
+
+```{r, eval=FALSE}
+numbers <- c(1, 3, 5, 7, 9)
+```
+
+Your task is to write a program that calculates the sum of all the odd numbers in the vector numbers using a for loop.
+
+```{r, eval=FALSE, echo=params$solutionOn}
+### Solution:
+
+# Define the vector
+numbers <- c(1, 3, 5, 7, 9)
+
+# Initialize the sum variable to 0
+sum_odd <- 0
+
+# Use a for loop to iterate over each element in numbers
+for (i in 1:length(numbers)) {
+  
+  # Check if the current element is odd
+  if (numbers[i] %% 2 != 0) {
+    
+    # Add the current element to the sum variable
+    sum_odd <- sum_odd + numbers[i]
+    
+  }
+  
+}
+
+# Print out the sum of odd numbers
+cat("The sum of all odd numbers in the vector is:", sum_odd, "\n")
+
+```
+## Ecercise 4
+Suppose you have two vectors of data called `firstnames` and `lastnames`:
+
+```{r, eval=FALSE}
+firstnames <- c("John", "Jane", "David")
+lastnames <- c("Doe", "Smith", "Jones")
+```
+
+Your task is to write a program that concatenates the elements of the two vectors into a new vector called `fullnames` using a for loop.
+
+```{r, eval=FALSE, echo=params$solutionOn}
+### Solution:
+
+# Define the vectors
+firstnames <- c("John", "Jane", "David")
+lastnames <- c("Doe", "Smith", "Jones")
+
+# Initialize the new vector
+fullnames <- c()
+
+# Use a for loop to iterate over each element in firstnames and lastnames
+for (i in 1:length(firstnames)) {
+  
+  # Concatenate the current element in firstnames with the current element in lastnames
+  current_fullname <- paste(firstnames[i], lastnames[i])
+  
+  # Add the concatenated element to the fullnames vector
+  fullnames <- c(fullnames, current_fullname)
+  
+}
+
+# Print out the new vector
+cat("The fullnames vector is as follows:\n")
+for (i in 1:length(fullnames)){
+  cat(fullnames[i], "\n")
+}
+```
+
+## Exercise 5
+In this exercise, your task is to write a program that draws a pyramid of stars with `n` rows. The pyramid should be centered and have odd number of stars in each row. You can use `n` as `n=10`, `n=15`
+
+```{r, eval=FALSE, echo=params$solutionOn}
+### Solution:
+
+# Number of rows
+n = 15#10
+
+# Use a for loop to iterate over each row of the pyramid
+for (i in 1:n) {
+  
+  # Calculate the number of stars for the current row
+  num_stars <- 2 * i - 1
+  
+  # Calculate the number of spaces for the current row
+  num_spaces <- n - i
+  if (num_spaces > 0){
+    # Use a for loop to print the spaces for the current row
+    for (j in 1:num_spaces) {
+      cat(" ")
+    }
+  }
+  
+  # Use a for loop to print the stars for the current row
+  for (j in 1:num_stars) {
+    cat("*")
+  }
+  
+  # Print a new line after each row
+  cat("\n")
+}
+
+```
+-------
+
+# Reflection:
+Please take the remaining time of the class to reflect on the usage of vectors, conditional statements, and loop statements with your tutor and classmates. Ensure that you have understood these components and appreciate their importance in dealing with data.
+
+
+```{r, eval=FALSE}
+#- Write your reflection here:
+
+
+```
+
+-------

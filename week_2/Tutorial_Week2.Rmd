@@ -1,0 +1,317 @@
+---
+title: "Introduction to Data Science 11372 & 11516 G"
+subtitle: Tutorial / Laboratories - Week 2
+output:
+  html_document: rmdformats::readthedown
+editor_options:
+  markdown:
+    wrap: 72
+status: In Progress
+params:
+  solutionOn: yes
+  tutorOn: no
+---
+***
+
+Welcome to the tutorials and practical laboratory for **Introduction to Data 
+Science**. The purpose of this week's tutorial and lab exercises to introduce 
+you to the R programming language, which we will use extensively throughout the 
+unit.
+
+The "objectives" of this tutorial and lab are to:
+
+1.  Get to know your Tutor, classmates and your shared expectations,
+2.  Discuss the ways in which Data Scientists communicate
+3. Get your hands on doing simple operations (e.g. mathematical, logical, etc.) by using Console window in RStudio,
+4. Gain the ability to write and run simple R-Markdown scripts
+
+***
+------------------------------------------------------------------------
+
+# Lab Discussion
+
+This semester we will be adding to the tutorial material with more discussions about the subject and its relevance to other fields. This week we will discuss the subject itself and communication.
+
+## Exercise 1 - Introduction and Communication
+```{asis echo= params$tutorOn}
+<div style="background-color: yellow;">
+**Notes to Tutor**
+
+  * Introduce yourself first and discuss experiences with the IDS subject
+  * Select a few volunteers to introduce themselves with the guide below. Note  
+    that throughout the semester we will give everyone a chance to volunteer 
+    at some stage (encourage others to be preapared later)
+<br/>
+</div>
+```
+
+Introduce yourself to the class and discuss the following:
+
+* What course are you doing? What year? How is Data Science important to that  study?
+* What role does the tutor play ? What expectations do you have of them?
+* What experience do you have with programming in R, Markdown or other languages?
+
+***
+
+# Preparation
+
+## Install R and RStudio
+```{asis echo= params$tutorOn}
+
+<div style="background-color: yellow;">
+**Notes to Tutor**
+  
+  * Refer to the slides from week1 lecture for installation instructions
+<br/>
+</div>
+```
+
+To setup the environment on your computer, you need to install R and RStudio. Please follow the instructions from the lecture notes of week 1. The slides are only for Windows and MAC operating systems. If you are using lunix, you can follow the [instructions in this link](https://linuxconfig.org/rstudio-on-ubuntu-18-04-bionic-beaver-linux)
+
+**Please note:** In this unit, we use RStudio on Windows to do all our programming practices. The instructions in this document assume you are working on Windows operating system, so if you are using any other operating system, please adjust accordingly.
+To open RStudio, go to start menu, write RStudio and click on the RStudio icon. You will see a screen similar to the following:
+
+![](Rstudio_Interface.png)
+We have 4 main areas within the RStudio interface:
+
+1. **Console Area:** This shows the output of code you run. Also, you can directly write line-by-line commands in the console. Code entered directly in R console cannot be traced later. This is where script area comes to use.
+2. **Script Area:** As the name suggest, here you get space to write multiple lines of codes. To
+run those lines, simply select them and press (Ctrl + Enter). Alternatively, you can click on little
+'Run' button at top right corner of the script area.
+3. **Environment/Objects Area:** This space displays the set of external objects added. This
+includes data set, variables, vectors, functions etc. To check if data has been loaded properly
+in R, always look at this area.
+4. **Graphical Area:** This space displays the plots or graphs created during exploratory data
+analysis. Not just graphs, you could select packages, seek help with embedded R's official
+documentation.
+
+***
+# Basic Computations
+## Exercise 2 - Simple Operations
+* Perform the following simple operations in the console window and inspect the result:
+    ```{r eval = params$solutionOn}
+    2 + 3
+    ```
+    ```{r eval = params$solutionOn}
+    6 - 10
+    ```
+    ```{r eval = params$solutionOn}
+    5 == 2
+    ```
+
+## Exercise 3 - Variables and Data Types
+Variables are placeholders to refer to values stored in memory. These values can fall into the
+following categories:
+
+* Numeric 
+* Character,
+* Logical,
+* Complex and
+* Integer
+
+You can assign values to variables using the assignment operator `<-`, like this:
+```{r eval = TRUE, results='hide'}
+    x <- 1/40
+```
+And now the variable x contains the decimal value 0.025:
+```{r eval = TRUE}
+    x 
+```
+Look up at the top right pane of RStudio, in the "objects area", and you'll see that this has
+appeared in the "Environment" pane.
+
+Our variable x can be used in place of a number in any calculation that expects a number.
+```{r eval =  params$solutionOn}
+    x + 0.5
+```
+
+***
+# Functions
+A function is code organized together to perform a specific task. R has a large number of in-built functions, functional libraries as well allow an analyst can create their own functions. 
+
+In this unit we will be predominately be using functions from a library 'package' rather than writing complex code. It is important then to understand what a function is and how to use them.   
+
+## Exercise 4 - Working with embedded functions
+This exercise shows you the different options of the `paste()` function. 
+
+* Document the results of running the following code in your lab notes.
+
+    ```{r eval = params$solutionOn}
+    paste('Leo', 'the', 'lion')
+    ```
+    ```{r eval = params$solutionOn}
+    paste('a', 1:5)
+    ```
+    ```{r eval = params$solutionOn}
+    paste('a', 1:5, sep="")
+    ```
+    ```{r eval = params$solutionOn}
+    paste('a',1:5, collapse=",")
+    ```
+
+* What are the respective effects of the parameters `sep` and `collapse` ?
+  
+  [hint type `? paste` in the console window]
+  
+
+Paste is an example of n in-built functions of R. [This link](https://cran.r-project.org/doc/contrib/Short-refcard.pdf) is a useful reference of the most used R functions.
+
+Other functions are available in packages that can be installed. To install a package, simply type the following command in the console area: 
+```{r eval= FALSE}
+install.packages("package name")
+```
+
+Also, you can do this by using "install" button in the top left corner of the packages window.
+
+* The tidyverse packages are going to be regularly used throughout this unit. Install them now using the above as an example.
+    ```{r eval= FALSE, echo= params$echoOn}
+    install.packages("tidyverse")
+    ```
+
+Also, you can do this by using "install" button in the top left corner of the packages window
+
+Once a package is installed it can be used but will be easier to do so if the library is added to the search path. To do that use the `library()` function:
+```{r eval= FALSE, echo= params$echoOn}
+library(tidyverse)
+```
+
+
+***
+# Creating R Markdown script
+This semester we will standardise the way to document and script R code using R Markdown.
+R Markdown documents weave together narrative text and code to produce elegantly formatted output.
+
+## Exercise 5 - Creating a R Markdown script
+
+* In current directory of your workspace, create another directory for the exercises and
+name it "exercises_wk2".
+
+* Change the current working directory of the RStudio to the newly created folder, using
+the following command in the console window:
+    ```{r eval=FALSE}
+    setwd("path to exercises_wk2 folder")
+    ```
+* Create a new R Markdown script with Title as `Variables`
+* Note that the template document already has alot of markdown text and R code provided as an example. Save the script as `variables.Rmd`, please note the extension of the file `.Rmd`
+* Go ahead and **knit** the document to produce a HTML file in the Viewer window.
+* There may be many problems encountered at this stage due to the way RStudio gets installed. If the knitting doesn't work now - make sure you work through the errors with your tutor over the next few weeks.
+* Add a new markdown heading at the end of the file called 'Practicing on Variables'
+* Introduce the code to follow using markdown text
+* Add the R code below as a chunk 
+```{r eval=FALSE}
+    age <- 23
+```
+* Extend this code with the following steps:
+  + Add 2 to the age variable
+  + Multiply the result by 3.
+  + Subtract 6 from it
+  + Divide what you get by 3.
+  + Have the final age display to the console
+```{r echo = params$solutionOn, eval = params$solutionOn}
+    age <- 23
+    age <- age + 2
+    age <- age * 3
+    age <- age - 6
+    age <- age / 3
+    age
+```
+
+* You can use `#` signs (Shift+3 on your keyboard) to comment. We add comments with code in the script
+area. Anything to the right of a `#` is ignored by the R interpreter
+* Add a comment to the final line of your R Code chunk to document what the expected value of `age` is
+
+***
+
+--------------------------------------------------------------
+# More Exercises
+
+If tutorial's time allows, please go through the as much as possible from the following sections as extra practices and any leftovers should be tried out at your own time to prepare you for the next week.
+
+## Interacting with RStudio
+* Most of the time, you will be shifting between the Script area and the Console are,
+so that RStudio provides simple shortcuts for this transition, simply use
+the Ctrl+1 and Ctrl+2 shortcuts to jump between the script and the console windows.
+* To create new script, go to File >> new file >> R script, or simply press Ctrl+Shift+N.
+* Practice the following shortcuts:
+  + Ctrl+Return(Enter) to run lines from editor
+  + Alt+Shift+k for RStudio keyboard shortcuts
+  + Ctrl+r to browse the command history
+  + Alt+Shift+j to navigate between code sections
+  + tab for auto-completion
+  + Ctrl+1 to skip to editor
+  + Ctrl+2 to skip to console
+  + Ctrl+8 to skip to the environment list
+  + Code Folding:
+    - Alt+l collapse chunk
+    - Alt+Shift+l unfold chunk
+    - Alt+o collapse all
+    - Alt+Shift+o unfold all
+  + Alt+"-" for the assignment operator <-
+  + Esc, if you want to exit a running program
+  
+## More on Simple Operations
+* Perform the following simple operations in the console window
+    ```{r eval = params$solutionOn}
+    3 * 4
+    ```
+    ```{r eval = params$solutionOn}
+    12 ** 4
+    ```
+    ```{r eval = params$solutionOn}
+    12 ^ 4
+    ```
+    ```{r eval = params$solutionOn}
+    30 > 20
+    ```
+    ```{r eval = params$solutionOn}
+    10 <= 2
+    ```
+    ```{r eval = params$solutionOn}
+    5 != 4
+    ```
+
+## More on Variables
+* Perform the following in the console window:
+    ```{r eval = params$solutionOn}
+    x <- 120
+    ```
+*Does the assignment print a value?
+*Can the variable be reassigned with different values?
+*What will x contain after running this?
+    ```{r eval = params$solutionOn}
+    x <- x + 1
+    ```
+* Note that the right hand side is fully evaluated before the assignment occurs.
+
+* Also notice that variable names can contain letters, numbers, underscores and periods. They
+cannot start with a number nor contain spaces at all. Different people use different
+conventions for long variable names, these include
+  + periods.between.words
+  + underscores_between_words
+  + camelCaseToSeparateWords
+  
+* What you use is up to you, but **be consistent**.
+
+## More Functions
+* Perform the following in the console window:
+    ```{r eval = params$solutionOn}
+    1:5
+    log(1:5)
+    ```
+* what does the operation `1:5` produce ? How does the `log()` function handles this ? 
+    ```{r eval = params$solutionOn}
+    print("Introduction to Data Science.")
+    ```
+
+    ```{r eval = params$solutionOn}
+    print(paste("I am ", 25, "years old!"))
+    ```
+* Notice how one function can be **nested** within another. What does this do ?
+
+    ```{r eval = params$solutionOn}
+    readline(prompt= "what is your age?")
+    age
+    ```
+* What has happened after `readline(prompt= "what is your age?")` in the console
+window? Why? and
+* Why did you get an error in the last line?

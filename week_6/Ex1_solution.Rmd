@@ -1,0 +1,59 @@
+---
+title: "airQuality_Ex"
+author: "Ibrahim"
+date: '2022-08-27'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Data Description
+This data represents the air quality measurements recorded on daily basis in the New York city between May and September, 1975. Though it is not huge amount of data, we can use it to perform analysis on:
+
+* Determining the health precautions for any visitors to the city in the same period, especially those are allergic to bad weather or have asthma conditions.
+* The suitability of using the solar or wind power as a clean energy in this city in the same period of the year.  
+
+```{r, eval=FALSE}
+# 3. Read the `airquality` on a variable and give it a name (_e.g., airQ_)
+airQ <- airquality
+
+# What is the type/class of the `airQ` variables?
+class(airQ)
+
+# How many rows and columns in this data?
+nrows <- nrow(airQ) 
+ncols <- ncol(airQ)
+cat("AirQuality contains", nrows, "rows", "and", ncols, "columns")
+# Check the type of each column/variable in this data
+
+for(col in colnames(airQ)){
+  print(col) # column name
+  print(class(airQ[,col])) # column type
+  print("---------------")
+}
+# Can you identify which column/variable has the most `NA` data?
+na_vec <- vector()
+for(col in colnames(airQ)){
+   na_count <- sum(is.na(airQ[,col]))
+   cat(col,":")
+   print(na_count)
+   na_vec <- c(na_vec, na_count)
+}
+
+# the column with the most Nas
+col_idx <- which.max(na_vec)
+cat("The column with the most Nas is:", colnames(airQ)[col_idx], "\n")
+
+# The average of each numeric column (Figure out the usage of `na.rm=TRUE`, try with and without using it)
+for(col in colnames(airQ)){
+  
+  if(is.numeric(airQ[,col])){
+    cat("The average of column named", col,"is", mean(airQ[,col], na.rm=TRUE), "\n")
+  }
+
+}
+
+```
+

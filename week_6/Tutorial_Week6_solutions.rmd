@@ -1,0 +1,225 @@
+---
+title: "Introduction to Data Science 11372 & 11516 G"
+subtitle: Tutorial / Laboratories - Week 6
+output:
+  html_document: rmdformats::readthedown
+editor_options:
+  markdown:
+    wrap: 72
+status: In Progress
+params:
+  solutionOn: no
+  tutorOn: no
+---
+***
+
+Welcome to the tutorials and practical laboratory for the **Introduction to Data Science**.
+The purpose of this week's tutorial and lab exercises is to introduce you to different methods of reading data into data frames using `read.csv(...)` and `read_csv(...)` functions. Then doing  basic operations on the created data frames.
+
+# Objectives
+1. Get yourself familiar with reading tabular data into data frames using two different functions,
+2. Performing basic operations on the stored data in data frames
+
+----------------
+
+# Data Frame  (RECAP)
+
+## Exercise 1
+Let's warm up and review the `data.frame` concept with this exercise. It uses a built-in dataset called (`airquality`), which includes daily air quality measurements in the New York city from May to September 1973 over a period of 5 months. Kindly create a markdown file and perform the following tasks on this data:
+
+1. Write (`?airquality`) in the console area, what did you get in the help tab?
+2. Can you describe this data in your R Markdown and specify what kind of analysis you can do using it?
+3. Read the `airquality` on a variable and give it a name (_e.g., airQ_)
+4. What is the type/class of the `airQ` variables?
+5. How many rows and columns in this data?
+6. Check the type of each column/variable in this data
+7. Can you identify which column/variable has the most `NA` data?
+8. Compute the average of each numeric column.
+
+```{r, echo=params$solutionOn}
+# The solution is provided in another file called "Ex1_solution.Rmd"
+```
+
+----------------
+
+# Importing data from external files
+
+## Data
+The data used in the following exercises has been collected from '_data.gov.au_' website about number of sport clubs registered under "sports vouchers" program. Feel free to read more about this data from this link, (https://data.gov.au/dataset/ds-sa-c1ce1428-4915-44a1-a936-f7d0d8c63678/details?q=sport).
+
+```{asis, echo=params$tutorOn}
+<div style="background-color: yellow;">
+  <span><strong>Notes to Tutor</strong></span>
+</br>
+Get the students learn how to do their research about the used data from its sources, so please ask them to open the above link and check whether they got their minds about the data that they are about to work with or not.
+</br>
+</div>
+```
+
+## Exercise 2
+In few sentences, your task is to describe the above data and define what kind of analysis can be done on this data.
+
+```{asis, echo=params$solutionOn}
+<div style="background-color: lightgrey;">
+##### Data Description #####
+This data lists the sport clubs registered under the "sports vouchers" program. This program is designed by the Australian government to support families to encourage their kids to be active in sports. This includes free vouchers to participate in these registered clubs for sport activities. This data can be used for analysis such as:
+
+- Helping families to find which clubs in their living areas are supported by these programs
+- Guiding the new comers to Australia to determine which suburbs to live in with their families.
+</div>
+```
+
+----------------
+
+# Importing data
+To read tabular data (_e.g._, text, csv, excel sheets, ..., etc.) into data frames, we have the `read.*` functions in the core R. See for example ```help(read.csv)```, ```help(read.csv2)```, ```help(read.delim)```. On the read data, we can perform several types of operations. Also, there are the equivalent write.* functions (_e.g._, ```write.csv```, ```write.delim```, ..., etc.) to write data frames' contents back into files.
+
+## Exercise 3
+
+1. Download the data (two csv files) from the Canvas under week 6.
+2. Place the data directory in your working directory
+3. Create an R-markdown file and perform the following operations:
+    
+    * Put the description of the data at the beginning of the your Markdown file
+    * Add a chunk of code to read the "club-venues-in-the-sports-voucher-program.csv" file into a data frame and give it a name (_e.g._, club_data_df)
+    * Print the content of this data frame
+    * What is number of rows and number of columns?
+    * Could you print the type/class of each column in the data frame?
+    * Read the "club-created-date.csv" file into another data frame and give it a name (_e.g._, club_dates_df)
+    * Can you merge the two data frames into a new data frame?
+    * How many `Diving` club are available in South Australia that are accredited with this program?
+    How many clubs have been accredited with this program after 1-Jan-1990?
+    * Save the merged data frame to a new csv file on your working directory.
+    
+```{r, echo=params$solutionOn, eval=FALSE}
+### Solution
+
+# Download the data and place them in a folder called "data" in your working directory
+
+# read first data file
+club_data_df <- read.csv("data/club-venues-in-the-sports-voucher-program.csv")
+
+print(club_data_df) # How is the print style?
+# check structure of the data frame
+str(club_data_df)
+
+# Number of rows/cols
+print(dim(club_data_df))
+
+# printing types and classes of the columns using for-loop
+for(col in colnames(club_data_df))
+{
+  print(col) # column name
+  print(class(club_data_df[,col])) # column type
+  print("---------------")
+}
+# another way to do the above operation using sapply function
+sapply(colnames(club_data_df), function(x) class(club_data_df[,x]))
+
+# read the second data file
+club_dates_df <- read.csv("data/club-created-date.csv")
+
+# merge the two data frames column-wise
+data_df <- cbind(club_data_df, club_dates_df)
+
+# How many Diving clubs?
+diving_clubs_count <- nrow(data_df[data_df$Club_Venue_Sports == "Diving",])
+cat("Number of clubs that run Diving programs at SA is:", diving_clubs_count)
+
+# How many clubs got accredited after 1990?
+
+# first, we need to turn the creation date into a real date format (ie, YYYY-MM-DD)
+class(data_df$Creation_Date)
+# we will use the `as.Date` function with format that matches the provided date
+data_df$Creation_Date <- as.Date(data_df$Creation_Date, format = "%d/%m/%Y")
+class(data_df$Creation_Date)
+
+clubs_after_90 <- nrow(data_df[data_df$Creation_Date >= as.Date("1990-01-01"),])
+cat("Number of clubs that got accredited after 1990:", clubs_after_90)
+
+# save the merged data into a new file
+write.csv(data_df, file="club_sport_data_merged_df.csv")
+
+```
+
+----------------
+
+# Tibbles as alternative for data frames
+
+Tibbles are a modern way to create and to handle data frames. Tibbles incorporate features of the old data frames that resist the test of time with new added features to make reading, accessing and handling the big datasets are much easier and effective.
+
+***Note*** : To work with creating, reading or writing tibbles, you need to install the package called “tidyverse”. This can be done by installing and calling this package as following:
+```{r, eval=FALSE}
+install.packages("tidyverse")
+library(tidyverse)
+```
+
+You need to install this package only once. Next time you just call it using the ```library(package_ _name)``` command.
+
+```{asis, echo=params$tutorOn}
+<div style="background-color: yellow;">
+  <span><strong>Notes to Tutor</strong></span>
+</br>
+Let the students notice the difference in speed while performing the operations on tibbles versus normal data frames, for instance, the speed of reading data using ```read.csv``` and using ```read_csv```. How about if the file/data frame contains hundreds of thousands records?  
+</br>
+</div>
+```
+
+## Exercise 4
+
+1. Repeat the steps of `Exercise 3` using `read_csv`, `parse_date` and `write_csv` functions
+2. Discuss your notices on the differences between the two approaches (i.e., pros/cons) with your peers in the class 
+
+```{r, echo=params$solutionOn, eval=FALSE}
+#### Solution
+
+# Call the library
+library(tidyverse)
+
+# read first data file, check how fast is this one?
+club_data_tbl <- read_csv("data/club-venues-in-the-sports-voucher-program.csv")
+
+print(club_data_tbl) # How is the print style?
+# check structure of the data frame
+str(club_data_tbl)
+
+# Number of rows/cols
+print(dim(club_data_tbl))
+
+# printing types and classes of the columns using for-loop
+for(col in colnames(club_data_tbl))
+{
+  print(col) # column name
+  print(class(club_data_tbl[[col]])) # column type
+  print("---------------")
+}
+# another way to do the above operation using sapply function
+sapply(colnames(club_data_tbl), function(x) class(club_data_tbl[[x]]))
+
+# read the second data file
+club_dates_tbl <- read_csv("data/club-created-date.csv")
+
+# merge the two data frames column-wise
+data_tbl <- cbind(club_data_tbl, club_dates_tbl)
+
+# How many Diving clubs?
+diving_clubs_count <- nrow(data_tbl[data_tbl$Club_Venue_Sports == "Diving",]) 
+cat("Number of clubs that run Diving programs at SA is:", diving_clubs_count) # here it gives us 3, why?
+
+# How many clubs got accredited after 1990?
+
+# first, we need to turn the creation date into a real date format (ie, YYYY-MM-DD)
+class(data_tbl$Creation_Date)
+# we will use the `as.Date` function with format that matches the provided date
+data_tbl$Creation_Date <- parse_date(data_tbl$Creation_Date, format = "%d/%m/%Y")
+class(data_tbl$Creation_Date)
+
+clubs_after_90 <- nrow(data_tbl[data_tbl$Creation_Date >= parse_date("1990-01-01"),])
+cat("Number of clubs that got accredited after 1990:", clubs_after_90)
+
+# save the merged data into a new file
+write_csv(data_tbl, file="club_sport_data_merged_tbl.csv")
+
+```
+
+----------------

@@ -465,6 +465,8 @@ for (month in names(monthly_pressure_readings_sum)) {
 
 average_monthly_pressure
 
+
+
 #----------------------------------#
 
 # 2-  The code for task 2 goes here
@@ -496,9 +498,42 @@ print(high_temp_count)
 # weather %>%
 #   filter(Location == 'Sydney' & Temperature > 25)
 
+
+
 #----------------------------------#
 
 # 3-  The code for task 3 goes here
+# Use a for loop to calculate the average humidity for the days with a temperature below 21 degrees Celsius in Canberra.
+
+humidity_sum <- 0
+days_count <- 0
+
+for (i in 1:nrow(weather)) {
+  # stores location
+  location <- weather$Location[i]
+  
+  # stores the temperature
+  temp <- weather$Temperature[i]
+  
+  # checks if location is Sydney and temp is greater than 25
+  if(location == 'Canberra' & temp < 21) {
+    
+    # update days count
+    days_count <- days_count + 1
+    
+    # sum humidity to calculate average
+    humidity_sum <- humidity_sum + weather$Humidity[i]
+  }
+}
+
+average_humidity <- humidity_sum/days_count
+
+average_humidity
+
+# to validate
+# weather %>%
+#   filter(Location == 'Canberra' & Temperature < 21) %>%
+#   summarise(mean_humidity=mean(Humidity))
 
 
 
@@ -507,6 +542,30 @@ print(high_temp_count)
 # 4-  The code for task 4 goes here
 
 
+# variable to store the high uv days
+high_uv_days <- 0
+
+for (i in 1:nrow(weather)) {
+  # stores location
+  location <- weather$Location[i]
+  
+  # stores the temperature
+  uv_index <- weather$UVIndex[i]
+  
+  # checks if location is Sydney and temp is greater than 25
+  if(location %in% c('Canberra', 'Sydney') & uv_index > 7) {
+    
+    # update days count
+    high_uv_days <- high_uv_days + 1
+  }
+}
+
+print(high_uv_days)
+
+# to validate
+weather %>%
+  filter(Location %in% c('Canberra', 'Sydney') & UVIndex > 7) %>%
+  summarise(count=n())
 
 #----------------------------------#
 ```

@@ -1,0 +1,37 @@
+---
+title: "R Dojo - Practice -1"
+author: "Ajul Thomas"
+date: "2023-09-13"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# R Dojo
+
+## Practice Session 1
+
+Based on topics till week 3.
+
+```{r}
+
+# vectors
+x <- c(1,2,3,4,5,6,7,8)
+y <- 1:5
+z <- vector("integer", x)
+
+cat(class(x))
+cat("\n")
+cat(unclass(y))
+
+typeof(x)
+typeof(y)
+
+# sequences
+a <- seq(1,5,2)
+b <- seq(from=1,to= 20,length=20)
+c <- seq(from=1,length=30, by=5)
+```
+

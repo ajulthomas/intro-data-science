@@ -1,0 +1,249 @@
+---
+title: "Introduction to Data Science 11372 & 11516 G"
+subtitle: Tutorial / Laboratories - Week 5
+output:
+  html_document: rmdformats::readthedown
+editor_options:
+  markdown:
+    wrap: 72
+status: In Progress
+params:
+  solutionOn: yes
+  tutorOn: no
+---
+***
+
+Welcome to the tutorials and practical laboratory of the **Introduction to Data Science**.
+
+The purpose of this week's tutorial and lab exercises is to introduce you to some other components of the R programming language, which are essential for any data science project.
+
+These components include data structure concepts such as matrices, arrays and data frames. Also, this is coupled with hands-on skills on how to use these data structures with real examples. The objectives of this tutorial can be summarised as follows:
+
+1.  Get yourself familiar with creating, accessing and operating on ‘Matrices/Arrays’
+2.	Get yourself familiar with creating, accessing and operating on ‘Data Frames’.
+
+```{asis, echo=params$tutorOn}
+<div style="background-color: yellow;">
+  <span><strong>Notes to Tutor</strong></span>
+</br>
+Please ensure that students have completed the exercises of previous weeks before jumping into the next sections.   
+</br>
+</div>
+```
+
+# Matrices and Arrays
+
+Please walk through the following section to study `Matrices` and `Arrays`.
+
+Matrices and arrays are data structures that store elements with similar data types in 2-D and in n-D respectively. Matrices are special case of arrays with only two dimensions. In the R language, arrays and matrices are nothing more than vectors with additional attributes.
+
+To create a matrix or an array, we specify the data to be ordered in the matrix or in the array, as well as the potential dimension of the order (e.g., number of rows, number of columns, etc.). 
+
+**Practice the following**:
+
+```{r, eval= FALSE, echo= TRUE}
+mat <- matrix(11:80, 7, 10)
+print(mat)
+str(mat)
+
+arr <- array(1:60, dim= c(3,4,5))
+print(arr)
+str(arr)
+```
+
+## Exercise 1
+
+Given the following vectors;
+
+```{r, echo = TRUE, eval = FALSE}
+vecX <- c(3, 9, -1, 4, 2, 6)
+vecY <- c(5, 2, 0, 9, 3, 4)
+```
+
+create a chunk of code to perform these operations:
+
+*	Create a matrix `matX`, from the vector (`vecX`), where number of rows are 2,
+*	Create a matrix `matY`, from the vector (`vecY`), where number of rows are 2,
+*	Display the values of elements of the first row from matrix `matX`.
+* Display the value of the element in the second row and third column of `matY`,
+*	Sum up the two matrices and display the output,
+*	Subtract the `matY` from `matX` and display the output,
+*	Multiply the two matrices (*element-wise*) and print the output,
+*	Transpose the `matY` and assign the output to a third matrix called `matZ`,
+*	Perform matrix multiplication between `matX` and `matZ` and assign the output to `matW`,
+*	Display the dimension of the `matW` matrix,
+* Display the maximum, minimum and average value of matrix, `matW`
+* Reflect and discuss with your colleagues what matrices are and when we should use them.
+
+```{r, eval=FALSE, echo=params$solutionOn}
+# Solution of Ex2 
+vecX <- c(3, 9, -1, 4, 2, 6)
+vecY <- c(5, 2, 0, 9, 3, 4)
+
+# create m1
+matX <- matrix(vecX, nrow= 2)
+matX
+# create m2
+matY <- matrix(vecY, nrow= 2)
+matY
+# Display the values of elements of the first row from matrix `matX`.
+matX[1,]
+# Display the value of the element in the second row and third column of `matY`,
+matY[2,3]
+
+# summation
+matX+matY
+# subtraction
+matX - matY
+# element-wise multiplication
+matX * matY
+# Transpose
+matZ <- t(matY)
+matZ
+# matrix multiplication
+matW <- matX %*% matZ
+matW
+# dimention
+dim(matW)
+
+# Display the maximum, minimum and average value of matrix, `matW`
+cat("maximum value of matW:", max(matW), "\n")
+cat("minimum value of matW:", min(matW), "\n")
+cat("average value of matW:", mean(matW), "\n")
+
+cat("********* Done *********\n")
+```
+
+-----------
+
+## Exercise 2
+
+Use the vectors (`vecX` and `vecY`) alongside with the following vector to create an array and complete the following code.
+
+```{r, eval = FALSE}
+vecZ <- c(8, -3, 1, 7, 0, 4)
+# print the three vectors, vecX, vecY, vecZ
+
+# Create an array from the three vector and give it a name (e.g., arrNums). The dimension of this array is (3,2,3)
+arrNums <- 
+
+# what is the element of the second row and first column of the third slice of the array
+element <- 
+  
+# print this element
+print(element)
+
+# extract the minimum, maximum, median, and mean of the values in the array.
+
+```
+
+**Reflect on what you have learned about arrays and matrices** 
+
+```{r, eval=FALSE, echo=params$solutionOn}
+# Solution of Ex3:
+vecZ <- c(8, -3, 1, 7, 0, 4)
+# print the three vectors, vecX, vecY, vecZ
+print(vecX)
+print(vecY)
+print(vecZ)
+
+# Create an array from the three vector and give it a name (e.g., arrNums). The dimension of this array is (3,2,3)
+arrNums <- array(c(vecX, vecY, vecZ), dim = c(3,2,3))
+print(arrNums)
+
+# what is the element of the second row and first column of the third slice of the array
+element <- arrNums[2,1,3] 
+  
+# print this element
+print(element)
+
+# extract the minimum, maximum, median, and mean of the values in the array.
+
+cat("maximum value of the array:", max(arrNums), "\n")
+cat("minimum value of the array:", min(arrNums), "\n")
+cat("median value of the array:", median(arrNums), "\n")
+cat("average value of the array:", mean(arrNums), "\n")
+
+cat("********* Done *********\n")
+```
+
+# Data Frames
+
+```{asis, echo=params$tutorOn}
+<div style="background-color: yellow;">
+  <span><strong>Notes to Tutor</strong></span>
+</br>
+Before jumping into how data frames are created in R, it is a good practice to check with the students about what comes to their mind when hearing the word data frames, i.e., what do they think of this concept?.
+Choosing answers from students with different background can help you to build on what they already understand and get them to observe the concept easily. Also, encourage the students to participate in sharing their ideas or thoughts, no matter what. The student who talk in a class would feel that he is part of this class. Try your best to not letting the students live in their isolated dreams.
+</br>
+</div>
+```
+
+Data frames are the most common used data structures in R. A Data Frame is a series of records that are represented by rows (observations), and columns (variables). They are like matrices in structure as they are also bi-dimensional. However, contrary to matrices, data frames may include data of different types.
+
+**Practice the following example**:
+
+```{r, eval=FALSE}
+authors=c("Reda", "John", "Edward", "Ben")
+year=c(2104, 2016, 2005, 2019)
+publishers=c("Wiley", "Springer", "Sage", "International Books")
+
+books <- data.frame(authors=authors, year= year, publishers= publishers)
+
+# print the data frame entries
+print(books)
+
+# print the values of the authors entry
+books$authors
+# or ...
+books["authors"] # what will happen if you use double square brackets? books[["authors"]] 
+```
+
+----------
+
+## Exercise 3
+1.	Create your own data frame that represents a tiny database with one table holding information about 5 movies. The variables (_i.e._, columns) of this table include the movies' title, director, year, and country.
+2.	Create another data frame of the same format as above but containing just one new movie.
+3.	Merge the two data frames row-wise using `rbind()` function.
+4.	Extract the titles of the merged data frame using the access operator, `$`
+5.	Try sorting the year using `sort()` function
+6.	Replace the sort with the `order()` function, what is the difference between using sort and order?
+
+```{r, eval=FALSE, echo=params$solutionOn}
+# Solution of Ex4:
+
+# create a database for the films
+films_A <- data.frame(title=c("film1", "film2", "film3", "film4", "film5"),
+                    director=c("A", "B", "C", "B", "A"),
+                    year=c(2012, 2000, 2014, 2000, 2012),
+                    country=c("Australia", "Egypt", "India", "Egypt", "Australia"))
+
+# another data frame, with only one film entry
+films_B <- data.frame(title=c("film6"), 
+                       director=c("D"),
+                       year=c(1989),
+                       country=c("China"))
+
+# merge the two data frames, here we use `rbind` function
+films <- rbind(films_A, films_B)
+films
+
+# extract titles entry
+films$title
+
+# sort based on the year, ascendingly
+films[sort(films$year),] # what is the output? please note that sort return ordered values not indexes, that's why the things got messed up. 
+
+# let's use order instead, as we need the indexes when using square brackets to access the entries  
+films[order(films$year),]
+
+# sorting based on the year, descendingly
+films[order(-films$year),]
+
+cat("******* Done *******\n")
+```
+-------
+
+For the remaining time of the class, discuss with your tutor any other questions and exercises that are leftovers from the previous tutorials.
+
+-------
