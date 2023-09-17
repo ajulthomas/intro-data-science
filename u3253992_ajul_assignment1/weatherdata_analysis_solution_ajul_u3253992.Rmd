@@ -118,52 +118,53 @@ Please follow this structure:
 
 library(tidyverse)
 
-#----------------------------------#
-# 1-  The code for task 1 goes here
-# Create a vector containing the average temperature readings for each month.
-
 # to check the data type of the data column
 class(weather$Date)
 
 # Extract the month and year from the "Date" column
-weather$Month <- format(weather$Date, "%Y-%m")
+weather$YearMonth <- format(weather$Date, "%Y-%m")
+
+# extract year, month and date
+weather <- weather %>%
+  separate(col=Date, into=c("Year","Month","Day"), sep="\\-", remove=FALSE)
+
+#----------------------------------#
+# 1-  The code for task 1 goes here
+# Create a vector containing the average temperature readings for each month.
 
 # using group_by and summarize to find the monthly average temperature
-monthly_average_temp_df <- weather %>%
-  group_by(Month) %>%
-  summarize(average_temp = mean(Temperature))
-
-print(monthly_average_temp_df)
-
-monthly_average_temperature <- monthly_average_temp_df$average_temp
+monthly_average_temperature <- 
+  (
+  weather %>%
+    group_by(Month) %>%
+    summarize(average_temp = mean(Temperature))
+  )$average_temp
 
 cat("Q1: Monthly average temperatures: ")
 print(monthly_average_temperature)
 
+
+
 #----------------------------------#
 
 # 2-  The code for task 2 goes here
-# Create two vector containing the average humidity readings for each month; one for Sydney and another for canberra.
+# Create two vector containing the average humidity readings for each month; one for Sydney and another for Canberra.
 
-# uses group_by and summarize methods to extract the monthly average humidity for canberra snd sydney
-monthly_avg_humidity_df <- weather %>%
-  group_by(Location, Month) %>%
-  summarize(average_humidity = mean(Humidity))
+canberra_monthly_avg_humidity <- 
+  (
+    weather %>%
+      filter(Location=='Canberra') %>%
+      group_by(Month) %>%
+      summarise(average_humidity=mean(Humidity))
+  )$average_humidity
 
-monthly_avg_humidity_df
-
-# weather %>%
-#   filter(Month %in% c('2023-04')) %>%
-#   select(Month, Location)
-# 
-# weather %>%
-#   select(Date, Month, Location)
-
-canberra_monthly_avg_humidity <- (filter(monthly_avg_humidity_df,Location == 'Canberra'))$average_humidity
-# canberra_monthly_avg_humidity <- c(0, canberra_monthly_avg_humidity)
-
-sydney_monthly_average_humidity <- (filter(monthly_avg_humidity_df,Location == 'Sydney'))$average_humidity
-# sydney_monthly_average_humidity <- c(sydney_monthly_average_humidity, 0)
+sydney_monthly_average_humidity <- 
+  (
+    weather %>%
+      filter(Location=='Sydney') %>%
+      group_by(Month) %>%
+      summarise(average_humidity=mean(Humidity))
+  )$average_humidity
 
 cat("Q2: Monthly average humidity for Sydney and Canberra: \n")
 print(canberra_monthly_avg_humidity)
@@ -191,7 +192,9 @@ monthly_averages_df <- monthly_averages_df %>% select(-Month)
 # as the next step, we will convert the df into a matrix
 # reference: https://stat.ethz.ch/R-manual/R-devel/library/base/html/data.matrix.html
 monthly_averages <- data.matrix(monthly_averages_df)
+
 # is.matrix(monthly_averages)
+print("Matrix containing the average temperature, humidity, pressure, and wind speed readings for each month: ")
 monthly_averages
 
 
@@ -200,6 +203,8 @@ monthly_averages
 #----------------------------------#
 
 # 4-  The code for task 4 goes here
+# Create another matrix containing the average temperature, humidity, pressure, and wind speed readings for each city.
+
 
 city_averages_df <- weather %>%
   group_by(Location) %>%
@@ -209,12 +214,14 @@ city_averages_df <- weather %>%
     average_pressure = mean(Pressure),
     average_wind_speed = mean(WindSpeed)
     )
-city_averages_df
+city_averages_df <- city_averages_df %>% select(-Location)
 
 # as the next step, we will convert the df into a matrix
 # reference: https://stat.ethz.ch/R-manual/R-devel/library/base/html/data.matrix.html
 city_averages <- data.matrix(city_averages_df)
+
 # is.matrix(city_averages)
+print("Matrix containing the average temperature, humidity, pressure, and wind speed readings for each city: ")
 city_averages
 
 
@@ -224,87 +231,7 @@ city_averages
 # 5-  The code for task 5 goes here
 # Create an array containing the average temperature, humidity, pressure, wind speed, and UV index readings for each day of each month.
 
-weather <- weather %>%
-  mutate(DayOfWeek = weekdays(Date))
 
-weather$DayOfWeek
-
-monthly_averages_by_day_df <- 
-  weather %>%
-  group_by(Month, DayOfWeek) %>%
-  summarize(
-    average_temp = mean(Temperature), 
-    average_humidity = mean(Humidity),
-    average_pressure = mean(Pressure),
-    average_wind_speed = mean(WindSpeed),
-    average_UV_index = mean(UVIndex)
-    )
-
-monthly_averages_by_day_df
-
-# create a vector of months
-months <- unique(monthly_averages_by_day_df$Month)
-months
-
-n_slices <- length(unique(monthly_averages_by_day_df$Month))
-n_slices
-
-# calculating col length for the array
-n_cols <- ncol(monthly_averages_by_day_df) - 2 # reducing the columns month and weekday
-n_cols
-
-# creating a variable to hold row length for the array, which would be no. of days in a week
-# length(unique(monthly_averages_by_day_df$DayOfWeek))
-n_rows <- 7
-
-# stores days of week in required order
-days_of_week <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
-
-# initializing an empty 3D array
-monthly_averages_by_day_arr <- array(NA, c(n_rows, n_cols, n_slices))
-
-
-# starts the loop
-for (i in 1:n_slices) {
-  
-  # extracting the data for the current month( i.e indexed month in loop) 
-  curr_month_df <- monthly_averages_by_day_df %>%
-    filter(Month == months[i])
-  
-  # initialize the data matrix to which average reading for each day will be stored in order
-  # the rows of this matrix represents the weekday starting from Monday. 
-  # i.e first row represents Monday
-  # the columns represents the average readings, it follows the same order as that of the 'monthly_averages_by_day_df' dataframe
-  data_matrix <- matrix(data = NA, nrow = 0, ncol = n_cols)
-  
-  # starts the inner loop, where we will loop through each day of the week
-  for( j in  1:n_rows) {
-    
-    # filtering the current month data frame, based on weekdays so that they can be stored in order to the matrix
-    # this will ensure that first row in a slice always represents average readings on mondays of a given month
-    curr_day_df <- curr_month_df %>%
-      filter(DayOfWeek == days_of_week[j])
-    
-    # removing month and day columns
-    curr_day_df <- curr_day_df[, -which(names(curr_day_df) %in% c("Month", "DayOfWeek"))]
-    
-    # converting the df row into a vector
-    cur_day_vec <- unlist(curr_day_df[1,])
-    
-    # storing the weekdays(rows) x average readings(cols) to a matrix, where first row represents monday, second tuesday, e.t.c
-    data_matrix <- rbind(data_matrix, cur_day_vec)
-    
-  }
-  # print(data_matrix)
-  
-  # storing the matrix to each slice of the 3D array
-  # each slice represents the data of a particular month 
-  monthly_averages_by_day_arr[ , ,i] <- data_matrix
-
-}
-
-# prints the 3D array  
-print(monthly_averages_by_day_arr)
 
 
 #----------------------------------#
@@ -312,82 +239,7 @@ print(monthly_averages_by_day_arr)
 # 6-  The code for task 6 goes here
 # Create an array containing the average temperature, humidity, pressure, wind speed, and UV index readings for each day of each month, for each city.
 
-city_averages_by_day_df <- 
-  weather %>%
-  group_by(Location, DayOfWeek) %>%
-  summarize(
-    average_temp = mean(Temperature), 
-    average_humidity = mean(Humidity),
-    average_pressure = mean(Pressure),
-    average_wind_speed = mean(WindSpeed),
-    average_UV_index = mean(UVIndex)
-    )
 
-city_averages_by_day_df
-
-# create a vector of cities
-cities <- unique(city_averages_by_day_df$Location)
-cities
-
-n_city_slices <- length(unique(city_averages_by_day_df$Location))
-n_city_slices
-
-# calculating col length for the array
-n_cols <- ncol(city_averages_by_day_df) - 2 # reducing the columns month and weekday
-n_cols
-
-# creating a variable to hold row length for the array, which would be no. of days in a week
-# length(unique(monthly_averages_by_day_df$DayOfWeek))
-n_rows <- 7
-
-# stores days of week in required order
-days_of_week <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
-
-# initializing an empty 3D array
-city_averages_by_day_arr <- array(NA, c(n_rows, n_cols, n_city_slices))
-
-
-# starts the loop
-for (i in 1:n_city_slices) {
-  
-  # extracting the data for the current city( i.e indexed city in loop) 
-  curr_city_df <- city_averages_by_day_df %>%
-    filter(Location == cities[i])
-  
-  # initialize the data matrix to which average reading for each day will be stored in order
-  # the rows of this matrix represents the weekday starting from Monday. 
-  # i.e first row represents Monday
-  # the columns represents the average readings, it follows the same order as that of the 'monthly_averages_by_day_df' dataframe
-  data_matrix <- matrix(data = NA, nrow = 0, ncol = n_cols)
-  
-  # starts the inner loop, where we will loop through each day of the week
-  for( j in  1:n_rows) {
-    
-    # filtering the current month data frame, based on weekdays so that they can be stored in order to the matrix
-    # this will ensure that first row in a slice always represents average readings on mondays of a given city
-    curr_day_df <- curr_city_df %>%
-      filter(DayOfWeek == days_of_week[j])
-    
-    # removing location/city and day columns
-    curr_day_df <- curr_day_df[, -which(names(curr_day_df) %in% c("Location", "DayOfWeek"))]
-    
-    # converting the df row into a vector
-    cur_day_vec <- unlist(curr_day_df[1,])
-    
-    # storing the weekdays(rows) x average readings(cols) to a matrix, where first row represents monday, second tuesday, e.t.c
-    data_matrix <- rbind(data_matrix, cur_day_vec)
-    
-  }
-  # print(data_matrix)
-  
-  # storing the matrix to each slice of the 3D array
-  # each slice represents the data of a particular month 
-  city_averages_by_day_arr[ , ,i] <- data_matrix
-
-}
-
-# prints the 3D array  
-print(city_averages_by_day_arr)
 
 
 #----------------------------------#
@@ -476,7 +328,7 @@ average_monthly_pressure
 # variable to store the no. of instances where the Sydney temp is greater than 25 degree celcius
 high_temp_count <- 0
 
-# loopint through df
+# looping through df
 for (i in 1:nrow(weather)) {
   # stores location
   location <- weather$Location[i]
@@ -579,49 +431,119 @@ Please follow this structure:
 #----------------------------------#
 
 # 1-  The code for task 1 goes here
+# Load the 5 files using read.csv or read_csv functions and combine them into one data frame. 
+# Please note that the first 7 rows of each files need to be ignored while loading the data.
 
+# store filenames
+file_names <- c('201812.csv', '201811.csv', '201810.csv', '201809.csv', '201808.csv')
+
+create_file_paths <- function(file_name) {
+  file_path <- paste("data",file_name, sep = "/")
+  return(file_path)
+}
+
+file_paths <- sapply(file_names, create_file_paths)
+
+custom_read_csv <- function(file_path) {
+  return(read.csv(file_path, skip=7))
+}
+
+data_list <- lapply(file_paths, custom_read_csv)
+dim(data_list)
+
+combined_df <- data.frame()
+
+for(df in data_list) {
+  print(dim(df))
+  combined_df <- rbind(combined_df, df)
+}
 
 
 #----------------------------------#
 
 # 2-  The code for task 2 goes here
+# Check the dimensions of the combined data frame.
 
-
+dim(combined_df)
 
 #----------------------------------#
 
 # 3-  The code for task 3 goes here
+# Write a for loop to check the structure 'str()' and summary of each column.
 
+col_names <- colnames(combined_df)
 
+for(col in col_names) {
+  cat("Column Name: ", col, "\n")
+  cat('-------------------------\n')
+  
+  cat("Structure: \n")
+  cat(str(combined_df[[col]]))
+  cat("\n")
+  
+  cat("Summary: \n")
+  print(summary(combined_df[[col]]))
+  
+  cat("\n")
+}
 
 #----------------------------------#
 
 # 4-  The code for task 4 goes here
+# Write a code to remove the variables, which have no data at all 
+# (i.e. all the records in these variables are NAs).
 
+get_empty_col <- function(col_name) {
+  if(all(is.na(combined_df[[col_name]]))) {
+    print(col_name)
+    return(col_name)
+  }
+  return(NA)
+}
 
+empty_cols <- sapply(col_names, get_empty_col)
+empty_cols <- empty_cols[!is.na(empty_cols)]
+
+combined_df <- combined_df %>%
+  select(-empty_cols)
 
 #----------------------------------#
 # 5-  The code for task 5 goes here
+# Write code to change the column names to have no spaces between the words 
+# and replace these spaces with underscore the _ character.
 
+colnames(combined_df) <- gsub(" ", "_", colnames(combined_df))
 
-
+colnames(combined_df)
 #----------------------------------#
 
 # 6-  The code for task 6 goes here
+# Write code to create two new columns for the month and year from the Date column.
 
+class(combined_df$Date)
 
+combined_df$Date <- as.Date(combined_df$Date, format = "%d/%m/%Y")
+
+combined_df <- combined_df %>%
+  separate(col = Date, into = c("Month", "Year"), remove = FALSE)
 
 #----------------------------------#
 
 # 7-  The code for task 7 goes here
+# Write code to replace the remaining NAs with the median of the values of each column.
 
 
+combined_df <- combined_df %>%
+  mutate(across(where(is.numeric), ~replace_na(.,median(.,na.rm=TRUE))))
+
+# reference: https://www.statology.org/r-replace-na-with-median/
 
 #----------------------------------#
 
 # 8-  The code for task 8 goes here
+# Write code to save the combined weather data file with all of these changes to a single file.
 
-
+write.csv(combined_df, file = "combined_weather.csv")
 
 #----------------------------------#
 ```

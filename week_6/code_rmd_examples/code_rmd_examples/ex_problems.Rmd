@@ -1,0 +1,40 @@
+---
+title: "Checking problems while importing data"
+author: "Ibrahim"
+date: '2022-09-05'
+output: html_document
+---
+
+Here we check the Difference between `read.csv` and `read_csv` in inspecting and handling data problems while reading them
+
+```{r, eval=FALSE}
+# base function to read data.frame
+df <- read.csv("data/challenge.csv")
+str(df) # numeric and character columns
+df[1001,] # The second column is parsed as character however, it contains date values
+problems(df) # using problems with read.csv does not indicate any issues
+```
+-----------------------
+
+```{r, eval=FALSE}
+# readr functions to read csv
+library(tidyverse)
+tbl <- read_csv("data/challenge.csv")
+str(tbl) # Still the issue is there, with highlighting the col_character (red colour) to be read to check if this may lead to an issue.
+tbl[1001,]
+# use problems to check the problems in the tbl parsing
+problems(tbl) # still no issues appear from using this function
+
+##################################
+
+# Let's read the data and parse the second column as a date type and specify its format
+tbl2 <- read_csv("data/challenge.csv", col_types = 
+                  cols(
+                    x = col_double(),
+                    y = col_date(format = "%d/%m/%Y"),
+                  ), NA)
+
+str(tbl2) # now the second column is parsed as of date type
+problems(tbl2)
+# It is recommended to specify the column types when you would like the some columns to follow a specific data type
+```
