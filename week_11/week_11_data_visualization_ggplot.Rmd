@@ -1,0 +1,174 @@
+---
+title: "Lab 11 - Data Visualisation - ggplot2"
+author: "Ajul Thomas"
+date: "2023-10-10"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+
+```
+
+
+
+Exercise 1
+
+```{r}
+
+df <- data.frame( gender=factor(rep(c("F", "M"), each=200)),
+                 weight=round(c(rnorm(200, mean=55, sd=5), rnorm(200, mean=65, sd=5))))
+
+```
+
+
+Based on the above code, please perform the following steps:
+
+1)  Create a graph to visualise the spread of the weight values.
+```{r}
+
+df <- as_tibble(df)
+
+ggplot(df, aes(x=weight)) + 
+  geom_bar(stat = "count")
+
+```
+   
+2) Create a graph to show how the weight values are spread across the gender groups.
+```{r}
+
+weight_spread_gender <- ggplot(df, aes(x=weight, fill=gender)) +
+  geom_bar(stat="count", position="dodge")
+
+weight_spread_gender
+
+```
+   
+3) On the generated graph, can you highlights the average weight per each gender group?
+```{r}
+
+means <- df %>% 
+  group_by(gender) %>% 
+  summarise(average = mean(weight, na.rm = T))
+
+means
+
+female_weight_average <-  means$average[means$gender == 'F']
+male_weight_average <-  means$average[means$gender == 'M']
+
+weight_spread_gender +
+  geom_vline(aes(xintercept = female_weight_average, linetype="dashed", color="red")) +
+  geom_vline(aes(xintercept = male_weight_average, linetype="dashed", color="blue"))
+
+```
+    
+4) How can you inspect visually whether the weights of each group include any outliers?
+```{r}
+
+ggplot(df, aes(x= gender, y=weight)) +
+  geom_boxplot(aes(fill=gender))
+
+
+```
+
+5) what are your insights/findings about the generated analysis?
+
+```{r}
+
+
+
+```
+
+
+Exercise 2
+
+1) Download and import the data called “surveys_complete.csv” from week 11 on Canvas.
+
+```{r}
+
+
+surveys_df <- read_csv('./data/surveys_complete.csv')
+surveys_df
+
+```
+
+
+2) Generate a graph showing the distribution of the species’ weights based on their id using histogram and boxplot?
+```{r}
+
+ggplot(surveys_df)+
+  geom_histogram(aes(x=weight, fill=species_id), position = "dodge") +
+  labs(x = "Weight", y = " Frequency", title = "Distribution of Species weights by ID")
+
+ggplot(surveys_df, aes(x = species_id, y=weight, fill = species_id)) +
+  geom_boxplot() +
+  geom_point(alpha = .05, aes(fill = species_id))
+
+ggplot(surveys_df, aes(x = species_id, y=weight, fill = species_id)) +
+  geom_boxplot() +
+  geom_jitter(alpha = .01, aes(colour = species_id))
+```
+
+
+3) What are your insights based on using the two methods above (ie, boxplots vs histograms)?
+
+```{r}
+
+
+```
+
+
+
+
+### Exercise 3
+
+
+Given the following values, (199, 201, 236, 269,271,278,283,291, 301, 303,341):
+
+1)compute the three quartiles and inter-quartile range for this vector.
+
+```{r}
+
+qt_dt <- c(199, 201, 236, 269,271,278,283,291, 301, 303,341)
+
+dt_sum <- summary(qt_dt)
+
+dt_sum
+
+first_qtr <-  dt_sum["1st Qu."]
+third_qtr <- dt_sum["3rd Qu."]
+
+iqr <-  third_qtr - first_qtr
+
+data_lowest <- first_qtr - 1.5*iqr
+data_highest <- third_qtr - 1.5*iqr
+
+```
+
+
+2)Identify the outlier values, if any.
+
+```{r}
+
+outliers <- qt_dt[qt_dt < data_lowest | qt_dt > data_highest]
+
+outliers
+
+```
+
+
+3)Visualise the box-plot as a graph representation for this vector.
+
+```{r}
+
+
+
+```
+
+

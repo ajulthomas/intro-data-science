@@ -1,0 +1,198 @@
+---
+title: "Lab 10 - Data Visualisation - ggplot"
+author: "Ajul Thomas"
+date: "2023-10-03"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+
+library(tidyverse)
+
+```
+```{r}
+
+?mpg
+
+mpg
+```
+
+# plotting data
+
+
+1) Run ggplot(data = mpg). What do you see?
+
+```{r}
+ggplot(data=mpg)
+
+```
+
+
+2) Create a scatterplot of the hwy vs cyl variable.
+
+```{r}
+
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x=cyl, y=hwy))
+
+```
+
+3) Change the colour of the points to discriminate each class of the car with different colour.
+
+```{r}
+
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x=cyl, y=hwy, colour=class ))
+
+```
+
+
+4) What happens if you tried to make a scatterplot of class vs drv? Why is this plot not so useful?
+
+```{r}
+
+ggplot()
+
+```
+
+
+
+### Exercise 2
+
+    1) Create a scatter plot between the engine displacement (i.e., displ) and highway miles per gallon (i.e., hwy).
+    
+```{r}
+
+```
+    
+    
+    2) Add a smooth line to show the correlation between the variables in the last graph
+    
+```{r}
+
+```
+    
+    
+    Create a bar chart to show the frequencies of the different classes of the cars.
+    
+```{r}
+
+ggplot(data = mpg, aes(x = class)) +
+  geom_bar() +
+  stat_count(geom ="text", colour = "white", size=3.5, aes(label=..count..), position=position_stack(vjust = 0.5))
+
+```
+    
+    Build a histogram for the distribution of the highway miles per gallon variable.
+
+```{r}
+
+ggplot(data = mpg, aes(x=hwy)) +
+  geom_histogram() +
+  scale_x_continuous(name="highway miles per gallon", breaks=seq(min(mpg$hwy), max(mpg$hwy), 3), limits = c(min(mpg$hwy), max(mpg$hwy)) )
+
+```
+
+
+    Change the ticks of the x-axis
+    
+```{r}
+
+
+ggplot(data = mpg, aes(x=hwy)) +
+  geom_histogram() +
+  scale_x_continuous(name="highway miles per gallon", breaks=seq(min(mpg$hwy), max(mpg$hwy), 3), limits = c(min(mpg$hwy), max(mpg$hwy)) )
+
+```
+    
+    Add a vertical line to represent the median value of the variable on the distribution
+
+```{r}
+
+median_hwy = median(mpg$hwy)
+median_hwy
+
+ggplot(data = mpg, aes(x=hwy)) +
+  geom_density(fill="#b4b2f3") +
+  geom_vline(xintercept = median_hwy, color="red", linetype="dashed", size=1)
+
+```
+
+Exercise 3
+
+    Create a bar chart for the distribution of the car classes
+    
+```{r}
+
+ggplot(data=mpg, aes(y=class)) +
+  geom_bar(fill="#c0c8ce") 
+  # geom_vline(xintercept = 40, colour= "red", linetype="dashed")
+
+```
+    
+    
+    Change the fill of the bars to be aligned with the car type of drive
+    
+```{r}
+ggplot(data=mpg, aes(x=class, fill=drv)) +
+  geom_bar(position = "dodge")
+
+```
+    
+    
+    How to change the scale on the y-axis to be between 0 and 1?
+    
+```{r}
+
+ggplot(data=mpg, aes(x=class, fill=drv)) +
+  # geom_bar(position = "dodge")
+  geom_bar(position = "fill") +
+  scale_y_continuous(labels = scales::percent)
+
+```
+    
+    
+### Exercise 4
+
+Based on what you have understood in this tutorial, attempt the following tasks:
+
+    1) Create a “row” of subplots, one for each car class, where each subplot shows a scatter plot for the displacement and highway miles per gallon variables.
+    
+```{r}
+
+ggplot(data=mpg, aes(x=displ, y=hwy)) +
+  geom_point() +
+  facet_wrap(facets = vars(mpg$class))
+
+```
+    
+    
+    
+    
+    2) Add two variables (year of manufacturing and number of cylinders) to the last graph, where each subplot still shows the relationship between the displacement and the gallons consumed per mile on the highways.
+
+```{r}
+
+ggplot(data=mpg, aes(x=displ, y = hwy)) +
+  geom_point() +
+  facet_grid(year ~ cyl ~ class)
+
+```
+
+```{r}
+
+ggplot(data=mpg, aes(x=displ, y = hwy)) +
+  geom_point(aes(size=cyl, colour=class)) +
+  facet_wrap(~ year)
+
+```
+
+```{r}
+mpg %>% 
+  distinct(year)
+```
+

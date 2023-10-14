@@ -1,0 +1,94 @@
+---
+title: "Assignment 2, Part B"
+author: "Put your name"
+date: "2023-10-02"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Part B - Data Wrangling			(33 marks)
+
+**Perform the following tasks**
+
+1. 1. Load the `act_weather_data_partA.csv` into a data frame or a tibble, named, `act_weather_data`. (1 mark)
+
+```{r, eval=FALSE}
+# solution and documentation of the code goes below this line ...
+
+```
+
+2. Print the summary including the (minimum, median, mean, maximum) of each of the following variables: (5 marks)
+  + `Minimum_temperature`,
+  + `Maximum_temperature`,
+  + ` 9am_Temperature`,
+  + ` Speed_of_maximum_wind_gust_(km/h)`, and
+  + `3pm_Temperature`
+
+```{r, eval=FALSE}
+# solution and documentation of the code goes below this line ...
+
+```
+
+3. Based on the minimum and maximum temperature columns, compute the average temperature per month. Please note that we have 52 months provided in the data, so there will be 52 generated values. (4 marks)
+
+```{r, eval=FALSE}
+# solution and documentation of the code goes below this line ...
+
+```
+
+4. What is the average speed of maximum wind gust for each group of the direction of maximum wind gust? (2 marks)
+
+```{r, eval=FALSE}
+# solution and documentation of the code goes below this line ...
+
+```
+
+5. Which month has the highest average rain fall? And in which year? (2 marks) 
+- ( _hint:_ in this question you may use group_by, summarise and which.max functions)
+
+```{r, eval=FALSE}
+# solution and documentation of the code goes below this line ...
+
+```
+
+6. Which month was the driest in average, ( _i.e._, least amount of rainfall in average)? And in which year? (3 marks)
+
+```{r, eval=FALSE}
+# solution and documentation of the code goes below this line ...
+
+```
+
+7. For the humidity, which month was receiving highest humidity level, in average, in the 2019 year? (3 marks)
+
+```{r, eval=FALSE}
+# solution and documentation of the code goes below this line ...
+
+```
+
+8. For the period between August 2020 and July 2021 inclusive, Can you generate a summary table showing the minimum, maximum and average temperature (please use the `3 pm temperature` column), wind speed and humidity for each month and each quarter in the year? (5 marks)
+
+```{r, eval=FALSE}
+# solution and documentation of the code goes below this line ...
+
+```
+
+9. Build graph(s) that show the distribution of the variables in the question #8. (5 marks)
+- ( _hint:_ There will be six graphs where each of them include distributions of minimum, maximum and average of variables temperature, wind speed or humidity per month and quarter.
+
+```{r, eval=FALSE}
+# solution and documentation of the code goes below this line ...
+
+```
+
+10. Provide a narrative to describe your thoughts on the generated graphs from your answer of question #9 (3 marks)
+
+**Description goes below**
+
+.....
+
+----
+
+*** 

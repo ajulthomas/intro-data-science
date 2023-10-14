@@ -1,0 +1,51 @@
+---
+title: "Assignment 2, Part C"
+author: "Put your name"
+date: "2023-10-02"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Part C - Insights			(17 marks)
+
+**Perform the following tasks**
+
+1. There is a claim that the climate-change phenomenon has been hitting the ACT region over the last 4 years. Using the `act_weather_data`, can you help the authorities validate whether this claim is correct or not? (6 marks)
+
+- ( _hint:_ This is an open question, where the claim can be checked and validated via different ways. Please explain your strategy and final insights with evidences (i.e., graphs). You may search for extra data from the public repository to support your final thoughts. )
+
+
+```{r, eval=FALSE}
+# solution and documentation of the code goes below this line ...
+
+```
+
+
+2. The ACT Transport Sector is seeking to use this data to understand when the ACT road construction should be going ahead and when it should be stopped. Also, the sector plans to build a time plan over the year to fix potholes after rain seasons, can you help them building analysis of which times in the year that this would be perfect? (6 marks)
+
+
+
+```{r, eval=FALSE}
+# solution and documentation of the code goes below this line ...
+
+```
+
+3. As a data scientist, you need to practice extracting insights and valuable information from the analysis you conduct on the data. This can be done by posing some real-world problems or decisions that can be solved by doing some analysis on this data. For this task list at least **2 (two)** problems that can be solved by running analysis on this data set, if you are undergraduate student. Otherwise, generate at least **4 (four)** problems that can be solved by running analysis on this data set. (5 marks)
+
+**Solution**
+
+For each of the problems, use the following structure in your report:
+
+**Decision/Problem:** such as, _"In horticulture: Is it a good idea to plant tomatoes commercially in the ACT? If so when is the best timing for planting?"_
+
+**Knowledge:** such as _"Tomatoes thrive in warm sunny conditions. They cannot tolerate cold frosty weather (morning temperatures below zero) and windy conditions. Ideal daytime temperatures for growing are between 21-29°C. Any higher or lower reduces fruit set."_ ^[**"How to grow: Tomato"**, SBS Food, 2020. (Online). Available: https://www.sbs.com.au/food/article/2012/09/06/how-grow-tomato .(Accessed: 06- Oct-2020).]
+
+**Information needed:** _"Which months of the year have frosty temperature (below zero) and highest wind ... . Across **2019-2020**, plot the bar-charts of minimum temperature, and maximum wind speed per month"_
+
+**Conclusion:** final insights/findings from the above analysis should be reported here.
+
+
+*** 
