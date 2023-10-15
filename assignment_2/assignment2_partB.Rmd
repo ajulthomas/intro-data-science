@@ -18,6 +18,10 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r, eval=FALSE}
 # solution and documentation of the code goes below this line ...
 
+act_weather_data <- read_csv('output/act_weather_data_partA.csv')
+
+str(act_weather_data)
+
 ```
 
 2. Print the summary including the (minimum, median, mean, maximum) of each of the following variables: (5 marks)
@@ -30,12 +34,24 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r, eval=FALSE}
 # solution and documentation of the code goes below this line ...
 
+cols_to_display <- c('Minimum_temperature', 'Maximum_temperature', '9am_Temperature',  'Speed_of_maximum_wind_gust_(km/h)', '3pm_Temperature')
+
+act_weather_data %>% 
+  select(all_of(cols_to_display)) %>% 
+  summary()
+
 ```
 
 3. Based on the minimum and maximum temperature columns, compute the average temperature per month. Please note that we have 52 months provided in the data, so there will be 52 generated values. (4 marks)
 
 ```{r, eval=FALSE}
 # solution and documentation of the code goes below this line ...
+
+act_weather_data %>% 
+  select(Year, Month, Maximum_temperature, Minimum_temperature) %>%
+  mutate(average_temperature = (Maximum_temperature + Minimum_temperature)/2) %>% 
+  group_by(Year, Month) %>% 
+  summarise(average_monthly_temperature=mean(average_temperature))
 
 ```
 
@@ -44,6 +60,10 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r, eval=FALSE}
 # solution and documentation of the code goes below this line ...
 
+act_weather_data %>% 
+  group_by(Direction_of_maximum_wind_gust) %>% 
+  summarise(average_speed_max_wind_gust = mean(`Speed_of_maximum_wind_gust_(km/h)`))
+
 ```
 
 5. Which month has the highest average rain fall? And in which year? (2 marks) 
@@ -51,6 +71,14 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r, eval=FALSE}
 # solution and documentation of the code goes below this line ...
+
+str(act_weather_data)
+
+act_weather_data %>% 
+  select(Year, Month, `Rainfall_(mm)`) %>% 
+  group_by(Year, Month) %>% 
+  summarise(average_rainfall = mean(`Rainfall_(mm)`)) %>% 
+  summarise(month=Month[which.max(average_rainfall)], max_rainfall=max(average_rainfall))
 
 ```
 
