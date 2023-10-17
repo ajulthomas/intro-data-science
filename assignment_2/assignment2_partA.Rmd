@@ -179,14 +179,11 @@ act_weather_data <- act_weather_data %>%
 
 # The unique(act_weather_data$Month) function is used to extract the unique values present in the "Month" column.
 
-
-
-
 # converts month column into a factor
-act_weather_data$Month <- factor(act_weather_data$Month, levels = sort(unique(act_weather_data$Month)))
+act_weather_data$Month <- factor(act_weather_data$Month, levels = sort(unique(act_weather_data$Month)), ordered = T)
 
 # converts year column into a factor
-act_weather_data$Year <- factor(act_weather_data$Year, levels = sort(unique(act_weather_data$Year)))
+act_weather_data$Year <- factor(act_weather_data$Year, levels = sort(unique(act_weather_data$Year)), ordered = T)
 
 str(act_weather_data)
 

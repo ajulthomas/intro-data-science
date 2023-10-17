@@ -72,13 +72,12 @@ act_weather_data %>%
 ```{r, eval=FALSE}
 # solution and documentation of the code goes below this line ...
 
-str(act_weather_data)
-
 act_weather_data %>% 
-  select(Year, Month, `Rainfall_(mm)`) %>% 
-  group_by(Year, Month) %>% 
-  summarise(average_rainfall = mean(`Rainfall_(mm)`)) %>% 
-  summarise(month=Month[which.max(average_rainfall)], max_rainfall=max(average_rainfall))
+  select(Year, Month, `Rainfall_(mm)`) %>%
+  mutate(YearMonth=paste(Year,Month, sep = "-")) %>% 
+  group_by(YearMonth) %>% 
+  summarise(average_rainfall = mean(`Rainfall_(mm)`)) %>%
+  summarise(YearMonth=YearMonth[which.max(average_rainfall)], max_rainfall=max(average_rainfall))
 
 ```
 
@@ -87,12 +86,26 @@ act_weather_data %>%
 ```{r, eval=FALSE}
 # solution and documentation of the code goes below this line ...
 
+act_weather_data %>% 
+  select(Year, Month, `Rainfall_(mm)`) %>%
+  mutate(YearMonth=paste(Year,Month, sep = "-")) %>% 
+  group_by(YearMonth) %>% 
+  summarise(average_rainfall = mean(`Rainfall_(mm)`)) %>%
+  summarise(YearMonth=YearMonth[which.min(average_rainfall)], max_rainfall=min(average_rainfall))
+
 ```
 
 7. For the humidity, which month was receiving highest humidity level, in average, in the 2019 year? (3 marks)
 
 ```{r, eval=FALSE}
 # solution and documentation of the code goes below this line ...
+
+act_weather_data %>% 
+  filter(Year == 2019) %>% 
+  mutate(average_daily_humidity=(`9am_relative_humidity_(%)`+`3pm_relative_humidity_(%)`)/2) %>% 
+  group_by(Month) %>% 
+  summarise(average_humidity=mean(average_daily_humidity)) %>% 
+  summarise(month=Month[which.max(average_humidity)], average_humidity=max(average_humidity))
 
 ```
 
@@ -101,6 +114,52 @@ act_weather_data %>%
 ```{r, eval=FALSE}
 # solution and documentation of the code goes below this line ...
 
+quarter_summary_df <- act_weather_data %>% 
+  filter(Date >= "2020-08-01" & Date <= "2021-07-31") %>%
+  mutate(
+    wind_speed = as.numeric(`3pm_wind_speed_(km/h)`), 
+    temperature = as.numeric(`3pm_Temperature`), 
+    humidity = as.numeric(`3pm_relative_humidity_(%)`),
+    Quarter = quarter(Date)
+    ) %>%
+  group_by(Quarter) %>% 
+  summarise(
+    min_temp = min(temperature, na.rm = T),
+    max_temp = max(temperature, na.rm = T),
+    mean_temp = mean(temperature, na.rm = T),
+    min_windSpeed = min(wind_speed, na.rm = T),
+    max_windSpeed = max(wind_speed, na.rm = T),
+    mean_windSpeed = mean(wind_speed, na.rm = T),
+    min_humidity = min(humidity, na.rm = T),
+    max_humidity = max(humidity, na.rm = T),
+    mean_humidity = mean(humidity, na.rm = T)
+  )
+   
+monthly_summary_df <- act_weather_data %>% 
+  filter(Date >= "2020-08-01" & Date <= "2021-07-31") %>%
+  mutate(
+    wind_speed = as.numeric(`3pm_wind_speed_(km/h)`), 
+    temperature = as.numeric(`3pm_Temperature`), 
+    humidity = as.numeric(`3pm_relative_humidity_(%)`),
+    Quarter = quarter(Date)
+    ) %>%
+  group_by(Month) %>% 
+  summarise(
+    min_temp = min(temperature, na.rm = T),
+    max_temp = max(temperature, na.rm = T),
+    mean_temp = mean(temperature, na.rm = T),
+    min_windSpeed = min(wind_speed, na.rm = T),
+    max_windSpeed = max(wind_speed, na.rm = T),
+    mean_windSpeed = mean(wind_speed, na.rm = T),
+    min_humidity = min(humidity, na.rm = T),
+    max_humidity = max(humidity, na.rm = T),
+    mean_humidity = mean(humidity, na.rm = T)
+  )
+
+quarter_summary_df
+
+monthly_summary_df
+
 ```
 
 9. Build graph(s) that show the distribution of the variables in the question #8. (5 marks)
@@ -108,6 +167,30 @@ act_weather_data %>%
 
 ```{r, eval=FALSE}
 # solution and documentation of the code goes below this line ...
+
+quarterly_data <-  quarter_summary_df %>% 
+  gather(key = "attribute", value="avg_measure", min_temp:mean_humidity) %>% 
+  separate(col = attribute, into = c("type", "variable"), sep = "_")
+  # %>% spread(key = variable, value = avg_measure)
+
+str(quarterly_data)
+
+ggplot(quarterly_data) + 
+  geom_line(aes(x=Quarter, y=avg_measure, colour=type), size=1) +
+  facet_grid(~variable)
+
+
+monthly_data <- monthly_summary_df %>% 
+  mutate(Month=as.numeric(Month)) %>% 
+  gather(key = "attribute", value="avg_measure", min_temp:mean_humidity) %>% 
+  separate(col = attribute, into = c("type", "variable"), sep = "_") # %>% spread(key = variable, value = avg_measure)
+
+str(monthly_data)
+
+ggplot(monthly_data) + 
+  geom_line(aes(x=Month, y=avg_measure, colour=type), size=1) +
+  scale_x_continuous(breaks = seq(0,12,by=1)) +
+  facet_wrap(~variable)
 
 ```
 
