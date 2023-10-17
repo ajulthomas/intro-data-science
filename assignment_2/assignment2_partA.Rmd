@@ -1,8 +1,10 @@
 ---
 title: "Assignment 2, Part A"
-author: "Put your name"
+author: "Ajul Thomas (u3253992@uni.canberra.edu.au)"
 date: "2023-10-02"
-output: html_document
+output:
+  rmdformats::downcute:
+    downcute_theme: "chaos"
 ---
 
 ```{r setup, include=FALSE}
@@ -13,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 The following code can be used to load the data and merge them all into one data frame, Please run it and then perform the tasks below.
 
-```{r, eval=FALSE}
+```{r}
 library(tidyverse)
 AU_Date_Format <- "%d/%m/%Y"
 US_Date_Format <- "%m/%d/%Y"
@@ -43,7 +45,7 @@ rm(files, data, temp, i)
 **Perform the following tasks** 
 
 1. Run the following code to demonstrate the loading of the data has been executed correctly. Provide an explanation in words what each line does (3 marks):
-    ```{r eval=FALSE}
+    ```{r}
 dim(act_weather_data)
 
 str(act_weather_data)
@@ -85,7 +87,7 @@ The above code ...
 
 2. Remove the variables, which have no data at all (i.e. all the records in these variables are NAs) (3 marks)
 
-```{r, eval=FALSE}
+```{r}
 # solution and documentation of the code goes below this line ...
 
 # returns a logical vector that represents if the varaibales have no data at all
@@ -95,8 +97,9 @@ all_cols_na_stats <- colSums(is.na(act_weather_data)) == nrow(act_weather_data)
 na_cols <- names(act_weather_data)[all_cols_na_stats]
 
 # removes the columns for which there is no data at all(i.e. all the records in these variables are NAs)
-act_weather_data <- act_weather_data %>% select(-na_cols)
+act_weather_data <- act_weather_data %>% select(-all_of(na_cols))
 
+act_weather_data
 
 ```
 
@@ -104,7 +107,7 @@ act_weather_data <- act_weather_data %>% select(-na_cols)
 
 3. Replace NA values with either the average of its column's values, if they are numeric, or mode if they are categorical. (4 marks)
 
-```{r, eval=FALSE}
+```{r}
 # solution and documentation of the code goes below this line ...
 
 
@@ -146,14 +149,14 @@ for (colmn in na_cols_names) {
 
 act_weather_data
 
-
+# reference: ChatGPT/Stackoverflow.com - to understand how to use variable names inside the mutate, summarize and filter functions
 
 ```
 
 ----
 4.	Add two new columns to represent months (`Month`) and years (`Year`) of the data, you may extract the contents of this column from the `Date` column. (2 marks)
 
-```{r, eval=FALSE}
+```{r}
 # solution and documentation of the code goes below this line ...
 
 # checks the datatype of the Date column
@@ -165,16 +168,17 @@ act_weather_data$Date <-  as.Date(act_weather_data$Date, format=AU_Date_Format)
 # check the format of date column again, to ensure everything is as expected
 class(act_weather_data$Date)
 
-# seperates the Month and Year column
+# separates the Month and Year column
 act_weather_data <- act_weather_data %>% 
   separate(col = Date, into = c('Year', 'Month'), sep = '\\-', remove = F)
 
+act_weather_data
 
 ```
 
 5. Change the type of the `Month` and `Year` columns to Ordinal with levels as the number of months in a year (i.e. 12) and number of years (i.e., 6). (2 marks)
 
-```{r, eval=FALSE}
+```{r}
 # solution and documentation of the code goes below this line ...
 
 # The unique(act_weather_data$Month) function is used to extract the unique values present in the "Month" column.
@@ -191,7 +195,7 @@ str(act_weather_data)
 
 6. Save the weather data to a single file named `act_weather_data_partA.csv`. (1 marks)
 
-```{r, eval=FALSE}
+```{r}
 # solution and documentation of the code goes below this line ...
 
 write.csv(act_weather_data, file = "output/act_weather_data_partA.csv")

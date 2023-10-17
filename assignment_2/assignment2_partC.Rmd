@@ -18,8 +18,10 @@ knitr::opts_chunk$set(echo = TRUE)
 - ( _hint:_ This is an open question, where the claim can be checked and validated via different ways. Please explain your strategy and final insights with evidences (i.e., graphs). You may search for extra data from the public repository to support your final thoughts. )
 
 
-```{r, eval=FALSE}
+```{r}
 # solution and documentation of the code goes below this line ...
+
+# reads ACT weather data
 
 library(tidyverse)
 AU_Date_Format <- "%d/%m/%Y"
@@ -44,6 +46,8 @@ for(i in 1:length(files)){
 
 # Clean up any temporary variables no longer needed
 rm(files, data, temp, i)
+
+months = c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "July", "Aug", "Sep", "Oct", "Nov", "Dec")
 
 
 ```
@@ -78,7 +82,6 @@ act_weather_data <- act_weather_data %>%
 
 
 test_df <- act_weather_data %>% 
-  # filter(Year > 2018 & Year < 2023) %>% 
   mutate(
     avg_temp=(`9am_Temperature`+`3pm_Temperature`)/2,
     avg_humidity=(`9am_relative_humidity_(%)`+`3pm_relative_humidity_(%)`)/2
@@ -98,8 +101,9 @@ ggplot(test_df, aes(x=Month)) +
   geom_line(aes(y=mean_min_temp), color="blue", size=1) + 
   geom_line(aes(y=mean_max_temp), color="red", size=1) + 
   geom_line(aes(y=avg_temp_monthly), color="black", size=1) + 
-  scale_x_continuous(breaks = seq(0,12,by=1)) +
-  facet_wrap(~Year)
+  scale_x_discrete(limits=months) +
+  facet_wrap(~Year) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
 ```
 ```{r}
@@ -107,32 +111,53 @@ ggplot(test_df, aes(x=Month)) +
 
 ggplot(test_df, aes(x=Month)) + 
   geom_line(aes(y=rainfall), color="black", size=1) + 
-  scale_x_continuous(breaks = seq(0,12,by=1)) +
-  facet_wrap(~Year)
+  scale_x_discrete(limits=months) +
+  facet_wrap(~Year) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
 
 ```
 
 
 
-----
+---
 
-Based on the insights drawn from the visualizations presented above, it appears that the fluctuations in rainfall patterns in Canberra may be attributed to the influence of climate change.
+**Issue:**
+The core issue at hand centers on confirming the influence of climate change on the ACT region in the past four years.
 
-----
+**Approach:**
+To substantiate this claim, a comparative analysis is indispensable, examining temperature and precipitation data within the ACT region from 2019 to 2022 against extensive historical weather records. This analysis entails utilizing line charts to visually depict temperature and precipitation trends across the aforementioned four-year period. By contrasting these recent observations with long-term historical averages, our aim is to detect significant variations or patterns consistent with climate changes in the ACT region.
+
+**Data Requirements:**
+This analysis necessitates access to temperature and precipitation data for the ACT region spanning 2019 to 2022.
+
+**Conclusions:**
+Upon scrutinizing temperature and precipitation data within the ACT region for the specified timeframe (2019-2022), the following conclusions can be drawn:
+
+Temperature Trends:
+There is a noticeable and consistent reduction in average temperatures over this four-year duration. This trend suggests a cooling pattern or a departure from historical temperature norms, reflecting lower average temperatures in the region.
+
+Precipitation Patterns:
+Conversely, an evident increase in average precipitation is observed within the same timeframe. This escalation indicates heightened rainfall or other forms of precipitation in comparison to historical data.
+
+These findings offer valuable insights into the evolving climate trends in the ACT region, highlighting shifts in temperature and precipitation patterns. These observations may hold significance for various sectors reliant on weather conditions, such as agriculture and the environment.
+
+
+---
 
 
 2. The ACT Transport Sector is seeking to use this data to understand when the ACT road construction should be going ahead and when it should be stopped. Also, the sector plans to build a time plan over the year to fix potholes after rain seasons, can you help them building analysis of which times in the year that this would be perfect? (6 marks)
 
 ---
 
-Temperature Range: Ideal construction temperatures typically fall within 10°C to 30°C (50°F to 86°F). Avoid extreme cold and hot temperatures, which can affect construction materials and worker safety.
+**Temperature Range:** 
+Ideal construction temperatures typically fall within 10°C to 30°C (50°F to 86°F). Avoid extreme cold and hot temperatures, which can affect construction materials and worker safety.
 
-Rainfall Range: Road construction is best conducted during dry periods with minimal rainfall. Avoid construction on days with heavy rainfall or immediately following significant rain events.
+**Rainfall Range:** Road construction is best conducted during dry periods with minimal rainfall. Avoid construction on days with heavy rainfall or immediately following significant rain events.
 
-Humidity Range (%): Humidity levels between 30% and 70% are generally suitable for road construction. Low humidity can lead to rapid evaporation of water from construction materials, while high humidity can affect the curing process.
+**Humidity Range (%):** Humidity levels between 30% and 70% are generally suitable for road construction. Low humidity can lead to rapid evaporation of water from construction materials, while high humidity can affect the curing process.
 
-Wind Speed Range (Km/h): Wind speeds below 40 km/h (25 mph) are considered ideal for road construction. High winds can pose safety risks and affect the quality of work.
+**Wind Speed Range (Km/h):** Wind speeds below 40 km/h (25 mph) are considered ideal for road construction. High winds can pose safety risks and affect the quality of work.
 
 ---
 
@@ -140,7 +165,6 @@ Wind Speed Range (Km/h): Wind speeds below 40 km/h (25 mph) are considered ideal
 # solution and documentation of the code goes below this line ...
 
 months_suitable_for_road_construction <- act_weather_data %>% 
-  # filter(`9am_wind_speed_(km/h)`== 'Calm' | `3pm_wind_speed_(km/h)` == 'Calm' | `9am_wind_speed_(km/h)` <= 40 | `3pm_wind_speed_(km/h)` <= 40)
   mutate(
     wind_speed = (as.numeric(`9am_wind_speed_(km/h)`) + as.numeric(`3pm_wind_speed_(km/h)`) )/2,
     temperature = as.numeric((`9am_Temperature`+`3pm_Temperature`)/2), 
@@ -156,9 +180,11 @@ months_suitable_for_road_construction <- act_weather_data %>%
   filter(mean_temp >= 10 & mean_temp <= 30 & mean_windSpeed <= 40 & mean_humidity >= 30 & mean_humidity <= 70 & mean_rainfall < 3) %>% 
   summarise(months = Month)
 
+months = c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "July", "Aug", "Sep", "Oct", "Nov", "Dec")
 months_suitable_for_road_construction
 
-paste("The following months are suitable for road construction in ACT, Canberra : ", months_suitable_for_road_construction)
+paste("The following months are suitable for road construction in ACT, Canberra : ") 
+print(months[months_suitable_for_road_construction$months])
 
 ```
 
