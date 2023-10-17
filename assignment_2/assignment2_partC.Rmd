@@ -1,8 +1,10 @@
 ---
 title: "Assignment 2, Part C"
-author: "Put your name"
+author: "Ajul Thomas (u3253992@uni.canberra.edu.au)"
 date: "2023-10-02"
-output: html_document
+output:
+  rmdformats::downcute:
+    downcute_theme: "chaos"
 ---
 
 ```{r setup, include=FALSE}
@@ -80,7 +82,7 @@ act_weather_data <- act_weather_data %>%
 ```{r}
 # plotting data
 
-
+# prepares data for plotting
 test_df <- act_weather_data %>% 
   mutate(
     avg_temp=(`9am_Temperature`+`3pm_Temperature`)/2,
@@ -103,7 +105,12 @@ ggplot(test_df, aes(x=Month)) +
   geom_line(aes(y=avg_temp_monthly), color="black", size=1) + 
   scale_x_discrete(limits=months) +
   facet_wrap(~Year) +
-  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  labs(
+    title = "Distribution of Temperature (2018 - 2023)",
+    x = "Month",
+    y = "Temperature(dC))"
+    ) 
 
 ```
 ```{r}
@@ -113,7 +120,12 @@ ggplot(test_df, aes(x=Month)) +
   geom_line(aes(y=rainfall), color="black", size=1) + 
   scale_x_discrete(limits=months) +
   facet_wrap(~Year) +
-  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  labs(
+    title = "Distribution of Rainfall (2018 - 2023)",
+    x = "Month",
+    y = "Rainfall(mm))"
+    ) 
 
 
 ```
@@ -161,7 +173,7 @@ Ideal construction temperatures typically fall within 10°C to 30°C (50°F to 8
 
 ---
 
-```{r, eval=FALSE}
+```{r}
 # solution and documentation of the code goes below this line ...
 
 months_suitable_for_road_construction <- act_weather_data %>% 
