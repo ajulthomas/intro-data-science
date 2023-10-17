@@ -1,0 +1,217 @@
+---
+title: "Lab 12 - Correlation and Visualization"
+author: "Ajul Thomas"
+date: "2023-10-17"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Exercises
+Exercise 1
+
+1)Read the data from the “advertising.csv” file and get yourself familiar with the included variables.
+
+```{r}
+
+adv_df <- read_csv("data/Advertising.csv")
+
+adv_df
+
+```
+
+
+    
+2)Remove the un-named data variable(s), if any
+
+```{r}
+
+adv_df <- adv_df[-1] 
+
+adv_df
+
+
+```
+
+
+3)Check the statistical summary of the “sales” variable (hint: you can use the summary function)
+
+```{r}
+
+summary(adv_df)
+
+
+```
+
+
+4)How about using the summarise() function?
+
+```{r}
+
+adv_df %>% 
+  group_by() %>% 
+  summarise()
+
+
+```
+
+
+
+Exercise 2
+
+Based on the previous exercise, complete the following tasks:
+
+1)Plot scatter plots between the sales and each of the other variables in the data.
+
+```{r}
+
+ggplot(adv_df, aes(x=sales)) +
+  geom_point(aes(y=newspaper), color="red")
+  
+ggplot(adv_df, aes(x=sales)) +
+  geom_point(aes(y=radio), color="blue")
+
+ggplot(adv_df, aes(x=sales)) +
+  geom_point(aes(y=TV), color="purple")
+
+```
+
+
+2)Add a regression line using stat_smooth(method = lm) to the previous plots? What does lm provide?
+
+```{r}
+
+ggplot(adv_df, aes(x=sales, y=newspaper)) +
+  geom_point( color="red") +
+  geom_smooth(method=lm)
+  
+ggplot(adv_df, aes(x=sales, y=radio)) +
+  geom_point(color="blue") +
+  geom_smooth(method=lm)
+
+ggplot(adv_df, aes(x=sales, y=TV)) +
+  geom_point(color="purple") +
+  geom_smooth(method=lm)
+
+
+```
+
+3)Compute the correlation between sales variable and each of the other variables independently, using cor(var1, var2) function.
+
+```{r}
+
+r_tv <- cor(adv_df$sales, adv_df$TV)
+r_tv
+
+r_news <- cor(adv_df$sales, adv_df$newspaper )
+r_news
+
+r_radio <- cor(adv_df$sales, adv_df$radio)
+r_radio
+
+```
+
+4)Generate the correlation matrix for all the variables together.
+
+
+```{r}
+
+cor(adv_df)
+
+```
+
+5) Visualise the correlation matrix using ggcorr(…) function, by replacing … with the data frame.
+
+```{r}
+
+
+install.packages("GGally")
+library(GGally)
+
+ggcorr(adv_df, label = T, label_alpha = T )
+
+```
+
+
+Exercise 3
+
+We can also use the correlation matrix to test the linear relationship between variables, using cor.test(var1, var2, method), where method can be “Pearson”, “Spearman”, etc.
+
+1)Use the cor.test function to test the estimated correlation between sales and TV variables.
+
+```{r}
+
+cor_test_results <- cor.test(adv_df$sales, adv_df$TV, method="pearson")
+cor_test_results
+
+```
+
+2)How would you interpret the p-value and estimate values?
+
+```{r}
+
+
+
+```
+
+
+3)Can you extract the p-value and estimate coefficients from the output of the correlation test?
+
+```{r}
+
+# p value
+cor_test_results$p.value
+
+# correlation coefficient
+cor_test_results$estimate
+
+```
+
+
+Exercise 4 - Generating code for a given plot
+
+1)Please download “weather.csv” data from the contents of week 11’)’s module.
+
+
+```{r}
+
+weather_df <- read_csv('data/weather_data.csv')
+
+weather_df
+
+str(weather_df)
+
+```
+
+
+2)Given these data, can you write the code to generate the following plot? What are the steps would you follow?
+
+```{r}
+
+df_to_plot <- weather_df %>% 
+  # separate(col = Date, into = c('Year', 'Month'), sep = '\\-', remove = F) %>% 
+  mutate(avg_temp=(`9am_Temperature` + `3pm_Temperature`)/2) %>% 
+  group_by(month) %>% 
+  summarise(
+    min_temp = min(Minimum_temperature, na.rm = T),
+    max_temp = max(Maximum_temperature, na.rm = T),
+    mean_temp = mean(avg_temp, na.rm = T)
+  )
+
+months = c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "July", "Aug", "Sep", "Oct", "Nov", "Dec")
+
+
+df_to_plot_2 <- df_to_plot %>% 
+  gather(key="metric", value="value", -month)
+
+ggplot(df_to_plot_2, aes(x=month, y=value, group=metric, colour=metric)) +
+         scale_x_discrete(limits=months) + 
+         geom_point() +
+         geom_line() +
+         labs(title = "The average, minimum and maximum Temperature in 2019", x = "Months", y = "Value (in degree celsius)")
+
+```
+
+

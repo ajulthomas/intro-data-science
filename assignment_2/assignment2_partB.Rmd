@@ -115,11 +115,13 @@ act_weather_data %>%
 # solution and documentation of the code goes below this line ...
 
 quarter_summary_df <- act_weather_data %>% 
+  mutate(`9am_wind_speed_(km/h)` = ifelse(`9am_wind_speed_(km/h)` == "Calm", 0, as.numeric(`9am_wind_speed_(km/h)`))) %>% 
+  mutate(`3pm_wind_speed_(km/h)` = ifelse(`3pm_wind_speed_(km/h)` == "Calm", 0, as.numeric(`3pm_wind_speed_(km/h)`))) %>% 
   filter(Date >= "2020-08-01" & Date <= "2021-07-31") %>%
   mutate(
-    wind_speed = as.numeric(`3pm_wind_speed_(km/h)`), 
+    wind_speed = as.numeric((`9am_wind_speed_(km/h)` +`3pm_wind_speed_(km/h)`)/2), 
     temperature = as.numeric(`3pm_Temperature`), 
-    humidity = as.numeric(`3pm_relative_humidity_(%)`),
+    humidity = as.numeric((`9am_relative_humidity_(%)`+`3pm_relative_humidity_(%)`)/2),
     Quarter = quarter(Date)
     ) %>%
   group_by(Quarter) %>% 
@@ -136,11 +138,13 @@ quarter_summary_df <- act_weather_data %>%
   )
    
 monthly_summary_df <- act_weather_data %>% 
+  mutate(`9am_wind_speed_(km/h)` = ifelse(`9am_wind_speed_(km/h)` == "Calm", 0, as.numeric(`9am_wind_speed_(km/h)`))) %>% 
+  mutate(`3pm_wind_speed_(km/h)` = ifelse(`3pm_wind_speed_(km/h)` == "Calm", 0, as.numeric(`3pm_wind_speed_(km/h)`))) %>% 
   filter(Date >= "2020-08-01" & Date <= "2021-07-31") %>%
   mutate(
-    wind_speed = as.numeric(`3pm_wind_speed_(km/h)`), 
+    wind_speed = as.numeric((`9am_wind_speed_(km/h)` +`3pm_wind_speed_(km/h)`)/2), 
     temperature = as.numeric(`3pm_Temperature`), 
-    humidity = as.numeric(`3pm_relative_humidity_(%)`),
+    humidity = as.numeric((`9am_relative_humidity_(%)`+`3pm_relative_humidity_(%)`)/2),
     Quarter = quarter(Date)
     ) %>%
   group_by(Month) %>% 
@@ -166,33 +170,99 @@ monthly_summary_df
 - ( _hint:_ There will be six graphs where each of them include distributions of minimum, maximum and average of variables temperature, wind speed or humidity per month and quarter.
 
 ```{r, eval=FALSE}
-# solution and documentation of the code goes below this line ...
 
-quarterly_data <-  quarter_summary_df %>% 
+month_year_data <-  act_weather_data %>% 
+  mutate(`9am_wind_speed_(km/h)` = ifelse(`9am_wind_speed_(km/h)` == "Calm", 0, as.numeric(`9am_wind_speed_(km/h)`))) %>%
+  mutate(`3pm_wind_speed_(km/h)` = ifelse(`3pm_wind_speed_(km/h)` == "Calm", 0, as.numeric(`3pm_wind_speed_(km/h)`))) %>%
+  mutate(YearMonth=paste(Year,Month,sep = "-")) %>% 
+  filter(Date >= "2020-08-01" & Date <= "2021-07-31") %>%
+  mutate(
+    wind_speed = as.numeric((`9am_wind_speed_(km/h)` +`3pm_wind_speed_(km/h)`)/2), 
+    temperature = as.numeric(`3pm_Temperature`), 
+    humidity = as.numeric((`9am_relative_humidity_(%)`+`3pm_relative_humidity_(%)`)/2),
+    Quarter = quarter(Date)
+    ) %>%
+  group_by(YearMonth) %>% 
+  summarise(
+    min_temp = min(temperature, na.rm = T),
+    max_temp = max(temperature, na.rm = T),
+    mean_temp = mean(temperature, na.rm = T),
+    min_windSpeed = min(wind_speed, na.rm = T),
+    max_windSpeed = max(wind_speed, na.rm = T),
+    mean_windSpeed = mean(wind_speed, na.rm = T),
+    min_humidity = min(humidity, na.rm = T),
+    max_humidity = max(humidity, na.rm = T),
+    mean_humidity = mean(humidity, na.rm = T)
+  )
+
+month_year_data
+
+# month_year_data_processed <- 
+ df_to_plot <-  month_year_data %>% 
+  mutate(YearMonth=factor(YearMonth, unique(YearMonth), ordered = T)) %>% 
   gather(key = "attribute", value="avg_measure", min_temp:mean_humidity) %>% 
-  separate(col = attribute, into = c("type", "variable"), sep = "_")
-  # %>% spread(key = variable, value = avg_measure)
+  separate(col = attribute, into = c("type", "variable"), sep = "_") # %>% spread(key = variable, value = avg_measure)
+ 
+ str(df_to_plot)
+ 
+ ggplot(df_to_plot, aes(x=YearMonth, y=avg_measure, colour=type))+
+   geom_point(aes(y=avg_measure, colour=type))+
+   geom_path(aes(y=avg_measure, colour=type, group=type), size=1)+
+   labs(
+    title = "Distribution of Humidity, Temperature and Wind Speed",
+    x = "Month and Year",
+    y = "Temperature(in degree celcius), Humidity(%), Wind Speed(km/h)"
+   ) +
+   facet_wrap(~variable, ncol = 2) +
+   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
-str(quarterly_data)
 
-ggplot(quarterly_data) + 
-  geom_line(aes(x=Quarter, y=avg_measure, colour=type), size=1) +
-  facet_grid(~variable)
+```
 
+```{r}
+quarter_year_data <- act_weather_data %>%  
+  mutate(`9am_wind_speed_(km/h)` = ifelse(`9am_wind_speed_(km/h)` == "Calm", 0, as.numeric(`9am_wind_speed_(km/h)`))) %>%
+  mutate(`3pm_wind_speed_(km/h)` = ifelse(`3pm_wind_speed_(km/h)` == "Calm", 0, as.numeric(`3pm_wind_speed_(km/h)`))) %>%
+  filter(Date >= "2020-08-01" & Date <= "2021-07-31") %>%
+  mutate(
+    wind_speed = as.numeric((`9am_wind_speed_(km/h)` +`3pm_wind_speed_(km/h)`)/2), 
+    temperature = as.numeric(`3pm_Temperature`), 
+    humidity = as.numeric((`9am_relative_humidity_(%)`+`3pm_relative_humidity_(%)`)/2),
+    Quarter = quarter(Date)
+    ) %>%
+  mutate(YearQuarter=paste(Year,quarter(Date),sep = "-")) %>% 
+  group_by(YearQuarter) %>% 
+  summarise(
+    min_temp = min(temperature, na.rm = T),
+    max_temp = max(temperature, na.rm = T),
+    mean_temp = mean(temperature, na.rm = T),
+    min_windSpeed = min(wind_speed, na.rm = T),
+    max_windSpeed = max(wind_speed, na.rm = T),
+    mean_windSpeed = mean(wind_speed, na.rm = T),
+    min_humidity = min(humidity, na.rm = T),
+    max_humidity = max(humidity, na.rm = T),
+    mean_humidity = mean(humidity, na.rm = T)
+  )
 
-monthly_data <- monthly_summary_df %>% 
-  mutate(Month=as.numeric(Month)) %>% 
+df_to_plot_2 <- quarter_year_data %>% 
+  mutate(YearQuarter=factor(YearQuarter, unique(YearQuarter), ordered = T)) %>% 
   gather(key = "attribute", value="avg_measure", min_temp:mean_humidity) %>% 
   separate(col = attribute, into = c("type", "variable"), sep = "_") # %>% spread(key = variable, value = avg_measure)
 
-str(monthly_data)
+str(df_to_plot_2)
 
-ggplot(monthly_data) + 
-  geom_line(aes(x=Month, y=avg_measure, colour=type), size=1) +
-  scale_x_continuous(breaks = seq(0,12,by=1)) +
-  facet_wrap(~variable)
-
+ggplot(df_to_plot_2, aes(x=YearQuarter, y=avg_measure, colour=type))+
+   geom_point(aes(y=avg_measure, colour=type))+
+   geom_path(aes(y=avg_measure, colour=type, group=type), size=1)+
+   labs(
+    title = "Distribution of Humidity, Temperature and Wind Speed",
+    x = "Quarter and Year",
+    y = "Temperature(in degree celcius), Humidity(%), Wind Speed(km/h)"
+   ) +
+   facet_wrap(~variable, ncol = 2) +
+   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 ```
+
 
 10. Provide a narrative to describe your thoughts on the generated graphs from your answer of question #9 (3 marks)
 
@@ -201,5 +271,11 @@ ggplot(monthly_data) +
 .....
 
 ----
+
+
+
+
+
+---
 
 *** 
