@@ -1,0 +1,205 @@
+---
+title: "Assignment 2, Part A"
+author: "Ajul Thomas (u3253992@uni.canberra.edu.au)"
+date: "2023-10-02"
+output:
+  rmdformats::downcute:
+    downcute_theme: "chaos"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Part A - Data Importing and Cleaning			(15 marks)
+
+The following code can be used to load the data and merge them all into one data frame, Please run it and then perform the tasks below.
+
+```{r}
+library(tidyverse)
+AU_Date_Format <- "%d/%m/%Y"
+US_Date_Format <- "%m/%d/%Y"
+files <- list.files("data","*.csv")
+act_weather_data <- tibble()
+
+for(i in 1:length(files)){
+  data <- read_csv(paste0("data/", files[i]), skip= 7, show_col_types = FALSE)
+  assertthat::assert_that(nrow(problems(data)) == 0, 
+                  msg="There is still problem/s, which you need to fix first")
+
+  temp <- tryCatch(
+            expr    = {  parse_date(data$Date, AU_Date_Format)}, 
+            warning = function(e) { parse_date(data$Date, US_Date_Format)})
+  
+
+  data$Date <- format(temp, AU_Date_Format)
+
+  act_weather_data <- rbind(act_weather_data, data)
+}
+
+# Clean up any temporary variables no longer needed
+rm(files, data, temp, i)
+
+```
+
+**Perform the following tasks** 
+
+1. Run the following code to demonstrate the loading of the data has been executed correctly. Provide an explanation in words what each line does (3 marks):
+    ```{r}
+dim(act_weather_data)
+
+str(act_weather_data)
+
+act_weather_data %>%
+  group_by(Date) %>%
+  summarise(count=n()) %>% 
+  summarise(max = max(count))
+
+act_weather_data %>%
+  summarise_all(funs(sum(is.na(.)))) %>%
+  gather() %>%
+  filter(value > 0)
+```
+
+**Solution**
+The above code ...
+
+1. `dim(act_weather_data)`:
+   - This line is using the `dim()` function to find the dimensions (number of rows and columns) of the `act_weather_data` dataset. It is checking how many rows and columns are in the data.
+
+2. `str(act_weather_data)`:
+   - This line is using the `str()` function to display the structure of the `act_weather_data` dataset. It provides information about the data types and the first few rows of data, giving an overview of what the dataset contains.
+
+3. `act_weather_data %>% group_by(Date) %>% summarise(count = n()) %>% summarise(max = max(count))`:
+   - This line is using the pipe operator `%>%` to perform a series of operations on the `act_weather_data` dataset.
+   - First, it groups the data by the "Date" column using `group_by(Date)`. This step prepares the data for aggregation by grouping it by unique dates.
+   - Then, it calculates the count of rows for each group (in this case, the number of records for each unique date) using `summarise(count = n())`.
+   - Finally, it calculates the maximum count (maximum number of records for any date) using `summarise(max = max(count))`.
+   - Basically, the above code checks if there are more than one entry against a particular date. As the max count is one, it ensures there is only one entry against each date.
+
+4. `act_weather_data %>% summarise_all(funs(sum(is.na(.)))) %>% gather() %>% filter(value > 0)`:
+   - This line also uses the pipe operator `%>%` to perform a sequence of operations on the `act_weather_data` dataset.
+   - It starts by using `summarise_all(funs(sum(is.na(.)))` to calculate the sum of missing values (NA) for each column in the dataset.
+   - The `gather()` function is used to convert the result into a long format, essentially creating two columns, one for column names and another for the corresponding count of missing values.
+   - Finally, it filters the rows where the count of missing values (value column) is greater than 0. This step identifies and shows the columns with missing data.
+
+----
+
+2. Remove the variables, which have no data at all (i.e. all the records in these variables are NAs) (3 marks)
+
+```{r}
+# solution and documentation of the code goes below this line ...
+
+# returns a logical vector that represents if the varaibales have no data at all
+all_cols_na_stats <- colSums(is.na(act_weather_data)) == nrow(act_weather_data)
+
+# extract the names of the variables for which, there is no data at all
+na_cols <- names(act_weather_data)[all_cols_na_stats]
+
+# removes the columns for which there is no data at all(i.e. all the records in these variables are NAs)
+act_weather_data <- act_weather_data %>% select(-all_of(na_cols))
+
+act_weather_data
+
+```
+
+----
+
+3. Replace NA values with either the average of its column's values, if they are numeric, or mode if they are categorical. (4 marks)
+
+```{r}
+# solution and documentation of the code goes below this line ...
+
+
+# function to calculate mode
+mode <-  function(column_name, data = act_weather_data) {
+  mode_df <- data %>%
+    # removes all the rows na values
+    filter(!is.na(!!sym(column_name))) %>%
+    # groups by the column of concern
+    group_by(!!sym(column_name)) %>%
+    # takes the count of unique values
+    summarise(n=n()) %>%
+    # obtains the values that repeats the most(i.e. mode of the distribution) 
+    summarise(mode=(!!sym(column_name))[which.max(n)])
+  
+  return(mode_df$mode)
+}
+
+
+# get no. of na values in each column
+all_cols_na_counts <-  colSums(is.na(act_weather_data))
+all_cols_na_counts
+
+# get the names of cols for which there are na values
+na_cols_names <- names(all_cols_na_counts[all_cols_na_counts > 0])
+na_cols_names
+
+# loops through each column for which there are na values 
+for (colmn in na_cols_names) {
+  # checks if the column is a categorical variables with mode
+  if(!is.numeric(act_weather_data[[colmn]])) {
+    act_weather_data <- act_weather_data %>% mutate(!!sym(colmn) := replace_na(!!sym(colmn), mode(colmn)))
+  }
+  # else it is a numerical column, and replaces na values with the mean
+  else {
+    act_weather_data <- act_weather_data %>% mutate(!!sym(colmn) := replace_na(!!sym(colmn), mean(!!sym(colmn),na.rm = T)))
+  }
+}
+
+act_weather_data
+
+# reference: ChatGPT/Stackoverflow.com - to understand how to use variable names inside the mutate, summarize and filter functions
+
+```
+
+----
+4.	Add two new columns to represent months (`Month`) and years (`Year`) of the data, you may extract the contents of this column from the `Date` column. (2 marks)
+
+```{r}
+# solution and documentation of the code goes below this line ...
+
+# checks the datatype of the Date column
+class(act_weather_data$Date)
+
+# as the type of date column is character, we will format it using as.Date() function 
+act_weather_data$Date <-  as.Date(act_weather_data$Date, format=AU_Date_Format)
+
+# check the format of date column again, to ensure everything is as expected
+class(act_weather_data$Date)
+
+# separates the Month and Year column
+act_weather_data <- act_weather_data %>% 
+  separate(col = Date, into = c('Year', 'Month'), sep = '\\-', remove = F)
+
+act_weather_data
+
+```
+
+5. Change the type of the `Month` and `Year` columns to Ordinal with levels as the number of months in a year (i.e. 12) and number of years (i.e., 6). (2 marks)
+
+```{r}
+# solution and documentation of the code goes below this line ...
+
+# The unique(act_weather_data$Month) function is used to extract the unique values present in the "Month" column.
+
+# converts month column into a factor
+act_weather_data$Month <- factor(act_weather_data$Month, levels = sort(unique(act_weather_data$Month)), ordered = T)
+
+# converts year column into a factor
+act_weather_data$Year <- factor(act_weather_data$Year, levels = sort(unique(act_weather_data$Year)), ordered = T)
+
+str(act_weather_data)
+
+```
+
+6. Save the weather data to a single file named `act_weather_data_partA.csv`. (1 marks)
+
+```{r}
+# solution and documentation of the code goes below this line ...
+
+write.csv(act_weather_data, file = "output/act_weather_data_partA.csv")
+
+```
+
+*** 

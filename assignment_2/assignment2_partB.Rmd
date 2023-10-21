@@ -1,0 +1,359 @@
+---
+title: "Assignment 2, Part B"
+author: "Ajul Thomas (u3253992@uni.canberra.edu.au)"
+date: "2023-10-02"
+output:
+  rmdformats::downcute:
+    downcute_theme: "chaos"
+    toc_depth: 2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Part B - Data Wrangling			(33 marks)
+
+**Perform the following tasks**
+
+## 1. Load the `act_weather_data_partA.csv` into a data frame or a tibble, named, `act_weather_data`. (1 mark)
+
+```{r}
+# solution and documentation of the code goes below this line ...
+
+library(tidyverse)
+
+# reads data as a tibble
+act_weather_data <- read_csv('output/act_weather_data_partA.csv')
+
+str(act_weather_data)
+
+```
+
+## 2. Print the summary including the (minimum, median, mean, maximum) of each of the following variables: (5 marks)
+  + `Minimum_temperature`,
+  + `Maximum_temperature`,
+  + ` 9am_Temperature`,
+  + ` Speed_of_maximum_wind_gust_(km/h)`, and
+  + `3pm_Temperature`
+
+```{r}
+# solution and documentation of the code goes below this line ...
+
+cols_to_display <- c('Minimum_temperature', 'Maximum_temperature', '9am_Temperature',  'Speed_of_maximum_wind_gust_(km/h)', '3pm_Temperature')
+
+act_weather_data %>% 
+  # select the columns to be displayed
+  select(all_of(cols_to_display)) %>% 
+  # get the summary stats of the selected coloumns
+  summary()
+
+```
+
+## 3. Based on the minimum and maximum temperature columns, compute the average temperature per month. Please note that we have 52 months provided in the data, so there will be 52 generated values. (4 marks)
+
+```{r}
+# solution and documentation of the code goes below this line ...
+
+act_weather_data %>% 
+  # selects required columns
+  select(Year, Month, Maximum_temperature, Minimum_temperature) %>%
+  # creates a new column to store the average daily temperature
+  mutate(average_temperature = (Maximum_temperature + Minimum_temperature)/2) %>% 
+  # groups the data by Year and month
+  group_by(Year, Month) %>% 
+  # summarises the data for each month of each year
+  summarise(average_monthly_temperature=mean(average_temperature))
+
+```
+
+## 4. What is the average speed of maximum wind gust for each group of the direction of maximum wind gust? (2 marks)
+
+```{r}
+# solution and documentation of the code goes below this line ...
+
+act_weather_data %>% 
+  # groups the data by direction of maximum wind gust
+  group_by(Direction_of_maximum_wind_gust) %>% 
+  # for each wind direction calculates the mean of speed of maximum wind gust
+  summarise(average_speed_max_wind_gust = mean(`Speed_of_maximum_wind_gust_(km/h)`))
+
+```
+
+## 5. Which month has the highest average rain fall? And in which year? (2 marks) 
+- ( _hint:_ in this question you may use group_by, summarise and which.max functions)
+
+```{r}
+# solution and documentation of the code goes below this line ...
+
+highest_rainfall <- act_weather_data %>% 
+  # selects year, month and rainfall columns
+  select(Year, Month, `Rainfall_(mm)`) %>%
+  # creates a new column for easier grouping
+  mutate(YearMonth=paste(Year,Month, sep = "-")) %>% 
+  # groups by the new Year Month Column
+  group_by(YearMonth) %>% 
+  # calculates the average rainfall for each month of each year
+  summarise(average_rainfall = mean(`Rainfall_(mm)`)) %>%
+  # selects the row for which the rainfall is maximum
+  summarise(YearMonth=YearMonth[which.max(average_rainfall)], max_rainfall=max(average_rainfall))
+
+highest_rainfall
+
+```
+
+## 6. Which month was the driest in average, ( _i.e._, least amount of rainfall in average)? And in which year? (3 marks)
+
+```{r}
+# solution and documentation of the code goes below this line ...
+
+act_weather_data %>% 
+  # selects year, month and rainfall columns
+  select(Year, Month, `Rainfall_(mm)`) %>%
+  # creates a new column for easier grouping
+  mutate(YearMonth=paste(Year,Month, sep = "-")) %>%
+  # groups by the new Year Month Column
+  group_by(YearMonth) %>% 
+  # calculates the average rainfall for each month of each year
+  summarise(average_rainfall = mean(`Rainfall_(mm)`)) %>%
+  # selects the row for which the rainfall is minimum
+  summarise(YearMonth=YearMonth[which.min(average_rainfall)], max_rainfall=min(average_rainfall))
+
+```
+
+## 7. For the humidity, which month was receiving highest humidity level, in average, in the 2019 year? (3 marks)
+
+```{r}
+# solution and documentation of the code goes below this line ...
+
+act_weather_data %>% 
+  # filters data for the year 2019
+  filter(Year == 2019) %>% 
+  # creates a ne column to store the average daily humidity
+  mutate(average_daily_humidity=(`9am_relative_humidity_(%)`+`3pm_relative_humidity_(%)`)/2) %>% 
+  # groups the data by month
+  group_by(Month) %>% 
+  # summarises the data to obtain average humidity for each month
+  summarise(average_humidity=mean(average_daily_humidity)) %>% 
+  # selects the row for which average_humidity is maximum
+  summarise(month=Month[which.max(average_humidity)], average_humidity=max(average_humidity))
+
+```
+
+## 8. For the period between August 2020 and July 2021 inclusive, Can you generate a summary table showing the minimum, maximum and average temperature (please use the `3 pm temperature` column), wind speed and humidity for each month and each quarter in the year? (5 marks)
+
+```{r}
+# solution and documentation of the code goes below this line ...
+
+quarter_summary_df <- act_weather_data %>% 
+  # converts the non-numeric values in wind speed column to numeric, and replaces the value 'calm' with 0
+  mutate(`9am_wind_speed_(km/h)` = ifelse(`9am_wind_speed_(km/h)` == "Calm", 0, as.numeric(`9am_wind_speed_(km/h)`))) %>% 
+  mutate(`3pm_wind_speed_(km/h)` = ifelse(`3pm_wind_speed_(km/h)` == "Calm", 0, as.numeric(`3pm_wind_speed_(km/h)`))) %>% 
+  # filters out data for the required range
+  filter(Date >= "2020-08-01" & Date <= "2021-07-31") %>%
+  # creates new columns to store the average daily readings and to store the quarter details
+  mutate(
+    wind_speed = as.numeric((`9am_wind_speed_(km/h)` +`3pm_wind_speed_(km/h)`)/2), 
+    temperature = as.numeric(`3pm_Temperature`), 
+    humidity = as.numeric((`9am_relative_humidity_(%)`+`3pm_relative_humidity_(%)`)/2),
+    Quarter = quarter(Date)
+    ) %>%
+  # groups data by the quarter column just created
+  group_by(Quarter) %>% 
+  # calculates the min, max and mean values of temperature, win speed and humidity for each quarter
+  summarise(
+    min_temp = min(temperature, na.rm = T),
+    max_temp = max(temperature, na.rm = T),
+    mean_temp = mean(temperature, na.rm = T),
+    min_windSpeed = min(wind_speed, na.rm = T),
+    max_windSpeed = max(wind_speed, na.rm = T),
+    mean_windSpeed = mean(wind_speed, na.rm = T),
+    min_humidity = min(humidity, na.rm = T),
+    max_humidity = max(humidity, na.rm = T),
+    mean_humidity = mean(humidity, na.rm = T)
+  )
+   
+monthly_summary_df <- act_weather_data %>% 
+  # converts the non-numeric values in wind speed column to numeric, and replaces the value 'calm' with 0
+  mutate(`9am_wind_speed_(km/h)` = ifelse(`9am_wind_speed_(km/h)` == "Calm", 0, as.numeric(`9am_wind_speed_(km/h)`))) %>% 
+  mutate(`3pm_wind_speed_(km/h)` = ifelse(`3pm_wind_speed_(km/h)` == "Calm", 0, as.numeric(`3pm_wind_speed_(km/h)`))) %>% 
+  # filters out data for the required range
+  filter(Date >= "2020-08-01" & Date <= "2021-07-31") %>%
+  # creates new columns to store the average daily readings and to store the quarter details
+  mutate(
+    wind_speed = as.numeric((`9am_wind_speed_(km/h)` +`3pm_wind_speed_(km/h)`)/2), 
+    temperature = as.numeric(`3pm_Temperature`), 
+    humidity = as.numeric((`9am_relative_humidity_(%)`+`3pm_relative_humidity_(%)`)/2),
+    ) %>%
+  # groups data by the quarter column just created
+  group_by(Month) %>% 
+  # calculates the min, max and mean values of temperature, win speed and humidity for each month
+  summarise(
+    min_temp = min(temperature, na.rm = T),
+    max_temp = max(temperature, na.rm = T),
+    mean_temp = mean(temperature, na.rm = T),
+    min_windSpeed = min(wind_speed, na.rm = T),
+    max_windSpeed = max(wind_speed, na.rm = T),
+    mean_windSpeed = mean(wind_speed, na.rm = T),
+    min_humidity = min(humidity, na.rm = T),
+    max_humidity = max(humidity, na.rm = T),
+    mean_humidity = mean(humidity, na.rm = T)
+  )
+
+quarter_summary_df
+
+monthly_summary_df
+
+```
+
+## 9. Build graph(s) that show the distribution of the variables in the question #8. (5 marks)
+- ( _hint:_ There will be six graphs where each of them include distributions of minimum, maximum and average of variables temperature, wind speed or humidity per month and quarter.
+
+```{r}
+
+month_year_data <-  act_weather_data %>% 
+  # converts the non-numeric values in wind speed column to numeric, and replaces the value 'calm' with 0
+  mutate(`9am_wind_speed_(km/h)` = ifelse(`9am_wind_speed_(km/h)` == "Calm", 0, as.numeric(`9am_wind_speed_(km/h)`))) %>%
+  mutate(`3pm_wind_speed_(km/h)` = ifelse(`3pm_wind_speed_(km/h)` == "Calm", 0, as.numeric(`3pm_wind_speed_(km/h)`))) %>%
+  # creates a new column for easier grouping and visualization
+  mutate(YearMonth=paste(Year,Month,sep = "-")) %>% 
+  # filters out data for the required range
+  filter(Date >= "2020-08-01" & Date <= "2021-07-31") %>%
+  # creates new columns to store the average daily readings and to store the quarter details
+  mutate(
+    wind_speed = as.numeric((`9am_wind_speed_(km/h)` +`3pm_wind_speed_(km/h)`)/2), 
+    temperature = as.numeric(`3pm_Temperature`), 
+    humidity = as.numeric((`9am_relative_humidity_(%)`+`3pm_relative_humidity_(%)`)/2),
+    Quarter = quarter(Date)
+    ) %>%
+  # groups data by Year and Month
+  group_by(YearMonth) %>% 
+  # calculates the min, max and mean values of temperature, win speed and humidity for each quarter of each year
+  summarise(
+    min_temp = min(temperature, na.rm = T),
+    max_temp = max(temperature, na.rm = T),
+    mean_temp = mean(temperature, na.rm = T),
+    min_windSpeed = min(wind_speed, na.rm = T),
+    max_windSpeed = max(wind_speed, na.rm = T),
+    mean_windSpeed = mean(wind_speed, na.rm = T),
+    min_humidity = min(humidity, na.rm = T),
+    max_humidity = max(humidity, na.rm = T),
+    mean_humidity = mean(humidity, na.rm = T)
+  )
+
+month_year_data
+
+df_to_plot <-  month_year_data %>% 
+  # changes the Year Month coloumn to an ordinal factor
+  mutate(YearMonth=factor(YearMonth, unique(YearMonth), ordered = T)) %>% 
+  # reduces the width of the column, for easier plotting
+  gather(key = "attribute", value="avg_measure", min_temp:mean_humidity) %>% 
+  # seperates the column to obtain the quatity being measured and metric used 
+  separate(col = attribute, into = c("type", "variable"), sep = "_")
+ 
+str(df_to_plot)
+
+df_to_plot
+ 
+# Create a ggplot object using the data frame df_to_plot
+ggplot(df_to_plot, aes(x=YearMonth, y=avg_measure, colour=type))+
+  # Add points to the plot to represent data points.
+  geom_point(aes(y=avg_measure, colour=type))+
+  # Add lines connecting the points for each type (grouped by type).
+  geom_path(aes(y=avg_measure, colour=type, group=type), size=1)+
+  # Add labels and titles to the plot.
+  labs(
+    title = "Distribution of Humidity, Temperature and Wind Speed (August 2020 - July 2021)",
+    x = "Month and Year",
+    y = "Temperature(in degree celcius), Humidity(%), Wind Speed(km/h)"
+    ) +
+   # Create facets (subplots) based on the 'variable' column from the data frame.
+  facet_wrap(~variable, ncol = 2) +
+  # Adjust the appearance of the x-axis labels to be more readable.
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+
+
+```
+
+```{r}
+
+library(tidyverse)
+
+# Clean and preprocess the data
+quarter_year_data <- act_weather_data %>%
+  # Clean and preprocess the data
+  mutate(`9am_wind_speed_(km/h)` = ifelse(`9am_wind_speed_(km/h)` == "Calm", 0, as.numeric(`9am_wind_speed_(km/h)`))) %>%
+  mutate(`3pm_wind_speed_(km/h)` = ifelse(`3pm_wind_speed_(km/h)` == "Calm", 0, as.numeric(`3pm_wind_speed_(km/h)`))) %>%
+  # Filter data for a specific date range
+  filter(Date >= "2020-08-01" & Date <= "2021-07-31") %>%
+  # creates new columns to store the average daily readings and to store the quarter details
+  mutate(
+    wind_speed = as.numeric((`9am_wind_speed_(km/h)` +`3pm_wind_speed_(km/h)`)/2), 
+    temperature = as.numeric(`3pm_Temperature`), 
+    humidity = as.numeric((`9am_relative_humidity_(%)`+`3pm_relative_humidity_(%)`)/2),
+    Quarter = quarter(Date)
+    ) %>%
+  # Create a new variable 'YearQuarter' by combining 'Year' and 'Quarter'
+  mutate(YearQuarter=paste(Year,quarter(Date),sep = "-")) %>% 
+  # Group the data by 'YearQuarter'
+  group_by(YearQuarter) %>% 
+  # Calculate summary statistics
+  summarise(
+    min_temp = min(temperature, na.rm = T),
+    max_temp = max(temperature, na.rm = T),
+    mean_temp = mean(temperature, na.rm = T),
+    min_windSpeed = min(wind_speed, na.rm = T),
+    max_windSpeed = max(wind_speed, na.rm = T),
+    mean_windSpeed = mean(wind_speed, na.rm = T),
+    min_humidity = min(humidity, na.rm = T),
+    max_humidity = max(humidity, na.rm = T),
+    mean_humidity = mean(humidity, na.rm = T)
+  )
+
+# Reshape the data for plotting
+df_to_plot_2 <- quarter_year_data %>% 
+  # Convert 'YearQuarter' to a factor with ordered levels
+  mutate(YearQuarter=factor(YearQuarter, unique(YearQuarter), ordered = T)) %>% 
+  # Gather data into 'key' and 'value' columns
+  gather(key = "attribute", value="avg_measure", min_temp:mean_humidity) %>% 
+  # Gather data into 'key' and 'value' columns
+  separate(col = attribute, into = c("type", "variable"), sep = "_")
+
+str(df_to_plot_2)
+
+# Create a ggplot object using the data frame df_to_plot
+ggplot(df_to_plot_2, aes(x=YearQuarter, y=avg_measure, colour=type))+
+  # Add points to the plot to represent data points.
+   geom_point(aes(y=avg_measure, colour=type))+
+  # Add lines connecting the points for each type (grouped by type)
+   geom_path(aes(y=avg_measure, colour=type, group=type), size=1)+
+  # Add labels and titles to the plot.
+   labs(
+    title = "Distribution of Humidity, Temperature and Wind Speed (August 2020 - July 2021)",
+    x = "Quarter and Year",
+    y = "Temperature(in degree celcius), Humidity(%), Wind Speed(km/h)"
+   ) +
+  # Create facets (subplots) based on the 'variable' column from the data frame.
+   facet_wrap(~variable, ncol = 2) 
+```
+
+
+## 10. Provide a narrative to describe your thoughts on the generated graphs from your answer of question #9 (3 marks)
+
+**Description goes below**
+
+.....
+
+
+Monthly and Quarterly Temperature Insights:
+Within the specified time frame, January 2021 stands out as the hottest month, with both the highest average and maximum temperatures recorded. This pattern makes January the hottest month in ACT. Moreover, it's consistently observed that the first quarter of each year records the highest temperatures. Temperature trends show an increase from the fourth quarter and a decrease from the third quarter. In contrast, July, August, and September are consistently the coldest months in ACT.
+
+Monthly and Quarterly Wind Speed Observations:
+The highest wind speed, reaching 41.5 km/hr, was recorded in September 2020, potentially indicating a significant storm event. Notably, November and December consistently experience the windiest days. On the other hand, July 2021 stands out as one of the calmest months, with the lowest minimum wind speed and relatively low maximum temperature. Both the third and fourth quarters consistently experience the highest average wind speeds.
+
+Monthly and Quarterly Humidity Trends:
+In the provided data, January 2021 has the lowest average humidity and the lowest as well as relatively high humidity readings were also recorded in January. This suggests a dry and hot month. In 2021, the highest average humidity and peak humidity were observed in June and July. Quarterly data reveals that the third quarter consistently experiences the highest humidity levels. Similarly, the third quarter of 2020 also exhibited high humidity levels. This indicates that ACT regularly experiences high humidity during the third quarter of each year.
+
+---
+
+*** 

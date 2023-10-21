@@ -1,0 +1,246 @@
+---
+title: "Assignment 2, Part C"
+author: "Ajul Thomas (u3253992@uni.canberra.edu.au)"
+date: "2023-10-02"
+output:
+  rmdformats::downcute:
+    downcute_theme: "chaos"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Part C - Insights			(17 marks)
+
+**Perform the following tasks**
+
+1. There is a claim that the climate-change phenomenon has been hitting the ACT region over the last 4 years. Using the `act_weather_data`, can you help the authorities validate whether this claim is correct or not? (6 marks)
+
+- ( _hint:_ This is an open question, where the claim can be checked and validated via different ways. Please explain your strategy and final insights with evidences (i.e., graphs). You may search for extra data from the public repository to support your final thoughts. )
+
+
+```{r}
+# solution and documentation of the code goes below this line ...
+
+# reads ACT weather data
+
+library(tidyverse)
+AU_Date_Format <- "%d/%m/%Y"
+US_Date_Format <- "%m/%d/%Y"
+files <- list.files("data","*.csv")
+act_weather_data <- tibble()
+
+for(i in 1:length(files)){
+  data <- read_csv(paste0("data/", files[i]), skip= 7, show_col_types = FALSE)
+  assertthat::assert_that(nrow(problems(data)) == 0, 
+                  msg="There is still problem/s, which you need to fix first")
+
+  temp <- tryCatch(
+            expr    = {  parse_date(data$Date, AU_Date_Format)}, 
+            warning = function(e) { parse_date(data$Date, US_Date_Format)})
+  
+
+  data$Date <- format(temp, AU_Date_Format)
+
+  act_weather_data <- rbind(act_weather_data, data)
+}
+
+# Clean up any temporary variables no longer needed
+rm(files, data, temp, i)
+
+months = c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "July", "Aug", "Sep", "Oct", "Nov", "Dec")
+
+
+```
+
+```{r}
+
+str(act_weather_data)
+
+summary(act_weather_data)
+
+# checks the datatype of the Date column
+class(act_weather_data$Date)
+
+# as the type of date column is character, we will format it using as.Date() function 
+act_weather_data$Date <-  as.Date(act_weather_data$Date, format=AU_Date_Format)
+
+# check the format of date column again, to ensure everything is as expected
+class(act_weather_data$Date)
+
+# seperates the Month and Year column
+act_weather_data <- act_weather_data %>%
+  separate(col = Date, into = c('Year', 'Month', 'Day'), sep = '\\-', remove = F) %>% 
+  mutate(
+    Year=as.numeric(Year),
+    Month=as.numeric(Month),
+    Day=as.numeric(Day)
+  )
+
+```
+```{r}
+# plotting data
+
+# prepares data for plotting
+test_df <- act_weather_data %>% 
+  mutate(
+    avg_temp=(`9am_Temperature`+`3pm_Temperature`)/2,
+    avg_humidity=(`9am_relative_humidity_(%)`+`3pm_relative_humidity_(%)`)/2
+    ) %>% 
+  group_by(Year, Month) %>% 
+  summarise(
+    mean_min_temp=mean(Minimum_temperature),
+    mean_max_temp=mean(Maximum_temperature), 
+    avg_temp_monthly = mean(avg_temp), 
+    rainfall=mean(`Rainfall_(mm)`), 
+    humidity=mean(avg_humidity)
+    )
+
+str(test_df)
+
+ggplot(test_df, aes(x=Month)) +
+  geom_line(aes(y=mean_min_temp), color="blue", size=1) + 
+  geom_line(aes(y=mean_max_temp), color="red", size=1) + 
+  geom_line(aes(y=avg_temp_monthly), color="black", size=1) + 
+  scale_x_discrete(limits=months) +
+  facet_wrap(~Year) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  labs(
+    title = "Distribution of Temperature (2018 - 2023)",
+    x = "Month",
+    y = "Temperature(dC))"
+    ) 
+
+```
+```{r}
+
+
+ggplot(test_df, aes(x=Month)) + 
+  geom_line(aes(y=rainfall), color="black", size=1) + 
+  scale_x_discrete(limits=months) +
+  facet_wrap(~Year) +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  labs(
+    title = "Distribution of Rainfall (2018 - 2023)",
+    x = "Month",
+    y = "Rainfall(mm))"
+    ) 
+
+
+```
+
+
+
+---
+
+**Issue:**
+The core issue at hand centers on confirming the influence of climate change on the ACT region in the past four years.
+
+**Approach:**
+To substantiate this claim, a comparative analysis is indispensable, examining temperature and precipitation data within the ACT region from 2019 to 2022 against extensive historical weather records. This analysis entails utilizing line charts to visually depict temperature and precipitation trends across the aforementioned four-year period. By contrasting these recent observations with long-term historical averages, our aim is to detect significant variations or patterns consistent with climate changes in the ACT region.
+
+**Data Requirements:**
+This analysis necessitates access to temperature and precipitation data for the ACT region spanning 2019 to 2022.
+
+**Conclusions:**
+Upon scrutinizing temperature and precipitation data within the ACT region for the specified timeframe (2019-2022), the following conclusions can be drawn:
+
+Temperature Trends:
+There is a noticeable and consistent reduction in average temperatures over this four-year duration. This trend suggests a cooling pattern or a departure from historical temperature norms, reflecting lower average temperatures in the region.
+
+Precipitation Patterns:
+Conversely, an evident increase in average precipitation is observed within the same timeframe. This escalation indicates heightened rainfall or other forms of precipitation in comparison to historical data.
+
+These findings offer valuable insights into the evolving climate trends in the ACT region, highlighting shifts in temperature and precipitation patterns. These observations may hold significance for various sectors reliant on weather conditions, such as agriculture and the environment.
+
+
+---
+
+
+2. The ACT Transport Sector is seeking to use this data to understand when the ACT road construction should be going ahead and when it should be stopped. Also, the sector plans to build a time plan over the year to fix potholes after rain seasons, can you help them building analysis of which times in the year that this would be perfect? (6 marks)
+
+---
+
+**Temperature Range:** 
+Ideal construction temperatures typically fall within 10°C to 30°C (50°F to 86°F). Avoid extreme cold and hot temperatures, which can affect construction materials and worker safety.
+
+**Rainfall Range:** Road construction is best conducted during dry periods with minimal rainfall. Avoid construction on days with heavy rainfall or immediately following significant rain events.
+
+**Humidity Range (%):** Humidity levels between 30% and 70% are generally suitable for road construction. Low humidity can lead to rapid evaporation of water from construction materials, while high humidity can affect the curing process.
+
+**Wind Speed Range (Km/h):** Wind speeds below 40 km/h (25 mph) are considered ideal for road construction. High winds can pose safety risks and affect the quality of work.
+
+---
+
+```{r}
+# solution and documentation of the code goes below this line ...
+
+months_suitable_for_road_construction <- act_weather_data %>% 
+  mutate(
+    wind_speed = (as.numeric(`9am_wind_speed_(km/h)`) + as.numeric(`3pm_wind_speed_(km/h)`) )/2,
+    temperature = as.numeric((`9am_Temperature`+`3pm_Temperature`)/2), 
+    humidity = as.numeric((`9am_relative_humidity_(%)`+`3pm_relative_humidity_(%)`)/2),
+    ) %>%
+  group_by(Month) %>% 
+  summarise(
+    mean_rainfall=mean(`Rainfall_(mm)`, na.rm = T),
+    mean_temp = mean(temperature, na.rm = T),
+    mean_windSpeed = mean(wind_speed, na.rm = T),
+    mean_humidity = mean(humidity, na.rm = T)
+  ) %>% 
+  filter(mean_temp >= 10 & mean_temp <= 30 & mean_windSpeed <= 40 & mean_humidity >= 30 & mean_humidity <= 70 & mean_rainfall < 3) %>% 
+  summarise(months = Month)
+
+months = c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "July", "Aug", "Sep", "Oct", "Nov", "Dec")
+months_suitable_for_road_construction
+
+paste("The following months are suitable for road construction in ACT, Canberra : ") 
+print(months[months_suitable_for_road_construction$months])
+
+```
+
+3. As a data scientist, you need to practice extracting insights and valuable information from the analysis you conduct on the data. This can be done by posing some real-world problems or decisions that can be solved by doing some analysis on this data. For this task list at least **2 (two)** problems that can be solved by running analysis on this data set, if you are undergraduate student. Otherwise, generate at least **4 (four)** problems that can be solved by running analysis on this data set. (5 marks)
+
+**Solution**
+
+For each of the problems, use the following structure in your report:
+
+**Decision/Problem:** such as, _"In horticulture: Is it a good idea to plant tomatoes commercially in the ACT? If so when is the best timing for planting?"_
+
+**Knowledge:** such as _"Tomatoes thrive in warm sunny conditions. They cannot tolerate cold frosty weather (morning temperatures below zero) and windy conditions. Ideal daytime temperatures for growing are between 21-29°C. Any higher or lower reduces fruit set."_ ^[**"How to grow: Tomato"**, SBS Food, 2020. (Online). Available: https://www.sbs.com.au/food/article/2012/09/06/how-grow-tomato .(Accessed: 06- Oct-2020).]
+
+**Information needed:** _"Which months of the year have frosty temperature (below zero) and highest wind ... . Across **2019-2020**, plot the bar-charts of minimum temperature, and maximum wind speed per month"_
+
+**Conclusion:** final insights/findings from the above analysis should be reported here.
+
+---
+
+Problem 1:
+Decision: "How should the ACT plan for bushfire prevention and management?"
+Knowledge: Bushfires are influenced by weather conditions, including temperature, wind speed, and humidity.
+Information Needed: Analyze historical weather data to identify months or seasons with a high risk of bushfires based on temperature, wind speed, and dry conditions.
+Conclusion: Develop a bushfire prevention and management strategy based on weather-related risk factors.
+
+Problem 2:
+Decision: "When should outdoor events be scheduled in the ACT to minimize weather-related disruptions?"
+Knowledge: Weather conditions can significantly impact outdoor events, affecting attendance and safety.
+Information Needed: Analyze historical weather data to identify months or seasons with the least rainfall, moderate temperatures, and low wind speeds for event planning.
+Conclusion: Provide recommendations for scheduling outdoor events to minimize weather-related disruptions.
+
+Problem 3:
+Decision: "When should the ACT schedule water conservation efforts or restrictions?"
+Knowledge: Water conservation efforts may be needed during periods of drought or low rainfall.
+Information Needed: Analyze historical rainfall data to identify extended periods of low rainfall or drought conditions.
+Conclusion: Recommend the timing of water conservation efforts or restrictions based on the historical rainfall data.
+
+Problem 4:
+Decision: "When should the ACT conduct maintenance on outdoor infrastructure like parks and playgrounds?"
+Knowledge: Weather conditions can affect the safety and effectiveness of outdoor infrastructure maintenance.
+Information Needed: Analyze weather data to determine months or seasons with the most favorable conditions (e.g., low rainfall and moderate temperatures) for maintenance activities.
+Conclusion: Provide recommendations for scheduling outdoor infrastructure maintenance.
+
+---
+
+
+*** 

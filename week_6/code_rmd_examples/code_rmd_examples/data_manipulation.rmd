@@ -1,0 +1,139 @@
+---
+title: "Data Manipulation Verbs"
+author: "Ibrahim"
+date: "15/03/2022"
+output:
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_depth: 4
+  pdf_document:
+    toc: yes
+    toc_depth: '4'
+editor_options:
+  markdown:
+    wrap: 72
+status: In Progress
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
+```
+
+Here we apply the data manipulation verbs on `nycflight13` dataset to handle this data and extract pieces of information.
+
+#### Filter
+
+```{r}
+# call the required libraries
+library(tidyverse)
+library(nycflights13)
+df <- flights
+# filter based on conditions
+filter(df, month == 1, day == 1)
+filter(df, month == 12, day == 25)
+# you may combine conditions using logical operators
+filter(df, month == 1 | month == 12)
+# or by combining variables in vector
+filter(df, month %in% c(11, 12))
+# comma means and (&)
+# for example, extract all records for flights, that were not delayed (arr and dep) more than 2 hrs
+filter(flights, arr_delay <= 120, dep_delay <= 120)
+```
+
+#### Select
+
+```{r}
+# call the required libraries
+library(tidyverse)
+library(nycflights13)
+df <- flights
+# Select columns by name 
+select(flights, year, month, day) 
+# Select all columns between year and day (inclusive) 
+select(flights, year:day) 
+# Select all columns except those from year to day (inclusive) 
+select(flights, -(year:day)) 
+# rename() is a variant of select() that keeps all the variables that aren’t explicitly mentioned: 
+rename(flights, tail_num = tailnum) 
+# Move a variable to the start of the data frame. 
+select(flights, time_hour, air_time, everything()) 
+
+```
+
+#### Mutate
+
+```{r}
+# call the required libraries
+library(tidyverse)
+library(nycflights13)
+df <- flights
+# Create a new dataset 
+flights_sml <- select(df, year:day, ends_with("delay"), distance, air_time ) 
+# add new columns to the data frame
+mutate(flights_sml, gain = dep_delay - arr_delay, speed = distance / air_time * 60) 
+# Note that you can refer to columns that you’ve just created: 
+flights_sml <- mutate(flights_sml, gain = dep_delay - arr_delay, hours = air_time / 60, gain_per_hour = gain / hours ) 
+# If you only want to keep the new variables, use transmute(): 
+transmute(flights, gain = dep_delay - arr_delay, hours = air_time / 60, gain_per_hour = gain / hours ) 
+
+```
+
+#### Arrange
+
+```{r}
+# call the required libraries
+library(tidyverse)
+library(nycflights13)
+df <- flights
+# sort data by distance 
+arrange(df, distance) 
+# sort data by distance descendingly 
+arrange(df, desc(distance)) 
+# Sort Data by Multiple Variables 
+arrange(df, dep_time, arr_time) 
+
+```
+
+#### Summarise
+
+```{r}
+# call the required libraries
+library(tidyverse)
+library(nycflights13)
+df <- flights
+# extract a statistical metric from variable / variables of the data 
+summarise(df, min_delay = min(dep_delay, na.rm =TRUE), max_delay = max(arr_delay, na.rm =TRUE)) 
+
+```
+
+#### Grouping
+
+```{r}
+# group the data of the flights by the date 
+by_day <- group_by(flights, month) 
+# get the average delay per date/day 
+summarise(by_day, delay = mean(dep_delay, na.rm = TRUE)) # Imagine that we want to explore the relationship between the distance and average delay for each location. 
+by_dest <- group_by(flights, dest) 
+
+# extract the number of flights, average distance and average delay for each destination 
+delay <- summarise(by_dest, count= n(), dist= mean(distance, na.rm = TRUE), delay= mean(arr_delay, na.rm = TRUE) ) 
+
+# visualise to understand the relationship 
+ggplot(data= delay, mapping=aes(x= dist, y= delay)) + geom_point(aes(size= count), alpha= 1/ 3) + geom_smooth()
+
+```
+
+#### Pipe Operator
+
+```{r}
+df %>% 
+group_by(dest) %>% 
+summarise(count= n(), dist= mean(distance, na.rm = TRUE), delay= mean(arr_delay, na.rm = TRUE)) %>% 
+filter(count > 20, dest != 'HNL') %>% 
+ggplot(mapping=aes(x= dist, y= delay)) + 
+  geom_point(aes(size= count), alpha= 1/ 3) + 
+  geom_smooth()
+
+```
+
