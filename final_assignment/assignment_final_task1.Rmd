@@ -22,12 +22,6 @@ library("tidyverse")
 covid <-  read_csv("data/Covid19.csv")
 head(covid)
 
-covid %>% 
-  filter(location == "United Kingdom")
-
-covid %>% 
-  filter(location == "China")
-
 # read data from Test.csv as tibble
 test <- read_csv('data/Tests.csv')
 head(test)
