@@ -1,0 +1,102 @@
+---
+title: "Lab 13 - Linear Regression Analysis"
+author: "Ajul Thomas"
+date: "2023-10-24"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+Linear Regression
+
+Linear regression is a linear approximation of the causal relationship between two or more variables. The aim of using the linear regression is to predict the parameters that explain the relationship between predictors (i.e., explanatory) variables and predicted (i.e., response) variable.
+
+
+Exercise 1
+
+For the cars dataset embedded in R, perform the following: - split the data into training (80%) and testing (20%). - Build a linear regression model on the training data to help predicting the stopping distance based on the speed of the cars - Test the trained model on the testing data and report the Residual Mean Square Error.
+
+
+```{r}
+cars
+
+index <- sample(c(TRUE, FALSE), nrow(cars), replace = T, prob=c(0.8, 0.2))
+length(index)
+
+length(index[!index])
+
+?sample
+
+train <-  cars[index,]
+test <-  cars[!index,]
+
+
+model <- lm(dist ~ speed, data = train)
+model
+summary(model)
+
+predicted_distance <- predict(model, test)
+
+predicted_distance
+
+
+
+library(Metrics)
+
+error = rmse(test$dist, predicted_distance)
+error
+
+```
+
+
+Data for the following exercises
+
+Please download the “USA_Housing.csv” file from week 12 and put it in your working directory.
+Exercise 2
+
+    Read the data and get familiar with the included variables. The original data has been downloaded from Kaggle
+    Check the distribution of the price variable visually. Is it normally distributed?
+    Check the correlation matrix between the variables, numerically and graphically.
+    Check the outliers of the variables visually using the boxplot.
+    Can you spot the outliers using the Inter-Quartile Range (IQR) algorithm for one of the variables?
+
+```{r}
+
+
+
+df = read.csv("data/USA_Housing.csv")
+df
+
+ggplot(df, aes(x=Price))+
+  geom_histogram(aes(..density..))+
+  geom_density()
+
+
+
+```
+
+
+
+Exercise 3
+
+Based on the data of the previous exercise, perform the following steps:
+
+    Split the data into training and testing sets, where the training is 70% and the testing is 30% of the data.
+    Build a model that describes the changes of the prices with that variable that produces the highest correlation with the price variable.
+    Can you print and interpret the model parameters?
+    Visualise the model!
+    Test the model on the testing data and then evaluate the model performance using Residual Mean Square Error (RMSE) metric.
+    Build another model that would describes the changes of the prices with the changes in all the variables. This means building a multi-linear regression model.
+    Test the second model on the testing data and evaluate its performance using RMSE metric.
+    Visualise the distributions of the residuals of the two models.
+
+Exercise 4
+
+    Please discuss with your tutor the difference between the two models in the previous exercise and how you interpret the results of the two models.
+
+    Use the remaining time for any question or concern that you would like to share with your tutor.
+
+

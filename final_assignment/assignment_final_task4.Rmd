@@ -1,0 +1,44 @@
+---
+title: "Final Assignment, Task 4"
+author: "Put your name"
+date: "2023-11-2"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Task 4 - Insights (15 marks)
+
+Imagine you have been asked to plan for a dashboard that shall show the trends and the main figures of the different Covid19 waves that happened world wide in the last pandemic. Given the current data in this assignment is only covering the first wave of the Covid19, how would you augment this data? What are the other sources of data that you will rely on? What types of figures will you be focusing on to show in your dashboard? and why?
+
+**Task 4 Report**:
+
+Write the report as follows:
+
+1. **Objectives**:
+
+<TEXT HERE>
+
+2. **List of data sources to augment the existing data**:
+
+<TEXT HERE>
+
+3. **Set of figures/tables to show in the dashboard**:
+
+<TEXT HERE>
+
+4. **Analysis strategy**:
+
+<TEXT HERE>
+
+```
+
+**(Optional) Reflection on the whole unit goes here**: 
+Please tell us what you have liked and disliked about this unit, so we go better next time, thanks. 
+
+
+----
+
+*** 

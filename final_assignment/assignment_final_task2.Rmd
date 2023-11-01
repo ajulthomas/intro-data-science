@@ -1,0 +1,106 @@
+---
+title: "Final Assignment, Task 2"
+author: "Put your name"
+date: "2023-11-2"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Task 2: Task 2: Exploratory Data Analysis: 		(40 marks)
+
+1. Find the day with the highest death toll reported across the world. Print the date and the death toll of that day. 
+
+```{r}
+# The code and code description of this component go below here
+
+```
+
+
+2. Build a graph to show how the cumulative data of (Infected Cases, Deaths, Recovered, Tests) change over the time for the whole world collectively. 
+
+    [Hint: Use geom_line as a geometry function, use log for the Y axis for better presentation, Use different colour to distinguish between new cases, deaths, and recovered]
+
+```{r}
+# The code and code description of this component go below here
+
+```
+
+
+3. Extract the data corresonding to the last day _(05/05/2020)_ for all countries and save it in a separate dataframe and name it _"lastDay_data"_. 
+
+    [Hint: use filter function with Date = "2020-05-05"]
+
+```{r}
+# The code and code description of this component go below here
+
+```
+
+
+4. Based on the data in _"lastDay_data"_ dataframe, extract the corresponding records of the top 10 countries worldwide with current active cases, total confirmed cases, or fatality rate in separate dataframes (_i.e._, top10activeW, top10casesW, top10fatalityW, top10testsMW).
+
+    [Hint: you can use head(arranged_data, n=10) to get the top 10 records and pass the records of  these 10 countries in newly created data frames]
+
+```{r}
+# The code and code description of this component go below here
+
+```
+
+5. Based on the data of the in _"lastDay_data"_ dataframe, print total confirmed cases, death, recovered cases as well as the total tests per every `continent`. 
+
+```{r}
+# The code and code description of this component go below here
+
+```
+
+6. Build a graph to show the total number of cases over the time for the top 10 countries that have been obtained in question 4 (Use log transformation for the values in Y axis for better presentation). 
+
+    [Hint: first you need to get the data of the top-10 countries and then plot their lines, ie, one line per country]
+
+```{r}
+# The code and code description of this component go below here
+
+```
+
+7. Build a graph for the top 10 countries with current highest active cases which was obtained previously in question 4. The graph should have one sub-graph (_i.e._, using facet function) for each of these countries, every sub-graph should show how the new cases, new deaths, and new recovered cases were changing over the time (Use log for Y axis for better presentation, Use different colour to distinguish between new cases, deaths, and recovered). 
+
+    [hint: geom_line function with date on x_axis and each of the values of the variables in y_axis]
+
+```{r}
+# The code and code description of this component go below here
+
+```
+
+8. Build a graph for the top 10 countries with current highest total tests per one million of the population which was obtained previously in question 4. This graph should present total number of infected cases, total tests so far, and the total tests per million of the population for each country. 
+
+    [hint: you can use bar chart to achieve this task]
+
+```{r}
+# The code and code description of this component go below here
+
+```
+
+9.	Build a graph to present the statistics total, average, median of confirmed cases of the  continents. ( you may use log for Y axis for better presentation, Use Continent in the legend, make sure x-axis labels does not overlap). 
+
+```{r}
+# The code and code description of this component go below here
+
+```
+
+
+10. Based on the data of the _"lastDay_data"_ dataframe, list the top 2-countries of each continent that report the highest death toll. 
+
+```{r}
+# The code and code description of this component go below here
+
+```
+
+----
+
+**Task 2 final Report**: For each of the above, ensure that you have extracted the generated statistics (eg, numerical values) or the visualizations (eg, graphs) alongside with your description as output of each component in the knitted report. The marking will be conducted based on the description and validity of these quantitative and qualitative components of the analysis.
+
+----
+
+*** 
