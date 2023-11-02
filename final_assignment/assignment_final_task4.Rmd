@@ -13,25 +13,163 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Imagine you have been asked to plan for a dashboard that shall show the trends and the main figures of the different Covid19 waves that happened world wide in the last pandemic. Given the current data in this assignment is only covering the first wave of the Covid19, how would you augment this data? What are the other sources of data that you will rely on? What types of figures will you be focusing on to show in your dashboard? and why?
 
-**Task 4 Report**:
+# Task 4 Report: Planning for a Covid-19 Dashboard
 
-Write the report as follows:
+## Objectives:
 
-1. **Objectives**:
+## Objectives for COVID-19 Dashboard Development
 
-<TEXT HERE>
+1. **Real-time Monitoring:** Provide up-to-date and accurate information on COVID-19 cases, deaths, recoveries, and testing.
 
-2. **List of data sources to augment the existing data**:
+2. **Geospatial Insights:** Offer geographic and regional data to understand the spread of the virus and hotspots.
 
-<TEXT HERE>
+3. **Trend Analysis:** Analyze historical data to identify patterns and trends in the progression of the pandemic.
 
-3. **Set of figures/tables to show in the dashboard**:
+4. **Vaccination Tracking:** Monitor and report on the progress of COVID-19 vaccination efforts, including coverage and efficacy.
 
-<TEXT HERE>
+5. **Demographic Information:** Include data on age, gender, and other demographics to assess the virus's impact on different populations.
 
-4. **Analysis strategy**:
+6. **Resource Allocation:** Assist in resource allocation by providing data on hospitalization rates, ICU bed availability, and ventilator usage.
 
-<TEXT HERE>
+7. **Public Awareness:** Educate the public about COVID-19 through FAQs, guidelines, and relevant educational content.
+
+8. **Risk Assessment:** Provide risk assessment and guidance on travel restrictions, public health measures, and containment strategies.
+
+
+## List of Data Sources to Augment the Existing Data:
+
+To enhance the existing data, we will rely on multiple sources:
+
+- [World Health Organization (WHO)](https://www.who.int/emergencies/disease-outbreak-news): Accessing global databases such as WHO to obtain comprehensive global Covid-19 data, covering all waves of the pandemic.
+
+- [Johns Hopkins University - Coronavirus Resource Center](https://coronavirus.jhu.edu/): Accessing data provided by Johns Hopkins University to acquire global Covid-19 statistics and trends.
+
+- [Our World in Data](https://ourworldindata.org/coronavirus): Referencing comprehensive data and research on Covid-19, including global and country-specific statistics.
+
+- Government Reports: Collecting data from government health agencies, including specific countries' health departments, to ensure accurate and up-to-date regional data.
+
+- Vaccination Data: Gathering information from vaccine manufacturers, health authorities, and official vaccination reports to track vaccination rates and coverage.
+
+
+## Figures/Tables in the Dashboard
+
+Our Covid-19 dashboard will provide a wide range of figures and tables to convey essential information about the pandemic:
+
+1. **Total Cases and Deaths:** A running tally of total confirmed COVID-19 cases and related deaths, updated regularly to reflect the current status.
+
+2. **New Cases and Deaths:** Line charts or bar graphs illustrating the daily or weekly trends in new COVID-19 cases and related deaths to track the progression of the pandemic.
+
+3. **Recoveries:** A table or line chart showing the number of individuals who have recovered from COVID-19 over time.
+
+4. **Active Cases:** An area chart or table that visualizes the current number of active cases by subtracting recoveries and deaths from the total cases.
+
+5. **Testing Data:** Line charts and tables to display testing data, including the number of tests conducted, positive and negative results, and the test positivity rate.
+
+6. **Vaccination Data:** Charts and tables illustrating vaccine distribution, doses administered, and the percentage of the population vaccinated to monitor vaccination progress.
+
+7. **Hospitalization and ICU Data:** Bar graphs or tables representing the number of COVID-19 patients in hospitals and those in intensive care units.
+
+8. **Regional Data:** Maps, tables, or bar charts providing a regional breakdown of cases and deaths, helping users understand the geographic distribution of the pandemic's impact.
+
+9. **Demographics:** Pie charts or bar graphs to present demographic information, such as the age and gender distribution of COVID-19 cases and deaths.
+
+10. **Variant Information:** Tables or charts that depict the prevalence of COVID-19 variants and their impact on the pandemic.
+
+11. **Vaccine Efficacy:** Line charts or comparative tables to showcase the effectiveness of vaccines against different variants.
+
+12. **Mobility Data:** Line charts or heatmaps to visualize changes in mobility patterns and adherence to social distancing measures.
+
+13. **Global Comparison:** Comparative bar graphs, tables, or world maps to compare COVID-19 statistics with other countries or regions, offering users a global perspective.
+
+14. **Historical Trends:** Time series line charts to illustrate historical trends in cases, deaths, and other key metrics, enabling users to track the pandemic's evolution.
+
+15. **Per Capita Data:** Normalized data and metrics like cases and deaths per 100,000 people in tables or charts.
+
+16. **Testing and Vaccination Rates:** Bar graphs or tables to show testing and vaccination rates relative to the population.
+
+17. **Positivity Rate:** A line chart or table indicating the percentage of positive tests among total tests conducted.
+
+18. **Healthcare Resources:** Bar charts or tables to showcase information about available hospital beds, ventilators, and healthcare capacity.
+
+19. **Heatmaps:** Geographical heatmaps to visually represent COVID-19 prevalence and variations across regions.
+
+20. **Risk Assessment:** Color-coded zones or risk level indicators to help users understand the severity of the situation in different areas.
+
+21. **Travel Restrictions:** Tables or lists detailing travel advisories and restrictions.
+
+22. **Public Health Guidelines:** The current recommendations and guidelines from health authorities.
+
+23. **News and Updates:** A real-time news feed or a section for the latest updates related to the pandemic.
+
+24. **Community Resources:** Links to resources and contact information for health services and support organizations.
+
+25. **FAQs and Educational Content:** An accessible section with frequently asked questions and educational materials about COVID-19 to inform and educate the users.
+
+
+
+## Analysis Strategy:
+
+## Analyzing COVID-19 Data to Extract Insights
+
+Analyzing COVID-19 data to extract insights involves a multi-faceted approach that combines statistical, data visualization, and epidemiological techniques. Here's a step-by-step guide on how to analyze COVID-19 data effectively:
+
+### 1. Data Collection and Cleaning
+
+- Gather reliable data from official sources, such as government health agencies, the World Health Organization (WHO), or other trusted repositories.
+- Clean and preprocess the data by handling missing values, ensuring data consistency, and formatting it for analysis.
+
+### 2. Exploratory Data Analysis (EDA)
+
+- Begin with descriptive statistics to understand the basic characteristics of the data, including means, medians, standard deviations, and percentiles.
+- Create summary statistics and visualizations, such as histograms, box plots, and scatter plots, to identify trends and outliers in the data.
+
+### 3. Time Series Analysis
+
+- Examine temporal trends by analyzing daily or weekly data to understand how the pandemic evolves over time.
+- Calculate moving averages and apply smoothing techniques to identify long-term patterns and short-term fluctuations.
+
+### 4. Geospatial Analysis
+
+- Utilize geographical information systems (GIS) to map the spatial distribution of COVID-19 cases, deaths, and vaccination rates.
+- Create heatmaps, choropleth maps, or spatial clusters to identify hotspots and regional variations.
+
+### 5. Regression Analysis
+
+- Perform regression analysis to understand the relationships between COVID-19 metrics and various factors, such as government policies, demographics, and healthcare resources.
+- Identify significant predictors that affect the spread and impact of the virus.
+
+### 6. Machine Learning and Predictive Modeling
+
+- Develop machine learning models to make predictions and forecasts based on historical data.
+- Use algorithms like time series forecasting, decision trees, or neural networks to estimate future COVID-19 cases, hospitalizations, and vaccine coverage.
+
+### 7. Data Visualization
+
+- Create informative and interactive data visualizations to communicate insights effectively to stakeholders and the public.
+- Use charts, graphs, and dashboards to showcase trends, comparisons, and projections.
+
+### 8. Cluster Analysis
+
+- Apply clustering algorithms to group regions with similar COVID-19 dynamics, helping identify areas with shared characteristics and response needs.
+
+### 9. Statistical Testing
+
+- Conduct statistical tests to assess the significance of observed differences in data, such as variations in COVID-19 metrics between regions, age groups, or time periods.
+- Use hypothesis testing to make data-driven decisions.
+
+### 10. Vaccination Analysis
+
+- Analyze vaccination data to assess the impact of vaccination campaigns on COVID-19 cases and deaths.
+- Calculate vaccine efficacy, coverage rates, and identify vulnerable populations.
+
+### 11. Ethical Considerations
+
+- Ensure data privacy and ethical handling of data, especially when dealing with sensitive health information.
+
+
+
+In summary, the Covid-19 dashboard will serve as a comprehensive tool for monitoring and understanding the various waves of the pandemic. It will rely on a combination of data sources, analysis techniques, and visualization methods to present key figures and insights for informed decision-making by health authorities, policymakers, and the general public.
+
 
 ```
 

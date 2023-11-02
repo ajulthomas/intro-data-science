@@ -16,6 +16,15 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 # The code and code description of this component go below here
 
+day_with_highest_death_toll <- covid19_data %>% 
+  select(Date, NewDeaths) %>% 
+  group_by(Date) %>% 
+  summarise(TotalNewDeaths=sum(NewDeaths)) %>% 
+  summarise(Date=Date[which.max(TotalNewDeaths)], MaxTotalNewDeaths = max(TotalNewDeaths))
+
+day_with_highest_death_toll
+
+
 ```
 
 
@@ -25,6 +34,34 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r}
 # The code and code description of this component go below here
+
+library("ggplot2")
+
+covid_data_summarised <- covid19_data %>% 
+  select(Date, CumCases, CumDeaths, CumRecovered, CumTests) %>% 
+  group_by(Date) %>% 
+  summarise(
+    CumCasesWorld = sum(CumCases),
+    CumDeathsWorld = sum(CumDeaths),
+    CumRecoveredWorld = sum(CumRecovered),
+    CumTestsWorld = sum(CumTests)
+  )
+
+?geom_line
+
+ggplot(covid_data_summarised, aes(x = Date)) +
+  geom_line(aes(y = log10(CumCasesWorld), colour = 'Cases'), size = 1) +
+  geom_line(aes(y = log10(CumDeathsWorld), colour = 'Deaths'), size = 1) +
+  geom_line(aes(y = log10(CumRecoveredWorld), colour = 'Recovered'), size = 1) +
+  geom_line(aes(y = log10(CumTestsWorld), colour = 'Tests'), size = 1) +
+  scale_color_manual(values = c('Cases' = 'red', 'Deaths' = 'black', 'Recovered' = 'green', 'Tests' = 'blue')) +
+  labs(
+    title = "COVID-19 Data Trends",
+    x = "Date",
+    y = "Logarithm of Counts",
+    color = "Variable"
+  ) +
+  theme(plot.title = element_text(hjust = 0.5)) 
 
 ```
 
@@ -36,6 +73,11 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 # The code and code description of this component go below here
 
+lastDay_data <- covid19_data %>% 
+  filter(Date == as.Date("2020-05-05"))
+  
+lastDay_data  
+
 ```
 
 
@@ -46,12 +88,49 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 # The code and code description of this component go below here
 
+top10activeW <- lastDay_data %>% 
+  arrange(desc(Active)) %>% 
+  head(n=10)
+top10activeW
+
+top10casesW <- lastDay_data %>% 
+  arrange(desc(CumCases)) %>% 
+  head(n=10)
+top10casesW
+
+
+top10fatalityW <- lastDay_data %>% 
+  arrange(desc(FatalityRate)) %>% 
+  head(n=10)
+top10fatalityW
+
+top10testsW <- lastDay_data %>% 
+  arrange(desc(CumTests)) %>% 
+  head(n=10)
+top10testsW
+
+top10testsMW <- lastDay_data %>% 
+  arrange(desc(Tests_1M_Pop)) %>% 
+  head(n=10)
+top10testsMW
+
+
 ```
 
 5. Based on the data of the in _"lastDay_data"_ dataframe, print total confirmed cases, death, recovered cases as well as the total tests per every `continent`. 
 
 ```{r}
 # The code and code description of this component go below here
+
+continent_summary <- lastDay_data %>% 
+  group_by(Continent) %>% 
+  summarise(
+    TotalCases=sum(CumCases, na.rm=T),
+    TotalDeath=sum(CumDeaths, na.rm=T),
+    TotalRecovered=sum(CumRecovered, na.rm=T),
+    TotalTests=sum(CumTests,na.rm=T)
+  )
+continent_summary
 
 ```
 
@@ -62,6 +141,21 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 # The code and code description of this component go below here
 
+top_10_total_cases <- covid19_data %>% 
+  filter(Country %in% top10casesW$Country)
+top_10_total_cases
+
+
+ggplot(top_10_total_cases, aes(x=Date, y=log(CumCases), colour=Country)) +
+  geom_line() +
+  labs(
+    title = "COVID-19 Data Trends for Top 10 Countries",
+    x = "Date",
+    y = "Logarithm of Cumulative Cases",
+    color = "Country"
+  ) +
+  theme(plot.title = element_text(hjust = 0.5)) 
+
 ```
 
 7. Build a graph for the top 10 countries with current highest active cases which was obtained previously in question 4. The graph should have one sub-graph (_i.e._, using facet function) for each of these countries, every sub-graph should show how the new cases, new deaths, and new recovered cases were changing over the time (Use log for Y axis for better presentation, Use different colour to distinguish between new cases, deaths, and recovered). 
@@ -70,6 +164,25 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r}
 # The code and code description of this component go below here
+
+top_10_active <- covid19_data %>% 
+  filter(Country %in% top10activeW$Country)
+top_10_active
+# colSums(is.na(top_10_active))
+
+ggplot(top_10_active, aes(x=Date))+
+  geom_line(aes(y = log(NewCases), colour = 'Cases')) +
+  geom_line(aes(y = log(NewDeaths), colour = 'Deaths')) +
+  geom_line(aes(y = log(Recovered), colour = 'Recovered')) +
+  scale_color_manual(values = c('Cases' = 'red', 'Deaths' = 'black', 'Recovered' = 'green')) +
+  labs(
+    title = "COVID-19 Data Trends",
+    x = "Date",
+    y = "Logarithm of Counts",
+    color = "Variable"
+  ) +
+  facet_wrap(~Country, scales = "free_y", ncol = 2)+
+  theme(plot.title = element_text(hjust = 0.5)) 
 
 ```
 
@@ -80,12 +193,46 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 # The code and code description of this component go below here
 
+bar_graph_data <- top10testsMW %>% 
+  select(Code, Country, CumCases, CumTests, Tests_1M_Pop) %>% 
+  gather(key="Attribute", value="Count", CumCases, CumTests, Tests_1M_Pop)
+
+ggplot(bar_graph_data, aes(x=Country,  fill=Attribute))+
+  geom_bar(aes(y=log10(Count)),position = "dodge",  stat = "identity")+
+  labs(
+    title = "COVID-19 Data Trends - Top 10 Countries - Cumulative Tests per million",
+    x = "Country",
+    y = "Logarithm of Counts",
+    color = "Variable"
+  ) +
+  theme(plot.title = element_text(hjust = 0.5), axis.text.x = element_text(angle = 45, hjust = 1))
+
 ```
 
 9.	Build a graph to present the statistics total, average, median of confirmed cases of the  continents. ( you may use log for Y axis for better presentation, Use Continent in the legend, make sure x-axis labels does not overlap). 
 
 ```{r}
 # The code and code description of this component go below here
+
+continent_summary <- covid19_data %>% 
+  group_by(Continent) %>% 
+  summarise(
+    Total = sum(CumCases, na.rm = TRUE),
+    Average = mean(CumCases, na.rm = TRUE),
+    Median = median(CumCases, na.rm = TRUE)
+  ) %>% 
+  gather(key="Stats", value="Value", - Continent)
+continent_summary
+
+ggplot(continent_summary, aes(x=Continent, y=log(Value), fill=Stats))+
+  geom_bar(position = "dodge", stat = "Identity") +
+  labs(
+    title = "COVID-19 Data Trends- Total Reported Cases - Continent Stats",
+    x = "Continent",
+    y = "Logarithm of Stats",
+    color = "Variable"
+  ) +
+  theme(plot.title = element_text(hjust = 0.5), axis.text.x = element_text(angle = 45, hjust = 1))
 
 ```
 
@@ -94,6 +241,14 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r}
 # The code and code description of this component go below here
+
+lastDay_data %>% 
+  select(Country, Continent, CumDeaths) %>% 
+  group_by(Continent) %>% 
+  arrange(desc(CumDeaths)) %>% 
+  mutate(Rank=rank(desc(CumDeaths))) %>% 
+  filter(Rank <= 2) %>% 
+  arrange(Continent)
 
 ```
 

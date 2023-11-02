@@ -1,0 +1,202 @@
+---
+title: "Week 13 Tutorial"
+author: "Tamzid Ibrahim"
+date: "2023-10-26"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+Exercise 1 
+
+Linear equation is a general model, it is used to predict new values, it is the most rudimentary form of prediction
+
+For the cars dataset embedded in R, perform the following: - split the data into training (80%) and testing (20%). - Build a linear regression model on the training data to help predicting the stopping distance based on the speed of the cars - Test the trained model on the testing data and report the Residual Mean Square Error.
+
+```{r}
+library(ggplot2)
+library(tidyverse)
+
+cars
+
+cars %>% 
+  ggplot(aes(x = speed, y = dist )) +
+  geom_point()
+
+index <- sample( c(T,F), nrow(cars), replace = T, prob = c(.8, .2))
+
+index 
+
+train_set <- cars[index, ]
+test_set <- cars[!index, ]
+
+dim(train_set)
+dim(test_set)
+
+# Creating the linear regression model 
+
+model <- 
+  lm(dist ~ speed, train_set) #Response first and then explainatory 
+
+model
+
+summary(model)
+
+# Testing the model 
+
+predicted_dist <- 
+  predict(model, test_set)
+
+predicted_dist
+
+# Calculating the error between the actual and predicted 
+
+library(Metrics)
+
+actual <- 
+  test_set$dist
+
+rmse(actual, predicted_dist)
+
+sqrt(mean((predicted_dist-actual)^2))
+
+```
+
+Exercise 2
+
+Read the data and get familiar with the included variables. The original data has been downloaded from Kaggle
+Check the distribution of the price variable visually. Is it normally distributed?
+Check the correlation matrix between the variables, numerically and graphically.
+Check the outliers of the variables visually using the boxplot.
+Can you spot the outliers using the Inter-Quartile Range (IQR) algorithm for one of the variables?
+
+```{r}
+
+data <- read_csv("data/USA_Housing.csv")
+
+data
+
+# Chekcing whether it is normally distributed
+
+data %>% 
+  ggplot(aes(x = Price)) +
+  geom_histogram(aes(y = ..density..), fill = "aquamarine3") +
+  geom_density(color = "red")
+
+data %>% 
+  cor()
+
+library(GGally)
+
+ggcorr(data, label = T, label_alpha = T)
+
+
+# Antoher way to plot corr matrix 
+
+
+library(ellipse)
+
+ctab <- cor(data)
+
+plotcorr(ctab, mar = c(.5, .5, .5, .5))
+
+# Differentiate based on color 
+
+colorfun <- colorRamp(c("#CC0000", "white", "#3366cc"), space = "Lab")
+
+plotcorr(ctab, col = rgb(colorfun((ctab+1)/2), maxColorValue = 255), mar = c(.1, .1, .1, .1))
+
+meltdata <- data %>% 
+  gather()
+
+meltdata
+
+ggplot(meltdata, aes(key, value)) +
+  geom_boxplot() +
+  facet_wrap(~key, scale = "free")
+
+stats <- data %>% 
+  summarise(first_q = quantile(Area_Income, .25, na.rm = T), 
+            third_q = quantile(Area_Income, .75, na.rm = T))
+
+IQR <- stats$third_q - stats$first_q
+
+data_lowest <- stats$first_q - 1.5*IQR
+data_higest <- stats$third_q + 1.5*IQR
+
+outliers <- data$Area_Income[data$Area_Income > data_higest | data$Area_Income < data_lowest]
+
+outliers
+
+outlier_index <- which(data$Area_Income > data_higest | data$Area_Income < data_lowest)
+outlier_index
+
+```
+
+Ex -3
+Split the data into training and testing sets, where the training is 70% and the testing is 30% of the data.
+Build a model that describes the changes of the prices with that variable that produces the highest correlation with the price variable.
+Can you print and interpret the model parameters?
+Visualise the model!
+Test the model on the testing data and then evaluate the model performance using Residual Mean Square Error (RMSE) metric.
+Build another model that would describes the changes of the prices with the changes in all the variables. This means building a multi-linear regression model.
+Test the second model on the testing data and evaluate its performance using RMSE metric.
+Visualise the distributions of the residuals of the two models.
+
+
+```{r}
+index <- sample(c(T,F), nrow(data), replace = T, prob = c(.7, .3))
+
+train <- data[index,]
+
+test <- data[!index,]
+
+model1 <- lm(Price ~ Area_Income, train)
+
+model1
+
+summary(model1)
+
+plot(model1)
+
+
+# Testing 
+
+test$predictedprice1 <- predict(model1, test)
+
+actual <- test$Price
+
+predicted <- test$predictedprice1
+
+rmse(predicted, actual)
+
+
+```
+
+
+```{r}
+
+model2 <- lm(Price ~ . , train)
+
+test$predictedprice2 <- predict(model2, test)
+
+rmse(predicted, actual)
+rmse(test$predictedprice2, test$Price)
+
+hist(model1$residuals, color = "grey")
+
+hist(model2$residuals, color = "grey")
+
+ggplot(model1, aes(model1$residuals)) +
+  geom_histogram(aes(y = ..density..), fill = "yellow") +
+  geom_density(color = "blue")
+
+ggplot(model2, aes(model2$residuals)) +
+  geom_histogram(aes(y = ..density..), fill = "orange") +
+  geom_density(color = "red")
+
+```
+

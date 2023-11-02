@@ -18,12 +18,25 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 # The code and code description of this component go below here
 
+cor_data <- covid19_data %>% 
+  ungroup() %>% 
+  select(CumCases, CumTests, Population, GDP, GDPCapita)
+cor_data
+
 ```
 
 2. Compute the correlation matrix between the variables of the “cor_data” and visualise this correlation matrix.
 
 ```{r}
 # The code and code description of this component go below here
+
+cor(cor_data)
+
+ggcorr(cor_data, label = T, label_alpha = T)+
+  labs(
+    title = "Correlation Matrix"
+  )+
+  theme(plot.title = element_text(hjust = 0.5)) 
 
 ```
 
@@ -32,12 +45,34 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 # The code and code description of this component go below here
 
+ggplot(cor_data, aes(x=CumCases))+
+  geom_histogram(fill = "aquamarine3",color = "#000000")+
+  labs(title = "Distribution of Cumulative Cases",
+       x = "Cumulative Cases",  # Update x-axis label
+       y = "Frequency") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+ggplot(cor_data, aes(x=log(CumCases)))+
+  geom_histogram(fill = "aquamarine3",color = "#000000")+
+  labs(title = "Distribution of Cumulative Cases",
+       x = "Logarithm of Cumulative Cases",  # Update x-axis label
+       y = "Frequency") +
+  theme(plot.title = element_text(hjust = 0.5))
+
 ```
 
 4. Divide the cor_data into training and testing, where training data represent 65% of the number of rows.
 
 ```{r}
 # The code and code description of this component go below here
+
+index <- sample(c(T,F), nrow(cor_data), replace = T, prob = c(.65, .35))
+
+train <- cor_data[index,]
+nrow(train)
+
+test <- cor_data[!index,]
+nrow(test)
 
 ```
 
@@ -46,12 +81,49 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 # The code and code description of this component go below here
 
+ggplot(cor_data, aes(x=log(GDP), y=log(CumCases))) +
+  geom_point() +
+  labs(title = "Distribution of Cumulative Cases vs GDP",
+       x = "Logarithm of GDP",  # Update x-axis label
+       y = "Logarithm of Cumulative Cases") +
+  theme(plot.title = element_text(hjust = 0.5))
+
+model <- lm(CumCases ~ GDP, train)
+
+model
+
+summary(model)
+
+plot(model)
+
+# Testing 
+
+model_predictions <- predict(model, test)
+
+actual_CumCases <- test$CumCases
+
+rmse <- rmse(model_predictions, actual_CumCases)
+
+paste("RMSE of Linear Model 1 :", rmse)
+
 ```
 
 6. Train another linear regression model to predict cumulative cases from all the other variables. Then, evaluate this model on the test data and print the root mean square error value.
 
 ```{r}
 # The code and code description of this component go below here
+
+model2 <- lm(CumCases ~ ., data = train)
+
+summary(model2)
+
+plot(model)
+
+model2_predictions <- 
+  predict(model2, test)
+
+rmse_model2 <- rmse(actual_CumCases, model2_predictions)
+paste("RMSE of Linear Model 2:", rmse_model2)
 
 ```
 
@@ -62,6 +134,22 @@ knitr::opts_chunk$set(echo = TRUE)
 - 
 - 
 -
+
+1. **Model Complexity**: Model 1 is a simple linear regression with a single predictor (GDP), while Model 2 is a multiple linear regression with multiple predictors (CumTests, Population, GDP, GDPCapita).
+
+2. **Model Performance**: Model 2 (multiple regression) outperforms Model 1 (simple regression) with a higher R-squared value, indicating it explains more variance in CumCases.
+
+3. **RMSE**: Model 2 has a significantly lower RMSE compared to Model 1, suggesting it provides more accurate predictions.
+
+4. **Variable Selection**: Model 1 is appropriate when you have a strong prior belief that a single variable (GDP) drives CumCases. Model 2 is preferred when you suspect that multiple factors (CumTests, Population, GDP, GDPCapita) collectively influence CumCases.
+
+5. **Theoretical Understanding**: Choose Model 1 when you have a well-established theoretical understanding of the relationship between GDP and CumCases. Model 2 is suitable when you believe that other factors also play a role.
+
+6. **Accuracy vs. Simplicity**: Model 2 offers greater accuracy but is more complex. Model 1 is simpler but may sacrifice accuracy.
+
+7. **Research Context**: If precision and predictive power are crucial, Model 2 is the better option.
+
+8. **Data-driven Decision**: If the data supports the inclusion of multiple predictors, Model 2 may be more appropriate. If the data aligns with a single predictor, Model 1 can be effective.
 
 ----
 

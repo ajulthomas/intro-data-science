@@ -1,0 +1,274 @@
+---
+title: "Final Assignment, Task 2"
+author: "Put your name"
+date: "2023-11-2"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Task 2: Task 2: Exploratory Data Analysis: 		(40 marks)
+
+1. Find the day with the highest death toll reported across the world. Print the date and the death toll of that day. 
+
+```{r}
+library(tidyverse)
+# The code and code description of this component go below here
+
+
+highest_death_day <- covid19_data %>%
+  group_by(Date) %>%                       # Group by date
+  summarise(TotalDeaths = sum(NewDeaths)) %>%   # Sum up deaths for each date
+  arrange(-TotalDeaths) %>%                 # Arrange in descending order
+  slice(1)                                 # Take the first row
+
+print(highest_death_day)
+
+```
+
+
+2. Build a graph to show how the cumulative data of (Infected Cases, Deaths, Recovered, Tests) change over the time for the whole world collectively. 
+
+    [Hint: Use geom_line as a geometry function, use log for the Y axis for better presentation, Use different colour to distinguish between new cases, deaths, and recovered]
+
+```{r}
+# The code and code description of this component go below here
+library(ggplot2)
+
+# Aggregating the data by date
+world_data <- covid19_data %>%
+  group_by(Date) %>%
+  summarise(
+    CumCasesWorld = sum(CumCases),
+    CumDeathsWorld = sum(CumDeaths),
+    CumRecoveredWorld = sum(CumRecovered),
+    CumTestsWorld = sum(CumTests)
+  )
+
+# Building the plot
+ggplot(world_data, aes(x = Date)) +
+  geom_line(aes(y = CumCasesWorld, color = "Infected Cases")) +
+  geom_line(aes(y = CumDeathsWorld, color = "Deaths")) +
+  geom_line(aes(y = CumRecoveredWorld, color = "Recovered")) +
+  geom_line(aes(y = CumTestsWorld, color = "Tests")) +
+  scale_y_log10() + # Using a logarithmic scale for the Y axis
+  labs(
+    title = "Cumulative Data Over Time for the Entire World",
+    y = "Cumulative Counts (Log Scale)",
+    color = "Legend"
+  ) +
+  theme_minimal()
+```
+
+
+3. Extract the data corresonding to the last day _(05/05/2020)_ for all countries and save it in a separate dataframe and name it _"lastDay_data"_. 
+
+    [Hint: use filter function with Date = "2020-05-05"]
+
+```{r}
+# The code and code description of this component go below here
+
+lastDay_data <- covid19_data %>%
+  filter(Date == as.Date("2020-05-05"))
+lastDay_data
+```
+
+
+4. Based on the data in _"lastDay_data"_ dataframe, extract the corresponding records of the top 10 countries worldwide with current active cases, total confirmed cases, or fatality rate in separate dataframes (_i.e._, top10activeW, top10casesW, top10fatalityW, top10testsMW).
+
+    [Hint: you can use head(arranged_data, n=10) to get the top 10 records and pass the records of  these 10 countries in newly created data frames]
+
+```{r}
+# The code and code description of this component go below here
+top10activeW <- head(lastDay_data %>% 
+                       arrange(desc(Active)),n=10)
+
+top10casesW <- head(lastDay_data %>% 
+                      arrange(desc(CumCases)),n=10)
+
+top10fatalityW <- head(lastDay_data %>% 
+                         arrange(desc(FatalityRate)),n=10)
+
+top10testMW <- head(lastDay_data %>%
+                      arrange(desc(CumTests)),n=10)
+
+
+```
+
+5. Based on the data of the in _"lastDay_data"_ dataframe, print total confirmed cases, death, recovered cases as well as the total tests per every `continent`. 
+
+```{r}
+# The code and code description of this component go below here
+continent_totals <- lastDay_data %>%
+  group_by(Continent) %>%
+  summarise(
+    TotalConfirmedCases = sum(CumCases, na.rm = TRUE),
+    TotalDeaths = sum(CumDeaths, na.rm = TRUE),
+    TotalRecovered = sum(CumRecovered, na.rm = TRUE),
+    TotalTests = sum(CumTests, na.rm = TRUE)
+  )
+
+print(continent_totals)
+
+```
+
+6. Build a graph to show the total number of cases over the time for the top 10 countries that have been obtained in question 4 (Use log transformation for the values in Y axis for better presentation). 
+
+    [Hint: first you need to get the data of the top-10 countries and then plot their lines, ie, one line per country]
+
+```{r}
+# The code and code description of this component go below here
+# Get the top 10 country names
+top10_countries <- top10casesW$Country
+
+# Filter the main dataframe to include only data for these countries
+top10_data_over_time <- covid19_data %>%
+  filter(Country %in% top10_countries)
+
+ggplot(top10_data_over_time, aes(x = Date, y = CumCases, color = Country)) +
+  geom_line() +
+  scale_y_log10() + # Log transformation for Y-axis
+  labs(
+    title = "Total Number of Cases Over Time for Top 10 Countries",
+    y = "Cumulative Cases (Log Scale)",
+    x = "Date",
+    color = "Country"
+  ) +
+  theme_minimal()
+
+```
+
+7. Build a graph for the top 10 countries with current highest active cases which was obtained previously in question 4. The graph should have one sub-graph (_i.e._, using facet function) for each of these countries, every sub-graph should show how the new cases, new deaths, and new recovered cases were changing over the time (Use log for Y axis for better presentation, Use different colour to distinguish between new cases, deaths, and recovered). 
+
+    [hint: geom_line function with date on x_axis and each of the values of the variables in y_axis]
+
+```{r}
+# The code and code description of this component go below here
+# Get the top 10 country names based on active cases
+top10_active_countries <- top10activeW$Country
+
+# Filter the main dataframe for these countries
+top10_active_data_over_time <- covid19_data %>%
+  filter(Country %in% top10_active_countries)
+
+
+ggplot(top10_active_data_over_time, aes(x = Date)) +
+  # Plotting new cases with blue color
+  geom_line(aes(y = NewCases, color = "New Cases"), size = 1) +
+  # Plotting new deaths with red color
+  geom_line(aes(y = NewDeaths, color = "New Deaths"), size = 1) +
+  # Plotting new recovered cases with green color
+  geom_line(aes(y = Recovered, color = "New Recovered"), size = 1) +
+  # Applying a log transformation to the Y-axis for better visualization
+  scale_y_log10(
+    labels = scales::comma_format(),
+    breaks = scales::trans_breaks("log10", function(x) 10^x),
+    minor_breaks = scales::trans_breaks("log10", function(x) 10^x)
+  ) +
+  # Setting a custom color palette
+  scale_color_manual(values = c("New Cases" = "blue", "New Deaths" = "red", "New Recovered" = "green")) +
+  # Creating a separate sub-graph for each country
+  facet_wrap(~ Country, scales = "free_y", ncol = 1) +
+  labs(
+    title = "New Cases, Deaths, and Recovered Over Time for Top 10 Countries with Highest Active Cases",
+    y = "Counts (Log Scale)",
+    x = "Date",
+    color = "Status"
+  ) +
+  theme_minimal()
+
+```
+
+8. Build a graph for the top 10 countries with current highest total tests per one million of the population which was obtained previously in question 4. This graph should present total number of infected cases, total tests so far, and the total tests per million of the population for each country. 
+
+    [hint: you can use bar chart to achieve this task]
+
+```{r}
+# The code and code description of this component go below here
+# Getting the top 10 countries based on tests per million
+top10_tests_per_million_countries <- lastDay_data %>%
+  arrange(desc(Tests_1M_Pop)) %>%
+  head(10) %>%
+  pull(Country)
+
+ggplot(top10testMW, aes(x = reorder(Country, Tests_1M_Pop))) +
+  # Bar for total infected cases
+  geom_bar(aes(y = CumCases, fill = "Total Infected Cases"), stat = "identity", position = "dodge") +
+  # Bar for total tests so far
+  geom_bar(aes(y = CumTests, fill = "Total Tests"), stat = "identity", position = "dodge") +
+  # Text on top of bars to show total tests per million
+  geom_text(aes(y = CumTests, label = scales::comma_format()(Tests_1M_Pop)), position = position_dodge(width = 0.9), vjust = -0.25) +
+  scale_fill_manual(values = c("Total Infected Cases" = "blue", "Total Tests" = "green")) +
+  labs(
+    title = "Total Infected Cases, Total Tests, and Tests per Million for Top 10 Countries",
+    y = "Counts",
+    x = "Country",
+    fill = "Metric"
+  ) +
+  theme_minimal() +
+  coord_flip() +
+  theme(legend.position = "bottom")
+
+
+
+```
+
+9.	Build a graph to present the statistics total, average, median of confirmed cases of the  continents. ( you may use log for Y axis for better presentation, Use Continent in the legend, make sure x-axis labels does not overlap). 
+
+```{r}
+# The code and code description of this component go below here
+
+continent_stats <- covid19_data %>%
+  group_by(Continent) %>%
+  summarise(
+    Total = sum(CumCases, na.rm = TRUE),
+    Average = mean(CumCases, na.rm = TRUE),
+    Median = median(CumCases, na.rm = TRUE)
+  )
+
+ggplot(continent_stats, aes(x = reorder(Continent, -Total))) +
+  geom_bar(aes(y = Total, fill = "Total"), stat = "identity", position = "dodge") +
+  geom_bar(aes(y = Average, fill = "Average"), stat = "identity", position = "dodge") +
+  geom_bar(aes(y = Median, fill = "Median"), stat = "identity", position = "dodge") +
+  scale_y_log10(
+    labels = scales::comma_format(),
+    breaks = scales::trans_breaks("log10", function(x) 10^x),
+    minor_breaks = scales::trans_breaks("log10", function(x) 10^x)
+  ) +
+  labs(
+    title = "Statistics of Confirmed Cases by Continent",
+    y = "Counts (Log Scale)",
+    x = "Continent",
+    fill = "Statistic"
+  ) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+
+```
+
+
+10. Based on the data of the _"lastDay_data"_ dataframe, list the top 2-countries of each continent that report the highest death toll. 
+
+```{r}
+# The code and code description of this component go below here
+
+top2_countries_death <- lastDay_data %>%
+  group_by(Continent) %>%
+  slice_max(order_by = CumDeaths, n = 2) %>%
+  ungroup() %>%
+  select(Continent, Country, CumDeaths)
+
+print(top2_countries_death)
+
+```
+
+----
+
+**Task 2 final Report**: For each of the above, ensure that you have extracted the generated statistics (eg, numerical values) or the visualizations (eg, graphs) alongside with your description as output of each component in the knitted report. The marking will be conducted based on the description and validity of these quantitative and qualitative components of the analysis.
+
+----
+
+*** 
